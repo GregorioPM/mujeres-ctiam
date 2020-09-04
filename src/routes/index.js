@@ -3,7 +3,9 @@ const router = Router();
 const index = require("./login");
 
 router.get("/", (req, res) => {
-    res.redirect("/home");
+    res.render("index", {
+        title: "Home",
+    });
 });
 router.use("/login", index);
 
