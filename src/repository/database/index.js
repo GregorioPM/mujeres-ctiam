@@ -13,5 +13,6 @@ module.exports = database = {
                 console.log("db conected");
             }
         );
+        mongoose.set("useCreateIndex", true);
     },
 };

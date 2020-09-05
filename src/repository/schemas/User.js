@@ -1,3 +1,4 @@
+const bcrypt = require("bcrypt");
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
@@ -21,11 +22,17 @@ const userSchema = new Schema({
     },
 });
 
+userSchema.methods.encryptPassword = (password) =>
+    bcrypt.hashSync(password, bcrypt.genSaltSync(10));
+
+userSchema.methods.comparePassword = function (password) {
+    return bcrypt.compareSync(password, this.password);
+};
+
 userSchema.methods.toJSON = function () {
     let user = this;
     let userObject = user.toObject();
     delete userObject.password;
     return userObject;
 };
-
 module.exports = mongoose.model("User", userSchema);
