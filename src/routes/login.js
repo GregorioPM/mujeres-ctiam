@@ -17,4 +17,13 @@ router.post(
     })
 );
 
+router.post(
+    "/signin",
+    passport.authenticate("local-signin", {
+        successRedirect: "/profile",
+        failureRedirect: "/error",
+        passReqToCallback: true,
+    })
+);
+
 module.exports = router;

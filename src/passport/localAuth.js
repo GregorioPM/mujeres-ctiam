@@ -37,3 +37,33 @@ passport.use(
         }
     )
 );
+
+passport.use(
+    "local-signin",
+    new LocalStrategy(
+        {
+            usernameField: "email",
+            passwordField: "password",
+            passReqToCallback: true,
+        },
+        async (req, email, password, done) => {
+            console.log("entra a validar login", password);
+            const user = await User.findOne({ email });
+            if (!user) {
+                return done(
+                    null,
+                    false,
+                    req.flash("signingMessage", "No user found")
+                );
+            }
+            if (!user.comparePassword(password)) {
+                return done(
+                    null,
+                    false,
+                    req.flash("signingMessage", "Email or password incorrect")
+                );
+            }
+            done(null, user);
+        }
+    )
+);
