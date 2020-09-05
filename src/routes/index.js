@@ -7,6 +7,12 @@ router.get("/", (req, res) => {
         title: "Home",
     });
 });
+
+router.get("/profile", (req, res) => {
+    res.json({
+        status: true,
+    });
+});
 router.use("/login", index);
 
 module.exports = router;

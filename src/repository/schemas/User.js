@@ -22,7 +22,7 @@ const userSchema = new Schema({
     },
 });
 
-userSchema.methods.encryptPassword = (password) =>
+userSchema.statics.encryptPassword = (password) =>
     bcrypt.hashSync(password, bcrypt.genSaltSync(10));
 
 userSchema.methods.comparePassword = function (password) {
