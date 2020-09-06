@@ -5,7 +5,7 @@ const isAuthenticated = require("../middlewares/isAuthenticated");
 
 router.get("/", (req, res) => {
     res.render("index", {
-        title: "Home",
+        title: "Platzi",
     });
 });
 
@@ -16,8 +16,10 @@ router.use((req, res, next) => {
 });
 
 router.get("/home", (req, res) => {
-    console.log(req.session.id);
-    res.render("user/perfil");
+    const user = req.user;
+    res.render("user/perfil", {
+        user,
+    });
 });
 
 module.exports = router;

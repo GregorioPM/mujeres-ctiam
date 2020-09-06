@@ -1,7 +1,11 @@
 require("../config");
+const {
+    allowInsecurePrototypeAccess,
+} = require("@handlebars/allow-prototype-access");
 const express = require("express");
 const app = express();
 const flash = require("connect-flash");
+const Handlebars = require("handlebars");
 const hbs = require("express-handlebars");
 const mongoose = require("./repository/database");
 const morgan = require("morgan");
@@ -18,6 +22,7 @@ app.engine(
         extname: "hbs",
         defaultLayout: "layout",
         layoutsDir: path.join(__dirname, "/views", "/layouts"),
+        handlebars: allowInsecurePrototypeAccess(Handlebars),
     })
 );
 

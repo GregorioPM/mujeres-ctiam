@@ -7,7 +7,7 @@ passport.serializeUser((user, done) => {
 });
 
 passport.deserializeUser((id, done) => {
-    User.findById(id, done);
+    User.findById(id, done).select("-password").lean(true);
 });
 
 passport.use(
@@ -47,7 +47,6 @@ passport.use(
             passReqToCallback: true,
         },
         async (req, email, password, done) => {
-            console.log("entra a validar login", password);
             const user = await User.findOne({ email });
             if (!user) {
                 return done(
