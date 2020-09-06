@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const router = Router();
 const index = require("./login");
+const isAuthenticated = require("../middlewares/isAuthenticated");
 
 router.get("/", (req, res) => {
     res.render("index", {
@@ -8,11 +9,15 @@ router.get("/", (req, res) => {
     });
 });
 
-router.get("/profile", (req, res) => {
-    res.json({
-        status: true,
-    });
-});
 router.use("/login", index);
+
+router.use((req, res, next) => {
+    isAuthenticated(req, res, next);
+});
+
+router.get("/home", (req, res) => {
+    console.log(req.session.id);
+    res.render("user/perfil");
+});
 
 module.exports = router;

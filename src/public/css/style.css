@@ -5,8 +5,15 @@
     list-style: none;
     margin: 0;
     outline: none;
+    resize: none;
     padding: 0;
     text-decoration: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .row-100
@@ -133,7 +140,7 @@
     cursor: pointer;
     color: white;
     height: 40px;
-    margin-top: 40px;
+    margin-top: 30px;
     transition: .5s;
     width: 150px;
 }
@@ -197,6 +204,17 @@
     padding-bottom: 30px;
 }
 
+.padding-tb-15
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.padding-b-15
+{
+    padding-bottom: 15px;
+}
+
 .title-2
 {
     font-size: 55px;
@@ -211,6 +229,27 @@
 .bcolor-fd
 {
     background-color: #f2f2f2;
+}
+
+.cont-cmp-form
+{
+    align-items: center;
+    border-radius: 5px;
+    display: flex;
+    height: 30px;
+    width: 300px;
+}
+
+.cmp-form
+{
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid #B2B2B2;
+    height: 100%;
+    flex-basis: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1em;
 }
 
 /*********** Header ***********/
@@ -432,3 +471,143 @@ footer
 }
 
 /*********** Footre ***********/
+
+/********** Perfil ************/
+
+.ico-photo-profile
+{
+    border-radius: 40px;
+    height: 40px;
+    overflow: hidden;
+    width: 40px;  
+}
+
+.ul-h-profile
+{
+    width: 120px;
+}
+
+.art-profile
+{
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.cont-form-profile
+{
+    width: 70%;
+}
+
+.cont-form-profile__content
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.cont-options-profile
+{
+    border-left: 1px solid gray;
+    width: 30%;
+}
+
+.cont-options-profile__content
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.cont-p-form
+{
+    justify-content: flex-end;
+    display: flex;
+    width: 180px;
+}
+
+.cont-date-form
+{
+    padding-bottom: 15px;
+}
+
+.size-cmp
+{
+    align-items: center;
+    display: flex;
+    height: 35px;
+}
+
+.name-cmp-form
+{
+    justify-content: flex-end;
+    width: 30%;
+}
+
+.name-cmp-form div
+{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.name-cmp-form div p
+{
+    text-align: right;
+    padding-right: 15px;
+}
+
+.box-cmp-form
+{
+    width: 70%;
+}
+
+.cont-options-profile__content li
+{
+    padding-bottom: 10px;
+}
+
+.cont-options-profile__content li i
+{
+    font-size: 0px;
+}
+
+.cont-options-profile__content li .i-active
+{
+    color: #29abe2;
+    font-size: 20px;
+    margin-left: 4px;
+}
+
+
+.cont-options-profile__content li a
+{
+    font-size: 16px;
+    color: black;
+    padding: 0;
+}
+
+.cont-options-profile__content li .a-active
+{
+    color: #29abe2;
+    font-size: 18px;
+    padding-left: 15px;
+    color: #29abe2;
+}
+
+
+.cont-options-profile__content .li-active
+{
+    padding-bottom: 25px;
+}
+
+.cont-options-profile__content li:last-child
+{
+    padding-bottom: 12px;
+}
+
+.cont-options-profile__content li:hover
+{
+    font-weight: bold;
+    transition: .5s;
+}
+/********** Perfil ************/

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/0dc3b1d201.js" crossorigin="anonymous"></script>
+	<link rel="icon" type="ico/png" href="images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="row-100">
+        <nav class="row-70 flex-justify padding-tb-15">
+            <img class="logo-header" src="images/logo.png">
+            <ul class="ul-h-profile flex-justify">
+                <figure class="ico-photo-profile">
+                    <img class="img-100" src="images/perfil/1.jpg">
+                </figure>
+                <p class="txt-blue">Natalia</p>
+                <i class="fas fa-angle-down txt-blue">
+                  <ul>Logout</ul>
+                </i>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="row-100 padding-tb-mini">
+        <article class="row-70 art-profile">
+            <div class="cont-form-profile">
+                <div class="cont-form-profile__content padding-tb">
+                    <div class="">
+                        <div class="flex">
+                            <figure class="ico-photo-profile">
+                                <img class="img-100" src="images/perfil/1.jpg">
+                            </figure>
+                        </div>
+                        <form class="flex flex-align-top" action="" method="">
+                            <div class="name-cmp-form">
+                                <div class="padding-b-15">
+                                    <p class="">Nombre</p>
+                                </div>
+                                <div class="padding-b-15">
+                                    <p class="">Número de <br> Documento</p>
+                                </div>
+                                <div class="padding-b-15">
+                                    <p class="">Correo <br> electrónico</p>
+                                </div>
+                                <div class="padding-b-15">
+                                    <p class="">Imagen</p>
+                                </div>
+                                <div class="">
+                                    <p class="">Presentación</p>
+                                </div>
+                            </div>
+                            <div class="box-cmp-form">
+                                <div class="cont-cmp-form padding-b-15">
+                                    <input class="cmp-form" type="text" placeholder="" name="" value={{user.name}} id="" required>
+                                </div>
+                                <div class="cont-cmp-form padding-b-15">    
+                                    <input class="cmp-form" type="number" placeholder="" name="" value={{user.document}} id="" required>
+                                </div>
+                                <div class="cont-cmp-form padding-b-15">
+                                    <input class="cmp-form" type="email" placeholder="" name="" value={{user.email}} id="" required>
+                                </div>
+                                <div class="cont-cmp-form padding-b-15">    
+                                    <input class="cmp-form" type="file" class="form-control" name="imagen">
+                                </div>
+                                <div class="cont-cmp-form">
+                                    <textarea class="cmp-form" name="" placeholder="" value={{user.description}} id="" ></textarea>
+                                </div>
+                                <button class="btn-form" type="submit">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="cont-options-profile">
+                <div class="cont-options-profile__content padding-tb">
+                    <li class="li-active">
+                        <i class="fas fa-edit i-active"></i>
+                        <a class="a-active" href="">Editar Perfil</a>
+                    </li>
+                    <li class="">
+                        <i class="fas fa-lock i-oculto"></i>
+                        <a class="" href="">Cambiar contraseña</a>
+                    </li>
+                    <li class="">
+                        <i class="fas fa-user-edit i-oculto"></i>
+                        <a class="" href="">Registrar persona</a>
+                    </li>
+                    <li class="">
+                        <i class="far fa-list-alt i-oculto"></i>
+                        <a class="" href="">Lista persona</a>
+                    </li>
+                    <li class="">
+                        <i class="far fa-window-maximize i-oculto"></i>
+                        <a class="" href="">Ventana modal</a>
+                    </li>
+                    <li class="">
+                        <i class="fas fa-box-open i-oculto"></i>
+                        <a class="" href="">Servicios</a>
+                    </li>
+                    <li class="">
+                        <i class="far fa-newspaper i-oculto"></i>
+                        <a class="" href="">Blog</a>
+                    </li>
+                    <li class="">
+                        <i class="fas fa-phone-square-alt i-oculto"></i>
+                        <a class="" href="">Contacto</a>
+                    </li>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <footer class="row-100">
+        <div class="row-100">
+            <div class="row-90 flex-justify padding-tb-mini flex-align-top">
+                <img class="logo-footer" src="images/logofooter.png">
+                <ul class="navegacion-footer">
+                    <p class="title-footer-p">Conócenos</p>
+                    <li class="navegacion-footer__li"><a class="navegacion-footer__li--a" href="">Servicios</a></li>
+                    <li class="navegacion-footer__li"><a class="navegacion-footer__li--a" href="">Blog</a></li>
+                    <li class="navegacion-footer__li"><a class="navegacion-footer__li--a" href="">Contacto</a></li>
+                </ul>
+                <ul class="">
+                    <p class="title-footer-p">Social Media</p>
+                    <div class="socialmedia-footer">
+                        <li class="socialmedia-footer__li">
+                            <a href=""><img class="socialmedia-footer__li--img" src="images/icos/instagram.svg"></a>
+                        </li>
+                        <li class="socialmedia-footer__li">
+                            <a href=""><img class="socialmedia-footer__li--img" src="images/icos/facebook.svg"></a>
+                        </li>
+                        <li class="socialmedia-footer__li">
+                            <a href=""><img class="socialmedia-footer__li--img" src="images/icos/twitter.svg"></a>
+                        </li>
+                        <li class="socialmedia-footer__li">
+                            <a href=""><img class="socialmedia-footer__li--img" src="images/icos/linkedin.svg"></a>
+                        </li>
+                        <li class="socialmedia-footer__li">
+                            <a href=""><img class="socialmedia-footer__li--img" src="images/icos/youtube.svg"></a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="Copyright-footer">
+            <p>Copyright © 2020. Todos los derechos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
