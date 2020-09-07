@@ -474,6 +474,23 @@ footer
 
 /********** Perfil ************/
 
+#area-file {
+  padding: 3px;
+  resize: none;
+  height: 50px;
+  width: 100%;
+}
+
+.dragging-file {
+  border: 3px dashed #29abe2;
+  border-radius: 9px;
+}
+
+.non-dragging-file {
+  border: 3px dashed transparent;
+  border-radius: 9px;
+}
+
 .ico-photo-profile
 {
     border-radius: 40px;

@@ -32,9 +32,10 @@ app.set("view engine", "hbs");
 
 mongoose.connect();
 app.use(morgan(process.env.NODE_ENV));
+app.use(express.json());
 app.use(
     express.urlencoded({
-        extended: false,
+        extended: true,
     })
 );
 app.use(express.static(path.join(__dirname, "public")));

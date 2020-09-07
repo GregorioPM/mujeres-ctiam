@@ -63,9 +63,10 @@
                                 <div class="cont-cmp-form padding-b-15">
                                     <input class="cmp-form" type="email" placeholder="anemail@email.com" name="email" value="{{user.email}}" id="" required>
                                 </div>
-                                <div class="cont-cmp-form padding-b-15">    
+                                {{!-- <div class="cont-cmp-form padding-b-15"> --}}
+                                    <div id="area-file" class="non-dragging-file"></div> 
                                     <input class="cmp-form" type="file" class="form-control" name="imagen">
-                                </div>
+                                {{!-- </div> --}}
                                 <div class="cont-cmp-form">
                                     <textarea class="cmp-form" name="description" id="" >{{user.description}}</textarea>
                                 </div>
@@ -150,5 +151,6 @@
             <p>Copyright © 2020. Todos los derechos reservados</p>
         </div>
     </footer>
+    <script src="js/perfil.js"></script>
 </body>
 </html>
