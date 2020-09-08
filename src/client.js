@@ -1,6 +1,8 @@
 const admin = require("firebase-admin");
-
 var serviceAccount = require("../serviceAccountKey.json");
+var BusBoy = require("busboy");
+const os = require("os");
+const fs = require("fs");
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
@@ -8,35 +10,63 @@ admin.initializeApp({
     databaseURL: "https://storage-api-824e6.firebaseio.com",
 });
 
-const bucket = admin.storage().bucket();
-
 module.exports = {
     uploadImage(req, res, next) {
-        try {
-            if (!req.file) {
-                res.status(400).send("Error, could not upload file");
+        var busboy = new BusBoy({ headers: req.headers });
+        var json = {};
+        var fileMetas = {};
+        busboy.on("file", function (
+            fieldname,
+            file,
+            filename,
+            encoding,
+            mimetype
+        ) {
+            var meta = fileMetas[fieldname + ".meta"];
+            if (!meta) {
+                file.resume();
                 return;
             }
-            const blob = bucket.file(req.file.originalname);
-            const blobWriter = blob.createWriteStream({
-                metadata: {
-                    contentType: req.file.mimetype,
-                },
+            file.on("data", function (data) {
+                console.log(`streamed ${data.length}`);
             });
-            blobWriter.on("error", (err) => next(err));
-            blobWriter.on("finish", () => {
-                const publicUrl = `https://firebasestorage.googleapis.com/v0/b/${
-                    bucket.name
-                }/o/${encodeURI(blob.name)}?alt=media`;
-                res.status(200).send({
-                    fileName: req.file.originalname,
-                    fileLocation: publicUrl,
+
+            file.on("end", function () {
+                console.log(`finished streaming ${file}`);
+            });
+        });
+        busboy.on("field", function (name, val) {
+            if (/\.meta$/.test(name)) {
+                fileMetas[name] = JSON.parse(val);
+                console.log(`file metadata: name: ${name}, value: ${val}`);
+                return;
+            }
+            console.log(`name: ${name}, value: ${val}`);
+        });
+        busboy.on("finish", () => {
+            admin
+                .storage()
+                .bucket()
+                .upload(imageTobeUploaded.filepath, {
+                    resumable: false,
+                    metadata: {
+                        metadata: {
+                            contentType: imageTobeUploaded.mimeType,
+                        },
+                    },
+                })
+                .then(() => {
+                    const imageUrl = `https://firebasestorage.googleapis.com/v0/b/${config.storageBucket}/o/${imageFileName}?alt=media`;
+                    // return db.doc(`/users/${req.user.handle}`).update({imageUrl});
+                })
+                .then(() => {
+                    return res.json({ message: "Image Uploaded Successfully" });
+                })
+                .catch((err) => {
+                    console.error(err);
+                    return res.status(400).json({ error: err.code });
                 });
-            });
-            blobWriter.end(req.file.buffer);
-        } catch (error) {
-            res.status(400).send(`Error, could not upload file: ${error}`);
-            return;
-        }
+        });
+        req.pipe(busboy);
     },
 };

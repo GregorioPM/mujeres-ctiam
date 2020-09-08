@@ -10,6 +10,10 @@ router.get("/", (req, res) => {
     });
 });
 
+router.post("/gcsUpload", (req, res) => {
+    console.log("gsc???");
+});
+
 router.use("/contacto", (req, res) => {
     res.render("user/contacto");
 });
