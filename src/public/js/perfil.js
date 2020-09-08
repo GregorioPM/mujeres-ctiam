@@ -17,17 +17,9 @@ areaFile.addEventListener("drop", async (e) => {
     areaFile.classList.remove("dragging-file");
     const selectedFile = e.dataTransfer.files[0];
     var formData = new FormData();
-    var fileUploadMeta = JSON.stringify({
-        size: selectedFile.size,
-        name: selectedFile.name,
-        type: selectedFile.type,
-        lastUpdated: selectedFile.lastModified,
-    });
-    formData.append("fileUpload.meta", fileUploadMeta);
     formData.append("fileUpload", selectedFile);
     const data = await fetch("http://localhost:4000/home/uploadImage", {
         method: "POST",
         body: formData,
     });
-    console.log(data);
 });
