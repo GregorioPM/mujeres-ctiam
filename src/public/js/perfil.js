@@ -16,10 +16,14 @@ areaFile.addEventListener("drop", async (e) => {
     e.preventDefault();
     areaFile.classList.remove("dragging-file");
     const selectedFile = e.dataTransfer.files[0];
-    var formData = new FormData();
-    formData.append("fileUpload", selectedFile);
-    const data = await fetch("http://localhost:4000/home/uploadImage", {
-        method: "POST",
-        body: formData,
-    });
+    const task = uploadImage(selectedFile);
+    const onProgress = (e) => {};
+    const onError = (e) => {
+        console.log(e);
+    };
+    const onComplete = async () => {
+        const url = await task.snapshot.ref.getDownloadURL();
+        document.getElementById("profileImage").src = url;
+    };
+    task.on("state_changed", onProgress, onError, onComplete);
 });

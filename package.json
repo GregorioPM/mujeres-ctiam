@@ -6,21 +6,20 @@
   "dependencies": {
     "@handlebars/allow-prototype-access": "^1.0.3",
     "bcrypt": "^5.0.0",
-    "busboy": "^0.3.1",
     "connect-flash": "^0.1.1",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
     "express-session": "^1.17.1",
-    "firebase-admin": "^9.1.1",
     "handlebars": "^4.7.6",
     "mongoose": "^5.10.3",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.4",
     "passport": "^0.4.1",
-    "passport-local": "^1.0.0",
-    "request": "^2.88.2"
+    "passport-local": "^1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+  
+  },
   "scripts": {
     "dev": "nodemon src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
