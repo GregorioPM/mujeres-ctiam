@@ -1,9 +1,5 @@
 const { Router } = require("express");
 const router = Router();
-var BusBoy = require("busboy");
-const os = require("os");
-const fs = require("fs");
-const path = require("path");
 
 router.get("/", (req, res) => {
     const user = req.user;
@@ -11,7 +7,5 @@ router.get("/", (req, res) => {
         user,
     });
 });
-
-router.post("/uploadImage", (req, res, next) => {});
 
 module.exports = router;

@@ -14,8 +14,8 @@ router.post("/gcsUpload", (req, res) => {
     console.log("gsc???");
 });
 
-router.use("/contacto", (req, res) => {
-    res.render("user/contacto");
+router.get("/contacto", (req, res) => {
+    res.render("contacto");
 });
 
 router.use("/ejemplo", (req, res) => {

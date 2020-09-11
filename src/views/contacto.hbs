@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/0dc3b1d201.js" crossorigin="anonymous"></script>
+	<link rel="icon" type="ico/png" href="../images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="modal">
+        <div class="modal__content">
+            <form action="" method="">
+                <p>Iniciar sesión</p>
+                <div>
+                    <input type="text"  placeholder="Correo electrónico" id="correo" name="correo" required>
+                </div>
+                <div>
+                    <input type="password"  placeholder="Contraseña" id="password" name="password" required>
+                </div>
+                <!-- <div>
+                    <input type="date"  placeholder="Fecha" id="fecha" name="fecha" required>
+                </div> -->
+                <button class="btn-modal blue" type="submit">Entrar</button>
+                <button class="btn-gris" type="reset">Borrar información</button>
+                <i class="fas fa-times-circle cerrar"></i>
+            </form>
+        </div>
+    </div>
+
+    <header class="row-100">
+        <nav class="row-80 flex-justify">
+            <img class="logo-header" src="../images/logo.png">
+            <ul class="menu flex-justify">
+                <li class="menu__li"><a class="menu__li--a" href="">Inicio</a></li>
+                <li class="menu__li"><a class="menu__li--a" href="">Servicios</a></li>
+                <li class="menu__li"><a class="menu__li--a" href="">Blog</a></li>
+                <li class="menu__li"><a class="menu__li--a" href="">Contacto</a></li>
+                <li class="menu__li"><a class="abrir menu__li--a txt-blue" href="">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="row-100">
+        <article class="row-80 flex-justify padding-tb">
+            <figure class="cont-img-contact">
+                <img class="img-100" src="images/contacto.jpg">
+            </figure>
+            <div class="cont-info-contact">
+                <div class="cont-info-contact__content">
+                    <h3 class="cont-info-contact__content--h3">Contacto</h3>
+                    <p class="cont-info-contact__content--p">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi cum inventore quam, quasi quaerat architecto 
+                    </p>
+                    <form class="cont-info-contact__form" action="" method="">
+                        <div class="form-cmp-x2">
+                            <div class="cont-imput">
+                                <input class="" type="text" placeholder="Nombre" required>
+                            </div>
+                            <div class="cont-imput">
+                                <input class="" type="number" placeholder="Número teléfono" required>
+                            </div>
+                        </div>
+                        <div class="form-cmp-x1">
+                            <input class="" type="text" placeholder="Correo" required>
+                        </div>
+                        <div class="form-txtarea">
+                            <textarea class="" name="" placeholder="Mensaje" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="cont-btn-form">
+                            <button class="btn-form">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <footer class="row-100">
+        <div class="row-100">
+            <div class="row-90 flex-justify padding-tb-mini flex-align-top">
+                <img class="logo-footer" src="images/logofooter.png">
+                <ul class="navegacion-footer">
+                    <p class="title-footer-p">Conócenos</p>
+                    <li class="navegacion-footer__li"><a class="navegacion-footer__li--a" href="">Servicios</a></li>
+                    <li class="navegacion-footer__li"><a class="navegacion-footer__li--a" href="">Blog</a></li>
+                    <li class="navegacion-footer__li"><a class="navegacion-footer__li--a" href="">Contacto</a></li>
+                </ul>
+                <ul class="">
+                    <p class="title-footer-p">Social Media</p>
+                    <div class="socialmedia-footer">
+                        <li class="socialmedia-footer__li">
+                            <a href=""><img class="socialmedia-footer__li--img" src="../images/icos/instagram.svg"></a>
+                        </li>
+                        <li class="socialmedia-footer__li">
+                            <a href=""><img class="socialmedia-footer__li--img" src="../images/icos/facebook.svg"></a>
+                        </li>
+                        <li class="socialmedia-footer__li">
+                            <a href=""><img class="socialmedia-footer__li--img" src="../images/icos/twitter.svg"></a>
+                        </li>
+                        <li class="socialmedia-footer__li">
+                            <a href=""><img class="socialmedia-footer__li--img" src="../images/icos/linkedin.svg"></a>
+                        </li>
+                        <li class="socialmedia-footer__li">
+                            <a href=""><img class="socialmedia-footer__li--img" src="../images/icos/youtube.svg"></a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="Copyright-footer">
+            <p>Copyright © 2020. Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="../js/modal.js"></script>
+    <script src="../js/addproject.js"></script>
+</body>
+</html>
