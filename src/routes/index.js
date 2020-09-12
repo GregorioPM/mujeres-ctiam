@@ -1,25 +1,29 @@
 const { Router } = require("express");
-const router = Router();
 const login = require("./login");
-const user = require("./user");
 const isAuthenticated = require("../middlewares/isAuthenticated");
+const nodeMailer = require("../services/nodemailer");
+const router = Router();
+const user = require("./user");
 
 router.get("/", (req, res) => {
     res.render("index", {
         title: "Platzi",
+        isAuthenticated: req.user != undefined,
     });
 });
 
-router.post("/gcsUpload", (req, res) => {
-    console.log("gsc???");
+router.get("/contact", (req, res) => {
+    res.render("contact");
 });
 
-router.get("/contacto", (req, res) => {
-    res.render("contacto");
-});
-
-router.use("/ejemplo", (req, res) => {
-    res.render("ejemplo");
+router.post("/contact", (req, res) => {
+    const { name, numberPhone, email, message } = req.body;
+    nodeMailer(name, email, (err) => {
+        if (err) console.log(err);
+        res.render("contact", {
+            status: err ? false : true,
+        });
+    });
 });
 
 router.use("/login", login);
