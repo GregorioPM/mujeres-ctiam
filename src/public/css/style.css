@@ -331,6 +331,23 @@ input[type=number]::-webkit-outer-spin-button {
 
 /*********** Index ***********/
 
+#area-file {
+  resize: none;
+  border: 1px solid #b2b2b2;
+  border-radius: 5px;
+  height: 50px;
+  width: 100%;
+}
+
+.dragging-file {
+  border: 3px dashed #29abe2;
+  border-radius: 9px;
+}
+
+.non-dragging-file {
+  border: 3px dashed transparent;
+  border-radius: 9px;
+}
 .service-index
 {
     background-color: #ffffff;
@@ -703,6 +720,13 @@ footer
     margin-left: auto;
     margin-right: auto;
     width: 95%;
+}
+
+.new-size-img {
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /********** Contacto ************/

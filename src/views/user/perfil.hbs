@@ -18,9 +18,6 @@
                     <img class="img-100" src="images/perfil/1.jpg">
                 </figure>
                 <p class="txt-blue">Natalia</p>
-                <i class="fas fa-angle-down txt-blue">
-                  <ul>Logout</ul>
-                </i>
             </ul>
         </nav>
     </header>
@@ -31,7 +28,7 @@
                 <div class="cont-form-profile__content padding-tb">
                     <div class="">
                         <div class="flex">
-                            <figure class="ico-photo-profile">
+                            <figure class="ico-photo-profile new-size-img">
                                 <img class="img-100" src="images/perfil/1.jpg" id="profileImage">
                             </figure>
                         </div>
@@ -64,8 +61,9 @@
                                     <input class="cmp-form" type="email" placeholder="anemail@email.com" name="email" value="{{user.email}}" id="" required>
                                 </div>
                                 {{!-- <div class="cont-cmp-form padding-b-15"> --}}
-                                    <div id="area-file" class="non-dragging-file"></div> 
-                                    <input class="cmp-form" type="file" class="form-control" name="imagen">
+                                <div class="cont-cmp-form padding-b-15" style="margin-bottom : 15px">
+                                    <div id="area-file" class="non-dragging-file cmp-form"></div> 
+                                </div>
                                 {{!-- </div> --}}
                                 <div class="cont-cmp-form">
                                     <textarea class="cmp-form" name="description" id="" >{{user.description}}</textarea>
@@ -109,6 +107,10 @@
                     <li class="">
                         <i class="fas fa-phone-square-alt i-oculto"></i>
                         <a class="" href="">Contacto</a>
+                    </li>
+                    <li>
+                    <i class="fas fa-angle-down i-oculto"></i>
+                        <p>Logout</p>
                     </li>
                 </div>
             </div>
