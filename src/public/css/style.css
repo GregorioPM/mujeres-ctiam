@@ -335,7 +335,6 @@ input[type=number]::-webkit-outer-spin-button {
   resize: none;
   border: 1px solid #b2b2b2;
   border-radius: 5px;
-  height: 50px;
   width: 100%;
 }
 
