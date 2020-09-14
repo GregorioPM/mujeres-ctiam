@@ -12,12 +12,12 @@
 </head>
 
 <body>
-  <div class="modal">
+  <div class="modal" data-visible={{modal}}>
     <div class="modal__content">
-      <form action="" method="">
+      <form action="/login/signin" method="POST">
         <p>Iniciar sesión</p>
         <div>
-          <input type="text" placeholder="Correo electrónico" id="correo" name="correo" required>
+          <input type="text" placeholder="Correo electrónico" id="correo" name="email" required>
         </div>
         <div>
           <input type="password" placeholder="Contraseña" id="password" name="password" required>
@@ -37,7 +37,13 @@
         <li class="menu__li"><a class="menu__li--a" href="#">Servicios</a></li>
         <li class="menu__li"><a class="menu__li--a" href="#">Blog</a></li>
         <li class="menu__li"><a class="menu__li--a" href="/contact">Contacto</a></li>
-        <li class="menu__li"><a class="abrir menu__li--a txt-blue" href="">Iniciar sesión</a></li>
+        <li class="menu__li">
+          {{#if isAuthenticated}}
+            <a class="menu__li--a txt-blue" href="/home">Perfil</a>
+            {{else}}
+            <a class="abrir menu__li--a txt-blue" href="">Iniciar sesión</a>
+          {{/if}}
+        </li>
       </ul>
     </nav>
   </header>
