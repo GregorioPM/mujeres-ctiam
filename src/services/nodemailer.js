@@ -2,7 +2,6 @@ const nodemailer = require("nodemailer");
 const smtpTransport = require("nodemailer-smtp-transport");
 
 module.exports = async function sendEmail(name, email, callback) {
-    console.log(process.env.EMAIL, process.env.EMAIL_PASS);
     try {
         let transporter = nodemailer.createTransport(
             smtpTransport({

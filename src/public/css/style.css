@@ -332,10 +332,14 @@ input[type=number]::-webkit-outer-spin-button {
 /*********** Index ***********/
 
 #area-file {
-  resize: none;
   border: 1px solid #b2b2b2;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 50px;
+  position: relative;
+  resize: none;
   width: 100%;
 }
 

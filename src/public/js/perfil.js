@@ -14,6 +14,10 @@ areaFile.addEventListener("dragleave", (e) => {
 
 areaFile.addEventListener("drop", async (e) => {
     e.preventDefault();
+    document.getElementById("spinner").style.display = "block";
+    setTimeout(() => {
+        document.getElementById("spinner").style.display = "none";
+    }, 2000);
     areaFile.classList.remove("dragging-file");
     const selectedFile = e.dataTransfer.files[0];
     const task = uploadImage(selectedFile);
@@ -23,7 +27,11 @@ areaFile.addEventListener("drop", async (e) => {
     };
     const onComplete = async () => {
         const url = await task.snapshot.ref.getDownloadURL();
-        document.getElementById("profileImage").src = url;
+        Array.from(document.getElementsByClassName("profile-image")).forEach(
+            (img) => {
+                img.src = url;
+            }
+        );
     };
     task.on("state_changed", onProgress, onError, onComplete);
 });
