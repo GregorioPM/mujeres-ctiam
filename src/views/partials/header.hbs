@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/modal.css">
+  <meta charset="UTF-8">
+  <script src="https://kit.fontawesome.com/0dc3b1d201.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="ico/png" href="../images/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="modal" data-visible={{modal}}>
+    <div class="modal__content">
+      <form action="/login/signin" method="POST">
+        <p>Iniciar sesión</p>
+        <div>
+          <input type="text" placeholder="Correo electrónico" id="correo" name="email" required>
+        </div>
+        <div>
+          <input type="password" placeholder="Contraseña" id="password" name="password" required>
+        </div>
+        <button class="btn-modal blue" type="submit">Entrar</button>
+        <button class="btn-gris" type="reset">Borrar información</button>
+        <i class="fas fa-times-circle cerrar"></i>
+      </form>
+    </div>
+  </div>
+
+  <header class="row-100">
+    <nav class="row-80 flex-justify">
+      <img class="logo-header" src="../images/logo.png">
+      <ul class="menu flex-justify">
+        <li class="menu__li"><a class="menu__li--a" href="/">Inicio</a></li>
+        <li class="menu__li"><a class="menu__li--a" href="#">Servicios</a></li>
+        <li class="menu__li"><a class="menu__li--a" href="#">Blog</a></li>
+        <li class="menu__li"><a class="menu__li--a" href="/contact">Contacto</a></li>
+        <li class="menu__li">
+          {{#if isAuthenticated}}
+            <a class="menu__li--a txt-blue" href="/home">Perfil</a>
+            {{else}}
+            <a class="abrir menu__li--a txt-blue" href="">Iniciar sesión</a>
+          {{/if}}
+        </li>
+      </ul>
+    </nav>
+  </header>
