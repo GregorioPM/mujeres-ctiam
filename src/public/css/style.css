@@ -10,6 +10,8 @@
     text-decoration: none;
 }
 
+body { overflow-x: hidden; }
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -194,8 +196,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .padding-tb
 {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .padding-tb-mini
@@ -217,8 +219,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .title-2
 {
-    font-size: 55px;
-    line-height: 55px;
+    font-size: 4vw;
+    line-height: 7vh;
 }
 
 .txt-normal
@@ -231,13 +233,15 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: #f2f2f2;
 }
 
+form { padding-top: 40px }
+
 .cont-cmp-form
 {
     align-items: center;
     border-radius: 5px;
     display: flex;
     height: 30px;
-    width: 300px;
+    width: 100%;
 }
 
 .cmp-form
@@ -251,6 +255,29 @@ input[type=number]::-webkit-outer-spin-button {
     margin-right: auto;
     padding: 0 1em;
 }
+.file-input {
+    visibility: hidden;
+    width: 0;
+    position: relative;
+}
+
+.file-input::before {
+    content: 'Selecciona o arrastra una imagen';
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    visibility: visible;
+    position: absolute;
+  }
 
 /*********** Header ***********/
 
@@ -332,9 +359,13 @@ input[type=number]::-webkit-outer-spin-button {
 /*********** Index ***********/
 
 #area-file {
-  resize: none;
   border: 1px solid #b2b2b2;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  resize: none;
   width: 100%;
 }
 
@@ -352,7 +383,7 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: #ffffff;
     border-radius: 5px;
     overflow: hidden;
-    width: 300px;
+    width: 30%;
 
     -webkit-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.10);
     -moz-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.10);
@@ -722,10 +753,47 @@ footer
 }
 
 .new-size-img {
-    width: 150px;
-    height: 150px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 70%;
+    height: 250px;
+
 }
 
 /********** Contacto ************/
+
+
+/************* Responsive **************/
+
+@media (max-width: 1024px)
+{
+    .row-70 { width: 85%; }
+}
+
+@media (max-width: 960px)
+{
+    .flex-justify { flex-direction: column; }
+
+    .flex { width: 100%; flex-direction: column; }
+
+    .row-50 { width: 100%; }
+
+    .title-2 { margin-top: 40px; font-size: 40px; line-height: 35px; }
+
+    .btn-form { margin-bottom: 40px }
+
+    .img-section-r { width: 70%; }
+
+    .service-index { margin-bottom: 50px; width: 80% }
+
+    .row-70 { width: 90%; }
+}
+
+@media (max-width: 768px)
+{
+    
+}
+
+@media (max-width: 375px)
+{
+    
+}
+
