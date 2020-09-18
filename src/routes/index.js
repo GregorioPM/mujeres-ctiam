@@ -26,6 +26,10 @@ router.post("/contact", (req, res) => {
     });
 });
 
+router.get("/list", (req, res) => {
+    res.render("list");
+});
+
 router.use("/login", login);
 
 router.use((req, res, next) => {
