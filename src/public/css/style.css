@@ -485,9 +485,9 @@ footer
     width: 90%;
 }
 
-/*********** Footre ***********/
+/*********** Footer ***********/
 
-/* .ico-photo-profile
+.ico-photo-profile
 {
     border-radius: 40px;
     height: 40px;
@@ -495,11 +495,29 @@ footer
     width: 40px;  
 }
 
-.ul-h-profile
+.ico-photo-profile img
 {
-    width: 120px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
 }
 
+.down-perfil-header
+{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.down-perfil-header i { font-size: 25px; }
+
+.name-user-header
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* 
 .art-profile
 {
     display: flex;

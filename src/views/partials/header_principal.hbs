@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/modal.css">
-  <link rel="stylesheet" href="css/modal-cuenta.css">
-  <link rel="stylesheet" href="css/spinner.css">
   <link rel="stylesheet" href="css/slider.css">
   <meta charset="UTF-8">
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/0dc3b1d201.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  {{!-- <link rel="icon" type="ico/png" href="images/favicon.png"> --}}
+  <link rel="icon" type="ico/png" href="images/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>...</title>
 </head>
@@ -37,16 +34,20 @@
   </div>
 
   <header class="row-100">
-    <nav class="row-90 flex-justify padding-tb-15">
-      <a href="">
-        <img class="logo-header" src="images/logo.png">
-      </a>
-      <ul class="ul-h-profile flex">
-        <figure class="ico-photo-profile">
-          <img class="img-100 profile-image" src="images/perfil/photo.jpg">
-        </figure>
-        <p class="name-user-header">brpenaranda</p>
-        <button onclick="modal_cuenta()" class="down-perfil-header"><i class="fas fa-caret-down"></i></button>
+    <nav class="row-90 flex-justify">
+      <img class="logo-header" src="../images/logo.png">
+      <ul class="menu flex-justify">
+        <li class="menu__li"><a class="menu__li--a" href="/">Inicio</a></li>
+        <li class="menu__li"><a class="menu__li--a" href="#">Servicios</a></li>
+        <li class="menu__li"><a class="menu__li--a" href="#">Blog</a></li>
+        <li class="menu__li"><a class="menu__li--a" href="/contact">Contacto</a></li>
+        <li class="menu__li">
+          {{#if isAuthenticated}}
+            <a class="menu__li--a txt-blue" href="/home">Perfil</a>
+            {{else}}
+            <a class="abrir menu__li--a txt-blue" href="">Iniciar sesión</a>
+          {{/if}}
+        </li>
       </ul>
     </nav>
   </header>
