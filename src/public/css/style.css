@@ -447,6 +447,8 @@ footer
     width: 200px;
 }
 
+.navegacion-footer { padding-left: 30px }
+
 .navegacion-footer__li
 {
     padding-top: 5px;
@@ -580,14 +582,14 @@ footer
 {
     padding-top: 3rem;
     padding-bottom: 3rem;
-    width: 80%;
+    width: 75%;
 }
 
 .c-profile__info__content
 {
     display: flex;
-    margin-right: auto;
-    width: 95%;
+    margin-left: auto;
+    width: 90%;
 }
 
 .c-profile__b1, .c-profile__b2 { width: 50%; }
@@ -677,49 +679,63 @@ footer
 
 .cont-options-profile
 {
-    border-left: 1px solid gray;
+    border-right: 1px solid gray;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    width: 20%;
+    width: 25%;
 }
 
 .cont-options-profile__content
 {
-    margin-left: auto;
+    margin-right: auto;
     width: 80%;
 }
 
-.cont-options-profile__content li { padding-bottom: 10px; }
+.cont-options-profile__content li
+{
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
 
-.cont-options-profile__content li i { font-size: 0px; }
+.cont-options-profile__content li i { font-size: 20px; }
 
 .cont-options-profile__content li .i-active
 {
     color: #29abe2;
-    font-size: 20px;
-    margin-left: 4px;
 }
 
 .cont-options-profile__content li a
 {
-    font-size: 16px;
+    font-size: 18px;
     color: black;
     padding: 0;
+    font-weight: bold;
+    padding-left: 15px;
 }
 
 .cont-options-profile__content li .a-active
 {
     color: #29abe2;
     font-size: 18px;
-    padding-left: 15px;
-    color: #29abe2;
 }
-
-.cont-options-profile__content .li-active { padding-bottom: 25px; }
 
 .cont-options-profile__content li:last-child { padding-bottom: 12px; }
 
-.cont-options-profile__content li:hover { font-weight: bold; transition: .5s; }
+.cont-options-profile__content li:hover 
+{ 
+    background-color: #f2f2f2;
+    font-weight: bold; 
+    transition: .5s; 
+}
+
+@media (max-width: 1063px) {
+
+    .cont-options-profile__content li { text-align: center; width: 45px; }
+    .cont-options-profile__content li a { display: none; }
+    .cont-options-profile { width: 8%; }
+    .c-profile__info { width: 92%; }
+}
 
 /********** Perfil Nuevo ***********/
 
@@ -937,6 +953,31 @@ footer
     .c-list__t-body { display: flex; flex-direction: column; }
 
     .c-list__column { border-right: 0; border-bottom: 1px solid gray; }
+
+    .menu 
+    {   
+        margin-top: 30px;
+        width: 100%; 
+    }
+
+    .menu__li 
+    {
+        display: flex;
+        padding-right: 0; 
+        width: 100%;
+        transition: .5s;
+    }
+    
+    .menu__li:hover { background-color: #f9f9f9; }
+    
+    .menu__li--a
+    {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px)
