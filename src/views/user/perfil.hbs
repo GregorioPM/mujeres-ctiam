@@ -65,7 +65,7 @@
                         <div class="c-profile__c">
                             <p class="c-profile__c--p">Nombre</p>
                             <div class="c-profile__c--input">
-                                <input id="" type="text" required>
+                                <input id="" type="text" value="{{user.name}}" required>
                             </div>
                         </div>
                         <div class="c-profile__c">
@@ -77,13 +77,13 @@
                         <div class="c-profile__c">
                             <p class="c-profile__c--p">Correo electrónico</p>
                             <div class="c-profile__c--input">
-                                <input id="" type="text" required>
+                                <input id="" type="text" value="{{user.email}}"  required>
                             </div>
                         </div>
                         <div class="c-profile__c">
                             <p class="c-profile__c--p">Descripción</p>
                             <div class="c-profile__c--textarea">
-                                <textarea name="" id=""></textarea>
+                                <textarea name="" id="">{{user.description}}</textarea>
                             </div>
                         </div>
                         <div class="c-profile__btn">
@@ -100,5 +100,6 @@
 <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"></script>
 <script src="js/uploadImage.js"></script>
+<script src="js/perfil.js"></script>
 
 {{> footer }}
