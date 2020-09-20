@@ -1,0 +1,127 @@
+.slideshow
+{
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slider li img 
+{ 
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+}
+
+.slider .caption
+{
+    align-items: center;
+    color: #fff;
+    display: flex;
+    height: 40vh;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    padding:15px 10px;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.li-dark:before
+{
+    background-color: #000000;
+    content: "";
+    position: absolute;
+    opacity: .4;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+}
+
+.caption p { font-size: 3vh; width: 50%; }
+
+.pagination
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    left: 0;
+    position: absolute;
+    top: 305px;
+    width: 100%;
+}
+
+.pagination-item
+{
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 22px;
+    margin: 0 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: all 300ms;
+    width: 22px;
+}
+
+.prueba
+{
+    align-items: center;
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.prueba:hover
+{
+    background-color: blueviolet;
+    cursor: pointer;
+}
+
+.pagination-item:hover { transform: scale(1.8); }
+
+.pagination-item img
+{
+    display: inline-block;
+    height: 100%;
+    max-width: none;
+    opacity: 0;
+    transform: scale(1);
+    transition:  all 300ms;
+}
+
+.pagination-item:active img { background: white; }
+
+.pagination-item:hover img
+{
+    opacity: 1;
+    transform: scale(1);
+}
+
+@media screen and (min-width:320px){
+    .slider li img { height: 375px; }
+    .slider .caption p { display: none; }
+    .slider .caption h1 { font-size: 60px; }
+}
+
+@media screen and (min-width:480px){
+    .slider .caption p { display: block; }
+    .slider .caption h1{ font-size: 40px; }
+    .slider li img{ width: 100%; height: 100%; }
+}
