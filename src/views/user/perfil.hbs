@@ -1,46 +1,66 @@
 {{> header}}
 
 <div id="ventana-cuenta"></div>
+<div id="modal"></div>
 
 <section class="c-profile">
     <article class="c-profile__content">
         <div class="cont-options-profile">
             <div class="cont-options-profile__content">
                 <li class="li-active">
-                    <i class="fas fa-edit i-active"></i>
-                    <a class="a-active" href="">Editar Perfil</a>
+                    <a class="a-active" href="">
+                        <i class="fas fa-edit i-active"></i>
+                        <p>Editar Perfil</p>
+                    </a>
                 </li>
                 <li>
-                    <i class="fas fa-lock"></i>
-                    <a class="" href="">Contraseña</a>
+                    <a class="" href="">
+                        <i class="fas fa-lock"></i>
+                        <p>Contraseña</p>
+                    </a>
                 </li>
                 <li>
-                    <i class="fas fa-user-edit"></i>
-                    <a class="" href="">Reg. persona</a>
+                    <a class="" href="">
+                        <i class="fas fa-user-edit"></i>
+                        <p>Reg. persona</p>
+                    </a>
                 </li>
                 <li>
-                    <i class="far fa-image"></i>
-                    <a class="" href="">Reg. banner</a>
+                    <a class="" href="">
+                        <i class="far fa-image"></i>
+                        <p>Reg. banner</p>
+                    </a>
                 </li>
                 <li>
-                    <i class="far fa-list-alt"></i>
-                    <a class="" href="/list">Lista persona</a>
+                    <a class="" href="/list">
+                        <i class="far fa-list-alt"></i>
+                        <p>Lista persona</p>
+                    </a>
                 </li>
                 <li>
-                    <i class="far fa-window-maximize"></i>
-                    <a class="" href="">Modal</a>
+                    <button onclick="modal()">Hola</button>
+                    {{!-- <a onclick="modal()" class="" href="">
+                        <i class="far fa-window-maximize"></i>
+                        <p>Modal</p>
+                    </a> --}}
                 </li>
                 <li>
-                    <i class="fas fa-box-open"></i>
-                    <a class="" href="">Servicios</a>
+                    <a class="" href="">
+                        <i class="fas fa-box-open"></i>
+                        <p>Servicios</p>
+                    </a>
                 </li>
                 <li>
-                    <i class="far fa-newspaper"></i>
-                    <a class="" href="">Blog</a>
+                    <a class="" href="">
+                        <i class="far fa-newspaper"></i>
+                        <p>Blog</p>
+                    </a>
                 </li>
                 <li>
-                    <i class="fas fa-phone-square-alt"></i>
-                    <a class="" href="/contact">Contacto</a>
+                    <a class="" href="/contact">
+                        <i class="fas fa-phone-square-alt"></i>
+                        <p>Contacto</p>
+                    </a>
                 </li>
             </div>
         </div>
@@ -90,7 +110,7 @@
                         </div>
                         <div class="c-profile__btn">
                             <button type="submit">Guardar</button>
-                            <button type="submit">Borrar</button>
+                            {{!-- <button type="reset">Borrar</button> --}}
                         </div>
                     </div>
                 </div>
@@ -104,5 +124,6 @@
 <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"></script>
 <script src="js/uploadImage.js"></script>
 <script src="js/perfil.js"></script>
+<script src="js/modal.js"></script>
 
 {{> footer }}

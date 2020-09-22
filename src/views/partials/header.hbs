@@ -2,51 +2,36 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/modal.css">
-  <link rel="stylesheet" href="css/modal-cuenta.css">
-  <link rel="stylesheet" href="css/spinner.css">
-  <link rel="stylesheet" href="css/slider.css">
-  <meta charset="UTF-8">
-  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/0dc3b1d201.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  {{!-- <link rel="icon" type="ico/png" href="images/favicon.png"> --}}
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>...</title>
+    {{!-- Google font --}}
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/modal-perfil.css">
+    <link rel="stylesheet" href="css/modal-cuenta.css">
+    <link rel="stylesheet" href="css/spinner.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0dc3b1d201.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="ico/png" href="images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...</title>
 </head>
 
 <body>
-  <div class="modal" data-visible={{modal}}>
-    <div class="modal__content">
-      <form action="/login/signin" method="POST">
-        <p>Iniciar sesión</p>
-        <div>
-          <input type="text" placeholder="Correo electrónico" id="correo" name="email" required>
-        </div>
-        <div>
-          <input type="password" placeholder="Contraseña" id="password" name="password" required>
-        </div>
-        <button class="btn-modal blue" type="submit">Entrar</button>
-        <a href="/login/signin/github">Entra con github</a>
-        <a href="/login/signin/google">Entra con google</a>
-        <button class="btn-gris" type="reset">Borrar información</button>
-        <i class="fas fa-times-circle cerrar"></i>
-      </form>
-    </div>
-  </div>
-
-  <header class="row-100">
-    <nav class="row-90 flex-justify padding-tb-15">
-      <a href="">
-        <img class="logo-header" src="images/logo.png">
-      </a>
-      <ul class="ul-h-profile flex">
-        <figure class="ico-photo-profile">
-          <img class="img-100 profile-image" src="images/perfil/photo.jpg">
-        </figure>
-        <p class="name-user-header">brpenaranda</p>
-        <button onclick="modal_cuenta()" class="down-perfil-header"><i class="fas fa-caret-down"></i></button>
-      </ul>
-    </nav>
-  </header>
+    <header class="h">
+        <nav class="h__content">
+            <a href="/">
+                <img class="h__content--img" src="images/logo.png">
+            </a>
+            <ul class="h__menu-account">
+                <figure class="h__menu-account__fig">
+                    <img class="h__menu-account__fig--img" src="images/perfil/photo.jpg">
+                </figure>
+                <p class="h__menu-account--name-user">brpenaranda</p>
+                <button onclick="modal_cuenta()" class="h__menu-account--ico"><i class="fas fa-caret-down"></i></button>
+            </ul>
+        </nav>
+    </header>

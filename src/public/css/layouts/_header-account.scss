@@ -1,0 +1,37 @@
+.h__menu-account
+{
+    align-items: center;
+    display: flex;
+}
+
+.h__menu-account__fig
+{
+    border-radius: 40px;
+    height: 40px;
+    overflow: hidden;
+    width: 40px;  
+}
+
+.h__menu-account__fig--img
+{
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.h__menu-account--name-user
+{
+    color: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.h__menu-account--ico
+{
+    background-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.h__menu-account--ico i { font-size: 25px; }

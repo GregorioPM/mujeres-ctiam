@@ -2,7 +2,7 @@ $(document).ready(function(){
     var imgPost=1;
     var imgItems= $('.slider li').length; //numero slides
     for (let i = 1; i <= imgItems; i++) {
-        $('.pagination').append(' <li class="pagination-item" for="1"> <img src="images/slider/imgSlider'+i+'.jpg">  </li>');
+        $('.pagination').append(' <li class="pagination-item" for="1"> <img src="images/slider/ctiam'+i+'.jpg">  </li>');
         
     }
     

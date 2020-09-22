@@ -1,39 +1,39 @@
-{{> header}}
+{{> header_principal}}
 
 <div class="slideshow">
   <ul class="slider">
       <li class="li-dark">
-          <img src="images/slider/imgSlider1.jpg">
+          <img src="images/slider/ctiam1.jpg">
           <section class="caption">
-              <h1>Bosque</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio id quibusdam totam delectus at reprehenderit.</p>
+              {{!-- <h1>CTIAM</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio id quibusdam totam delectus at reprehenderit.</p> --}}
           </section>
       </li>
       <li class="li-dark">
-          <img src="images/slider/imgSlider2.jpg">
+          <img src="images/slider/ctiam2.jpg">
           <section class="caption">
-              <h1>Canada</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio id quibusdam totam delectus at reprehenderit.</p>
+              {{!-- <h1>APRENDIZAJE</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio id quibusdam totam delectus at reprehenderit.</p> --}}
           </section>
       </li>
       <li class="li-dark">
-          <img src="images/slider/imgSlider3.jpg">
+          <img src="images/slider/ctiam3.jpg">
           <section class="caption">
-              <h1>Jamaica</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio id quibusdam totam delectus at reprehenderit.</p>
+              {{!-- <h1>PRODUCTOS</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio id quibusdam totam delectus at reprehenderit.</p> --}}
           </section>
       </li>
       <li class="li-dark">
-          <img src="images/slider/imgSlider4.jpg">
+          <img src="images/slider/ctiam4.jpg">
           <section class="caption">
-              <h1>Venezia</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio id quibusdam totam delectus at reprehenderit.</p>
+              {{!-- <h1>CHARLAS</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio id quibusdam totam delectus at reprehenderit.</p> --}}
           </section>
       </li>
   </ul>
   <ol class="pagination"></ol>
 </div>
-
+{{!-- 
 <section class="row-100 sec-services">
   <h2 class="title-service">Nuestros servicios</h2>
   <article class="row-90 flex-justify">
@@ -85,44 +85,92 @@
       </div>
     </div>
   </article>
+</section> --}}
+
+<section class="c-product">
+    <article class="c-product__content">
+        <p class="c-product--title">Más populares</p>
+
+        <div class="c-product-cols">
+            <div class="c-product-col">
+                <div class="c-product-col__content">
+                    <figure class="c-product-col__fig">
+                        <img class="c-product-col__fig--img" src="images/productos/1.jpg">
+                    </figure>
+                    <div class="c-product-col__info">
+                        <p class="c-product-col__info--p">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium totam aut aliquid facilis dolores autem sit corporis.
+                        </p>
+                        <p class="c-product-col__info--price">$ 26.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="c-product-col">
+                <div class="c-product-col__content">
+                    <figure class="c-product-col__fig">
+                        <img class="c-product-col__fig--img" src="images/productos/2.jpg">
+                    </figure>
+                    <div class="c-product-col__info">
+                        <p class="c-product-col__info--p">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium totam aut aliquid facilis dolores autem sit corporis.
+                        </p>
+                        <p class="c-product-col__info--price">$ 29.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="c-product-col">
+                <div class="c-product-col__content">
+                    <figure class="c-product-col__fig">
+                        <img class="c-product-col__fig--img" src="images/productos/3.jpg">
+                    </figure>
+                    <div class="c-product-col__info">
+                        <p class="c-product-col__info--p">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium totam aut aliquid facilis dolores autem sit corporis.
+                        </p>
+                        <p class="c-product-col__info--price">$ 36.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
 </section>
 
 <section class="row-100 flex bcolor-fd">
-  <figure class="row-50">
-    <img class="img-100" src="images/index/1.JPG">
-  </figure>
-  <div class="row-50">
-    <div class="row-80">
-      <h2 class="title-2">Nos preocupamos <br> por tu bienestar</h2>
-      <p class="txt-normal">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quasi illum ratione asperiores nam? Maxime delectus
-        corrupti animi ducimus perspiciatis, numquam cum, id quidem quibusdam exercitationem suscipit sapiente earum
-        dicta.
-      </p>
-      <a class="btn-form" href="">Ver más</a>
+    <figure class="row-50">
+        <img class="img-100" src="images/index/1.JPG">
+    </figure>
+    <div class="row-50">
+        <div class="row-80">
+            <h2 class="title-2">Nos preocupamos <br> por tu bienestar</h2>
+            <p class="txt-normal">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quasi illum ratione asperiores nam? Maxime delectus
+              corrupti animi ducimus perspiciatis, numquam cum, id quidem quibusdam exercitationem suscipit sapiente earum
+              dicta.
+            </p>
+            <a class="btn-form" href="">Ver más</a>
+        </div>
     </div>
-  </div>
 </section>
 
 <section class="row-100 flex padding-tb">
-  <div class="row-50">
-    <div class="row-60">
-      <h2 class="title-2">Lorem ipsum</h2>
-      <p class="txt-normal">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quasi illum ratione asperiores nam? Maxime delectus
-        corrupti animi ducimus perspiciatis, numquam cum, id quidem quibusdam exercitationem suscipit sapiente earum
-        dicta.
-      </p>
-      <a class="btn-form" href="">Ver más</a>
+    <div class="row-50">
+        <div class="row-60">
+            <h2 class="title-2">Lorem ipsum</h2>
+            <p class="txt-normal">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quasi illum ratione asperiores nam? Maxime delectus
+              corrupti animi ducimus perspiciatis, numquam cum, id quidem quibusdam exercitationem suscipit sapiente earum
+              dicta.
+            </p>
+            <a class="btn-form" href="">Ver más</a>
+        </div>
     </div>
-  </div>
-  <div class="row-50">
-    <figure class="img-section-r">
-      <img class="img-100" src="images/index/2.JPG">
-    </figure>
-  </div>
+    <div class="row-50">
+        <figure class="img-section-r">
+            <img class="img-100" src="images/index/2.JPG">
+        </figure>
+    </div>
 </section>
 
 <script src="js/main.js"></script>
-
+<script src="js/modalLogin.js"></script>
 {{> footer}}

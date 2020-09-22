@@ -8,7 +8,7 @@ function modal_cuenta () {
                 "<a class=\"c-cuenta__li--a\" href=\"\"><i class=\"fas fa-bell\"></i>Notificaciones</a>" +
             "</li>" +
             "<li class=\"c-cuenta__li\">" +
-                "<a class=\"c-cuenta__li--a\" href=\"\"><i class=\"fas fa-sign-out-alt\"></i>Cerrar sesión</a>" +
+                "<a class=\"c-cuenta__li--a\" href=\"/login/logout\"><i class=\"fas fa-sign-out-alt\"></i>Cerrar sesión</a>" +
             "</li>" +
         "</div>" + 
     "</div>";
@@ -20,3 +20,4 @@ function modal_cuenta () {
     }
     return temp;
 }
+

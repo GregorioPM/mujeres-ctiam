@@ -1,0 +1,48 @@
+.c-modal
+{
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    left: 0;
+    min-width: 100%;
+    overflow-x: hidden;
+    position: fixed;
+    transition-duration: .5s;
+    top: 0;
+    z-index: 1000;
+}
+
+.c-modal__content
+{
+    align-items: center;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    height: 700px;
+    width: 500px;
+}
+
+.form-modal
+{
+    height: 620px;
+    width: 90%;
+}
+
+.title-modal { font-size: 25px; }
+
+.c-modal__box
+{
+    align-items: center;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 100%;
+}
+
+.c-modal__box--input
+{
+    height: 30px;
+    width: 95%;
+}

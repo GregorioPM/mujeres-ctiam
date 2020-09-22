@@ -7,13 +7,15 @@ const user = require("./user");
 
 router.get("/", (req, res) => {
     res.render("index", {
-        title: "Platzi",
+        title: "Mujeres CTIAM",
         isAuthenticated: req.user != undefined,
     });
 });
 
 router.get("/contact", (req, res) => {
-    res.render("contact");
+    res.render("contact", {
+        title: "Contacto | Mujeres CTIAM",
+    });
 });
 
 router.post("/contact", (req, res) => {
@@ -27,7 +29,9 @@ router.post("/contact", (req, res) => {
 });
 
 router.get("/list", (req, res) => {
-    res.render("list");
+    res.render("list", {
+        title: "Lista | Mujeres CTIAM",
+    });
 });
 
 router.use("/login", login);

@@ -1,0 +1,306 @@
+:root
+{
+    --purple: #C50084;
+}
+
+@import "index/index";
+@import "index/products";
+@import "index/slider";
+@import "layouts/header";
+@import "layouts/header-account";
+@import "layouts/footer";
+// @import "perfil/lista";
+@import "perfil/form";
+@import "modals/modal";
+@import "modals/modal-account";
+@import "modals/modal-perfil";
+@import "files/spinner";
+@import "list/list";
+@import "contact/contact";
+
+*
+{
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    resize: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body { overflow-x: hidden; }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.row-100
+{
+    overflow: hidden;
+    width: 100%;
+}
+
+.row-90
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.row-80
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.row-70
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.row-60
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.row-50
+{
+    width: 50%;
+}
+
+.flex
+{
+    align-items: center;
+    display: flex;
+}
+
+.flex-justify
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-align-top
+{
+    align-items: flex-start;
+}
+
+.flex-horizontal
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-3
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-5
+{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-6
+{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.grid-7
+{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.grid-8
+{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.btn
+{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 1px solid #b2b2b2;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    height: 40px;
+    margin-top: 40px;
+    transition: .5s;
+    width: 100%;
+}
+
+.btn-form
+{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: #29abe2;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    height: 40px;
+    margin-top: 30px;
+    transition: .5s;
+    width: 150px;
+}
+
+.btn-form:hover
+{
+    background-color: #000000;
+}
+
+.btn a { color: black; }
+
+.btn:hover a
+{
+    color: white;
+}
+
+.btn:hover
+{
+    background-color: #0FA12E;
+    border: 1px solid #0FA12E;
+    color: white;
+}
+
+.btn-a
+{
+    color: black;
+}
+
+.btn-30
+{
+    border-radius: 30px;
+}
+
+.img-100
+{
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+}
+
+.img-section-r
+{
+    border-radius: 10px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    width: 350px;
+}
+
+.padding-tb
+{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.padding-tb-mini
+{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.padding-tb-15
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.padding-b-15
+{
+    padding-bottom: 15px;
+}
+
+.title-2
+{
+    font-size: 4vw;
+    line-height: 7vh;
+}
+
+.txt-normal
+{
+    padding-top: 30px;
+}
+
+.bcolor-fd
+{
+    background-color: #f2f2f2;
+}
+
+form { padding-top: 40px }
+
+.cont-cmp-form
+{
+    align-items: center;
+    border-radius: 5px;
+    display: flex;
+    height: 30px;
+    width: 100%;
+}
+
+.cmp-form
+{
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid #B2B2B2;
+    height: 100%;
+    flex-basis: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1em;
+}
+.file-input {
+    visibility: hidden;
+    width: 0;
+    position: relative;
+}
+
+.file-input::before {
+    content: 'Selecciona o arrastra una imagen';
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    visibility: visible;
+    position: absolute;
+  }
