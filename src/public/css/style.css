@@ -58,6 +58,7 @@
 .service-index__info--title {
   font-size: 20px;
   font-weight: bold;
+  padding-bottom: 20px;
 }
 
 .service-index__info--p {
@@ -79,6 +80,7 @@
 }
 
 .c-product {
+  background-color: #f9f9f9;
   width: 100%;
 }
 
@@ -102,14 +104,25 @@
 }
 
 .c-product-col {
+  background-color: #ffffff;
+  border-radius: 5px;
+  transition: .5s;
   width: 100%;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.c-product-col:hover {
+  box-shadow: 0px 0px 22px -4px rgba(0, 0, 0, 0.35);
+}
+
+.c-product-col:hover .c-product-col__info--price {
+  font-size: 20px;
+  padding-top: 10px;
 }
 
 .c-product-col__content {
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 40px;
+  width: 100%;
 }
 
 .c-product-col__fig {
@@ -127,10 +140,11 @@
 }
 
 .c-product-col__info {
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 20px;
-  padding-bottom: 20px;
   text-align: center;
-  width: 100%;
+  width: 80%;
 }
 
 .c-product-col__info--p {
@@ -138,8 +152,9 @@
 }
 
 .c-product-col__info--price {
-  font-size: 20px;
-  padding-top: 10px;
+  font-size: 0px;
+  padding-top: 0px;
+  transition: .5s;
 }
 
 .slideshow {
@@ -307,12 +322,59 @@
   display: flex;
 }
 
+.h__search {
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  justify-content: space-around;
+  display: flex;
+  height: 35px;
+  width: 350px;
+}
+
+.h__search__c {
+  width: 290px;
+}
+
+.h__search--input {
+  font-size: 14px;
+  width: 100%;
+}
+
+.h__search--ico {
+  background-color: transparent;
+  cursor: pointer;
+  width: 20px;
+}
+
+.h__menu__a-img {
+  margin-right: 20px;
+}
+
 .h__menu--li {
+  margin-right: 2px;
   align-items: center;
   display: flex;
-  justify-content: space-between;
-  height: 50px;
-  padding-right: 20px;
+  justify-content: center;
+  border-radius: 35px;
+  height: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: bold;
+  transition: .5s;
+}
+
+.h__menu--li:hover {
+  background-color: #920061;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 35px;
+  height: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: bold;
+  transition: .5s;
 }
 
 .h__menu--li-btn {
@@ -347,6 +409,45 @@
   color: #ffffff;
   font-size: 20px;
   padding-left: 14px;
+}
+
+.h-list {
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.h-list__content {
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+}
+
+.h-list__ul {
+  align-items: center;
+  display: flex;
+}
+
+.h-list__li {
+  padding-right: 20px;
+  padding-bottom: 7px;
+  padding-top: 7px;
+}
+
+.h-list__li:last-child {
+  padding-right: 0;
+}
+
+.h-list__li--a {
+  color: #ffffff;
+  font-size: 12px;
+  opacity: .6;
+}
+
+.h-list__li--a:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
 
 .h__menu-account {
@@ -398,8 +499,8 @@ footer {
   justify-content: space-between;
   margin-right: auto;
   margin-left: auto;
-  padding-bottom: 15px;
-  padding-top: 15px;
+  padding-bottom: 55px;
+  padding-top: 55px;
   width: 90%;
 }
 
@@ -862,6 +963,117 @@ footer {
   padding-right: 7px;
 }
 
+.modal-category {
+  align-items: center;
+  border-radius: 7px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 95px;
+  left: 200px;
+  width: 180px;
+  z-index: 1000;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.33);
+}
+
+.modal-category__content {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  width: 80%;
+}
+
+.modal-category__li {
+  border-radius: 30px;
+  margin-bottom: 2px;
+  padding: 5px 10px;
+  transition: .5s;
+}
+
+.modal-category__li:hover {
+  background-color: #f2f2f2;
+}
+
+.modal-category__li--a {
+  display: flex;
+  color: #C50084;
+  width: 100%;
+}
+
+.c-title-questions {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+}
+
+.c-title-questions h1 {
+  padding-top: 3rem;
+  width: 75%;
+}
+
+.c-preguntas-frecuentes {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+}
+
+.c-preguntas-frecuentes__ul {
+  background: white;
+  border-radius: 10px;
+  font-size: 19px;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 75%;
+}
+
+.c-preguntas-frecuentes__li {
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  padding-right: 15px;
+}
+
+.c-preguntas-frecuentes__li i {
+  font-size: 21px;
+  transition: 0.3s;
+}
+
+.c-preguntas-frecuentes__li span {
+  transition: 0.3s;
+}
+
+.c-preguntas-frecuentes__li:hover span {
+  margin-left: 15px;
+}
+
+.c-preguntas-frecuentes__li:last-child {
+  border: none;
+}
+
+.c-preguntas-frecuentes__respuesta {
+  background: #d1d1d1;
+  height: 0;
+  overflow: hidden;
+  padding: 0 14px;
+  transition: 0.5s;
+  text-align: justify;
+}
+
+.resp_act {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid lightgrey;
+}
+
+.ico_resp_act {
+  transform: rotate(180deg);
+}
+
 .c-modal {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.7);
@@ -1053,6 +1265,59 @@ footer {
 
 .c-list__actions--a i {
   font-size: 20px;
+}
+
+.c-1-index {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.c-1-index__content {
+  padding-bottom: 80px;
+  padding-top: 60px;
+  width: 90%;
+}
+
+.c-1-index__info {
+  padding-bottom: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.c-1-index__info--title {
+  font-size: 30px;
+  padding-bottom: 30px;
+}
+
+.c-1-index__info--p {
+  color: #313131;
+}
+
+.c-1-index__cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  grid-gap: 30px;
+  padding-top: 40px;
+}
+
+.c-1-index__col {
+  text-align: center;
+}
+
+.c-1-index__col i {
+  color: #C50084;
+  font-size: 90px;
+  padding-bottom: 30px;
+}
+
+.c-1-index__col--title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.c-1-index__col--p {
+  padding-top: 15px;
 }
 
 .cont-img-contact {
@@ -1258,9 +1523,11 @@ input[type=number]::-webkit-outer-spin-button {
   cursor: pointer;
   color: white;
   height: 40px;
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
   transition: .5s;
-  width: 100%;
+  width: 80%;
 }
 
 .btn-form {
@@ -1290,8 +1557,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .btn:hover {
-  background-color: #0FA12E;
-  border: 1px solid #0FA12E;
+  background-color: var(--purple);
+  border: 1px solid var(--purple);
   color: white;
 }
 
@@ -1349,10 +1616,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 .bcolor-fd {
   background-color: #f2f2f2;
-}
-
-form {
-  padding-top: 40px;
 }
 
 .cont-cmp-form {

@@ -1,0 +1,44 @@
+.modal-category
+{
+    align-items: center;
+    border-radius: 7px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:95px;
+    left: 200px;
+    width: 180px;
+    z-index: 1000;
+
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.33);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.33);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.33);
+}
+
+.modal-category__content
+{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 80%;
+}
+
+.modal-category__li
+{
+    border-radius: 30px;
+    margin-bottom: 2px;
+    padding: 5px 10px;
+    transition: .5s;
+}
+
+.modal-category__li:hover
+{
+    background-color: #f2f2f2;
+}
+
+.modal-category__li--a
+{
+    display: flex;
+    color: #C50084;
+    width: 100%;
+}

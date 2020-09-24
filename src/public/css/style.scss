@@ -13,9 +13,12 @@
 @import "perfil/form";
 @import "modals/modal";
 @import "modals/modal-account";
+@import "modals/modal-category";
+@import "questions/questions";
 @import "modals/modal-perfil";
 @import "files/spinner";
 @import "list/list";
+@import "index/c1-index";
 @import "contact/contact";
 
 *
@@ -153,9 +156,11 @@ input[type=number]::-webkit-outer-spin-button {
     cursor: pointer;
     color: white;
     height: 40px;
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
     transition: .5s;
-    width: 100%;
+    width: 80%;
 }
 
 .btn-form
@@ -187,8 +192,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .btn:hover
 {
-    background-color: #0FA12E;
-    border: 1px solid #0FA12E;
+    background-color: var(--purple);
+    border: 1px solid  var(--purple);
     color: white;
 }
 
@@ -258,8 +263,6 @@ input[type=number]::-webkit-outer-spin-button {
 {
     background-color: #f2f2f2;
 }
-
-form { padding-top: 40px }
 
 .cont-cmp-form
 {

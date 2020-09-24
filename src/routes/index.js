@@ -34,6 +34,12 @@ router.get("/list", (req, res) => {
     });
 });
 
+router.get("/questions", (req, res) => {
+    res.render("questions", {
+        title: "Preguntas frecuentes | Mujeres CTIAM",
+    });
+});
+
 router.use("/login", login);
 
 router.use((req, res, next) => {

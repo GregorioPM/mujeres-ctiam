@@ -11,7 +11,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/0dc3b1d201.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="icon" type="ico/png" href="images/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>...</title>
 </head>
@@ -34,22 +33,34 @@
         </div>
     </div>
 
+    <div class="h-list">
+        <div class="h-list__content">
+            <ul class="h-list__ul">
+                <li class="h-list__li"><a class="h-list__li--a" href="/contact">¿Necesitas ayuda?</a></li>
+                <li class="h-list__li"><a class="h-list__li--a" href="/questions">Preguntas frecuentes</a></li>
+                <li class="h-list__li"><a class="h-list__li--a" href="">Como comprar</a></li>
+                <li class="h-list__li"><a class="h-list__li--a" href="">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+
     <header class="h">
         <nav class="h__content">
-            <a href="/"><img class="h__content--img" src="images/logo.png"></a>
             <ul class="h__menu">
+                <a class="h__menu__a-img" href="/"><img class="h__content--img" src="images/logo.png"></a>
                 <li class="h__menu--li">
-                    <button onclick="" class="h__menu--a">
+                    <button onclick="showCategory()" class="h__menu--a">
                       Categorias<i class="fas fa-caret-down"></i>
                     </button>
                 </li>
-                <li class="h__menu--li"><a class="h__menu--a" href="#">CTIAM</a></li>
-                <li class="h__menu--li"><a class="h__menu--a" href="#">Contacto</a></li>
-                {{#unless isAuthenticated}}
-                <li class="h__menu--li"></li>
+                <li class="h__menu--li"><a class="h__menu--a" href="https://ctiam.dasscol.co/" target="_blank">CTIAM</a></li>
+                {{!-- <li class="h__menu--li"><a class="h__menu--a" href="/contact">Contacto</a></li> --}}
+                {{!-- {{#unless isAuthenticated}}
+                {{!--<li class="h__menu--li">
                     <a class="h__menu--a" href="/registrar">Crea tu cuenta</a>
-                </li>
-                {{/unless}}
+                </li>--}}
+                {{!-- {{/unless}} --}}
+
                 <li class="h__menu--li-btn">
                   {{#if isAuthenticated}}
                     <a class="h__menu--a" href="/home">Perfil</a>
@@ -58,5 +69,17 @@
                   {{/if}}
                 </li>
             </ul>
+            <form action="">
+                <div class="h__search">
+                    <div class="h__search__c">
+                        <input class="h__search--input" type="text" placeholder="Buscar">
+                    </div>
+                    <button type="submit" onclick="" class="h__search--ico">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </form>
         </nav>
     </header>
+
+    <div id="c-category"></div>
