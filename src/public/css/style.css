@@ -295,6 +295,14 @@
   }
 }
 
+.c-slider-new {
+  width: 100%;
+}
+
+.c-slider-new__img {
+  width: 100%;
+}
+
 .h {
   background-color: #C50084;
   display: flex;
@@ -448,6 +456,95 @@
 .h-list__li--a:hover {
   opacity: 1;
   text-decoration: underline;
+}
+
+.h__ico-show {
+  cursor: pointer;
+  padding-left: 15px;
+}
+
+.h__ico-show--i {
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.h__form {
+  align-items: center;
+  display: flex;
+}
+
+/************** Slider ******************/
+.c-slider {
+  background-color: #ffffff;
+  max-height: 500px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.c-slider__txt {
+  align-items: center;
+  display: flex;
+  height: 450px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.c-slider__txt__content {
+  padding-left: 5vw;
+  width: 650px;
+}
+
+.c-slider__logo {
+  width: 350px;
+}
+
+.c-slider__info--h1 {
+  color: #ffffff;
+  font-size: 4vw;
+}
+
+.c-slider__info--p {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.c-slider__c-imgs {
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.c-slider-fondo-rosa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 500px;
+  width: 60%;
+  z-index: 1;
+  background: #d61398;
+  background: -webkit-gradient(left top, right top, color-stop(0%, #d61398), color-stop(70%, #d61398), color-stop(81%, rgba(214, 19, 152, 0.63)), color-stop(84%, rgba(214, 19, 152, 0.53)), color-stop(93%, rgba(247, 22, 176, 0.23)), color-stop(100%, rgba(247, 22, 176, 0)));
+  background: linear-gradient(to right, #d61398 0%, #d61398 70%, rgba(214, 19, 152, 0.63) 81%, rgba(214, 19, 152, 0.53) 84%, rgba(247, 22, 176, 0.23) 93%, rgba(247, 22, 176, 0) 100%);
+}
+
+.c-slider__c-img:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 500px;
+  width: 60%;
+  z-index: 0;
+}
+
+.c-slider__c-img img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
 }
 
 .h__menu-account {
@@ -971,7 +1068,7 @@ footer {
   justify-content: center;
   position: absolute;
   top: 95px;
-  left: 200px;
+  left: 210px;
   width: 180px;
   z-index: 1000;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.33);

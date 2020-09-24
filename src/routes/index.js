@@ -7,7 +7,7 @@ const user = require("./user");
 
 router.get("/", (req, res) => {
     res.render("index", {
-        title: "Mujeres CTIAM",
+        title: "Tienda CTIAM",
         isAuthenticated: req.user != undefined,
     });
 });
