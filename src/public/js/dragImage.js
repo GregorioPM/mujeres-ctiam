@@ -20,7 +20,7 @@ areaFile.addEventListener("drop", async (e) => {
     }, 2000);
     areaFile.classList.remove("dragging-file");
     const selectedFile = e.dataTransfer.files[0];
-    const task = uploadImage(selectedFile);
+    const task = uploadImage(selectedFile, "profileImages");
     const onProgress = (e) => {};
     const onError = (e) => {
         console.log(e);

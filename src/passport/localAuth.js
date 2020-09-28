@@ -1,15 +1,22 @@
 const LocalStrategy = require("passport-local").Strategy;
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
-const GitHubStrategy = require("passport-github").Strategy;
 const passport = require("passport");
-const User = require("../repository/schemas/User");
+const { User } = require("../repository/database");
 
 passport.serializeUser((user, done) => {
     done(null, user.id);
 });
 
-passport.deserializeUser((id, done) => {
-    User.findById(id, done).select("-password").lean(true);
+passport.deserializeUser(async (id, done) => {
+    const user = await User.findOne({
+        where: {
+            id,
+        },
+    });
+    if (!user) {
+        return done(null, false);
+    }
+    return done(null, user.dataValues);
 });
 
 passport.use(
@@ -21,20 +28,38 @@ passport.use(
             passReqToCallback: true,
         },
         async (req, email, password, done) => {
-            const userDB = await User.findOne({ email });
+            const userDB = await User.findOne({
+                where: {
+                    email,
+                },
+            });
             if (userDB) {
                 return done(
                     null,
                     false,
-                    req.flash("signupMessage", "The email is yet exits")
+                    req.flash(
+                        "signupMessage",
+                        "El email ingresado ya está asociado a una cuenta."
+                    )
                 );
             } else {
-                const user = new User({
+                const user = await User.create({
                     email,
-                    name: req.body.name,
+                    firstName: req.body.firstName,
+                    lastName: "Gómez",
                     password: User.encryptPassword(password),
                 });
-                user.save(done);
+                if (user) {
+                    return done(null, user.dataValues);
+                }
+                return done(
+                    null,
+                    false,
+                    req.flash(
+                        "signupMessage",
+                        "No ha sido posible crear la cuenta, error inesperado"
+                    )
+                );
             }
         }
     )
@@ -49,45 +74,29 @@ passport.use(
             passReqToCallback: true,
         },
         async (req, email, password, done) => {
-            const user = await User.findOne({ email });
+            const user = await User.findOne({
+                where: {
+                    email,
+                },
+            });
             if (!user) {
                 return done(
                     null,
                     false,
-                    req.flash("signingMessage", "No user found")
+                    req.flash("signingMessage", "Usuario no encontrado")
                 );
             }
             if (!user.comparePassword(password)) {
                 return done(
                     null,
                     false,
-                    req.flash("signingMessage", "Email or password incorrect")
+                    req.flash(
+                        "signingMessage",
+                        "Correo o contraseña incorrectos"
+                    )
                 );
             }
-            done(null, user);
-        }
-    )
-);
-
-passport.use(
-    "github",
-    new GitHubStrategy(
-        {
-            clientID: process.env.CLIENT_GITHUB_ID,
-            clientSecret: process.env.CLIENT_GITHUB_SECRET,
-            callbackURL: "http://localhost:4000/login/github/callback",
-        },
-        async (accessToken, refreshToken, profile, done) => {
-            const profileJSON = JSON.parse(profile._raw);
-            const { email } = profileJSON;
-            if (email) {
-                const user = await User.findOne({ email });
-                if (!user) {
-                    return done(null, false);
-                }
-                return done(null, user);
-            }
-            return done(null, false);
+            done(null, user.dataValues);
         }
     )
 );
@@ -103,13 +112,31 @@ passport.use(
             const profileJSON = profile._json;
             const { email } = profileJSON;
             if (email) {
-                const user = await User.findOne({ email });
+                const user = await User.findOne({
+                    where: {
+                        email,
+                    },
+                });
                 if (!user) {
-                    return done(null, false);
+                    return done(
+                        null,
+                        false,
+                        req.flash(
+                            "signingMessage",
+                            "Este correo no está asociado a ninguna cuenta regitrada"
+                        )
+                    );
                 }
-                return done(null, user);
+                return done(null, user.dataValues);
             }
-            return done(null, false);
+            return done(
+                null,
+                false,
+                req.flash(
+                    "signingMessage",
+                    "No se ha podido acceder a tu correo de Google"
+                )
+            );
         }
     )
 );
