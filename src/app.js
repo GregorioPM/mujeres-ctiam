@@ -1,14 +1,10 @@
 require("dotenv").config();
 require("../config");
-const {
-    allowInsecurePrototypeAccess,
-} = require("@handlebars/allow-prototype-access");
 const express = require("express");
 const app = express();
 const flash = require("connect-flash");
-const Handlebars = require("handlebars");
 const hbs = require("express-handlebars");
-const mongoose = require("./repository/database");
+require("./repository/database");
 const morgan = require("morgan");
 const passport = require("passport");
 const path = require("path");
@@ -23,7 +19,6 @@ app.engine(
         extname: "hbs",
         defaultLayout: "layout",
         layoutsDir: path.join(__dirname, "/views", "/layouts"),
-        handlebars: allowInsecurePrototypeAccess(Handlebars),
     })
 );
 
@@ -31,7 +26,6 @@ app.set("port", process.env.PORT);
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 
-mongoose.connect();
 app.use(morgan(process.env.NODE_ENV));
 app.use(express.json());
 app.use(

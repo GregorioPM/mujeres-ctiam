@@ -9,8 +9,8 @@ firebase.initializeApp({
     measurementId: "G-6H8RVM7WG8",
 });
 
-function uploadImage(file) {
-    const ref = firebase.storage().ref(`/images/${file.name}`);
+function uploadImage(file, folder) {
+    const ref = firebase.storage().ref(`/${folder}/${file.name}`);
     const task = ref.put(file);
     return task;
 }

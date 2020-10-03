@@ -9,6 +9,10 @@ router.get("/", (req, res) => {
     });
 });
 
+router.get("/signup", (req, res) => {
+    res.render("user/register");
+});
+
 router.post(
     "/signup",
     passport.authenticate("local-signup", {
@@ -27,8 +31,6 @@ router.post(
     })
 );
 
-router.get("/signin/github", passport.authenticate("github"));
-
 router.get(
     "/signin/google",
     passport.authenticate("google", { scope: ["profile", "email"] })
@@ -37,15 +39,6 @@ router.get(
 router.get(
     "/google/callback",
     passport.authenticate("google", {
-        successRedirect: "/home",
-        failureRedirect: "/login",
-        passReqToCallback: true,
-    })
-);
-
-router.get(
-    "/github/callback",
-    passport.authenticate("github", {
         successRedirect: "/home",
         failureRedirect: "/login",
         passReqToCallback: true,

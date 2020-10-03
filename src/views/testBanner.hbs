@@ -1,0 +1,17 @@
+{{> header}}
+<form>
+    <input type="file" class="form-control file-input" name="imagenPrimaria"
+        style="height: 40px;width: 90%; margin-left: auto; margin-right: auto;">
+
+    <input type="file" class="form-control file-input" name="imagenSecundaria"
+        style="height: 40px;width: 90%; margin-left: auto; margin-right: auto;">
+    <input type="text" name="textoPrincipal" placeholder="texto">
+    <input type="text" name="enlace" placeholder="enlace">
+    <button id="saveBanner">Guardar</button>
+</form>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"></script>
+<script src="js/updateBanner.js"></script>
+<script src="js/uploadImage.js"></script>
+
+{{> footer}}

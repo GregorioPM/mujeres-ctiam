@@ -1,18 +1,41 @@
-const mongoose = require("mongoose");
+const { Sequelize } = require("sequelize");
 
-module.exports = database = {
-    connect() {
-        mongoose.connect(
-            process.env.URLDB,
-            {
-                useNewUrlParser: true,
-                useUnifiedTopology: true,
-            },
-            (err, res) => {
-                if (err) throw err;
-                console.log("db conected");
-            }
-        );
-        mongoose.set("useCreateIndex", true);
-    },
+const sequelize = new Sequelize("database_ctiam", "root", "", {
+    host: "localhost",
+    dialect: "mysql",
+});
+
+exports.sequelize = sequelize;
+
+const Address = require("../models/Direccion");
+const Category = require("../models/Categoria");
+const City = require("../models/Ciudad");
+const LandMark = require("../models/Marca");
+const Order = require("../models/Pedido");
+const Store = require("../models/Tienda");
+const User = require("../models/Usuario");
+
+(async () => {
+    sequelize.drop();
+    sequelize.sync({ force: true }).then(() => console.log("tables created"));
+})();
+
+require("../asociation")({
+    Address,
+    Category,
+    City,
+    LandMark,
+    Order,
+    Store,
+    User,
+});
+
+exports.models = {
+    Address,
+    Category,
+    City,
+    LandMark,
+    Order,
+    Store,
+    User,
 };
