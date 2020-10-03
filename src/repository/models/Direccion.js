@@ -1,9 +1,29 @@
-module.exports = (sequelize, DataTypes) => {
-    const Address = sequelize.define("direcciones", {
+const { DataTypes } = require("sequelize");
+const { sequelize } = require("../database");
+const City = require("./Ciudad");
+const User = require("./Usuario");
+
+const Address = sequelize.define(
+    "direccion",
+    {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
+        },
+        id_usuario: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: User,
+                key: "id",
+            },
+        },
+        id_ciudad: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: City,
+                key: "id",
+            },
         },
         barrio: {
             type: DataTypes.STRING(12),
@@ -27,6 +47,8 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(),
             allowNull: false,
         },
-    });
-    return Address;
-};
+    },
+    { freezeTableName: true }
+);
+
+module.exports = Address;

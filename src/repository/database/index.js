@@ -1,25 +1,41 @@
-const { Sequelize, DataTypes } = require("sequelize");
-const AddressModel = require("../models/Direccion");
-const CityModel = require("../models/Ciudad");
-const UserModel = require("../models/Usuario");
+const { Sequelize } = require("sequelize");
 
 const sequelize = new Sequelize("database_ctiam", "root", "", {
     host: "localhost",
     dialect: "mysql",
 });
 
-const User = UserModel(sequelize, DataTypes);
-const Address = AddressModel(sequelize, DataTypes);
-const City = CityModel(sequelize, DataTypes);
+exports.sequelize = sequelize;
+
+const Address = require("../models/Direccion");
+const Category = require("../models/Categoria");
+const City = require("../models/Ciudad");
+const LandMark = require("../models/Marca");
+const Order = require("../models/Pedido");
+const Store = require("../models/Tienda");
+const User = require("../models/Usuario");
 
 (async () => {
+    sequelize.drop();
     sequelize.sync({ force: true }).then(() => console.log("tables created"));
 })();
 
-require("../asociation")({ Address, City, User });
-
-module.exports = {
+require("../asociation")({
     Address,
+    Category,
     City,
+    LandMark,
+    Order,
+    Store,
+    User,
+});
+
+exports.models = {
+    Address,
+    Category,
+    City,
+    LandMark,
+    Order,
+    Store,
     User,
 };

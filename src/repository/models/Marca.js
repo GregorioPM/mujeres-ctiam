@@ -1,8 +1,8 @@
 const { DataTypes } = require("sequelize");
 const { sequelize } = require("../database");
 
-const City = sequelize.define(
-    "ciudad",
+const LandMark = sequelize.define(
+    "marca",
     {
         id: {
             type: DataTypes.INTEGER,
@@ -10,11 +10,11 @@ const City = sequelize.define(
             autoIncrement: true,
         },
         nombre: {
-            type: DataTypes.STRING(35),
+            type: DataTypes.STRING(60),
             allowNull: false,
         },
     },
     { freezeTableName: true, timestamps: false }
 );
 
-module.exports = City;
+module.exports = LandMark;

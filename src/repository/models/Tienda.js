@@ -1,24 +1,27 @@
-const bcrypt = require("bcrypt");
 const { DataTypes } = require("sequelize");
 const { sequelize } = require("../database");
+const User = require("./Usuario");
 
-const User = sequelize.define(
-    "usuario",
+const Store = sequelize.define(
+    "tienda",
     {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true,
+            references: {
+                model: User,
+                key: "id",
+            },
         },
-        nombres: {
+        nombre: {
             type: DataTypes.STRING(45),
             allowNull: false,
         },
-        apellidos: {
+        descripcion: {
             type: DataTypes.STRING(30),
             allowNull: false,
         },
-        dni: {
+        telefono: {
             type: DataTypes.STRING(12),
             allowNull: false,
             unique: true,
@@ -28,17 +31,8 @@ const User = sequelize.define(
             allowNull: false,
             unique: true,
         },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
     },
     { freezeTableName: true }
 );
-User.encryptPassword = (password) =>
-    bcrypt.hashSync(password, bcrypt.genSaltSync(10));
-User.prototype.comparePassword = function (password) {
-    return bcrypt.compareSync(password, this.password);
-};
 
-module.exports = User;
+module.exports = Store;

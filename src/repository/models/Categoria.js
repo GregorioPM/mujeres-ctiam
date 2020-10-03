@@ -1,8 +1,8 @@
 const { DataTypes } = require("sequelize");
 const { sequelize } = require("../database");
 
-const City = sequelize.define(
-    "ciudad",
+const Category = sequelize.define(
+    "categoria",
     {
         id: {
             type: DataTypes.INTEGER,
@@ -13,8 +13,12 @@ const City = sequelize.define(
             type: DataTypes.STRING(35),
             allowNull: false,
         },
+        descripcion: {
+            type: DataTypes.STRING(150),
+            allowNull: false,
+        },
     },
     { freezeTableName: true, timestamps: false }
 );
 
-module.exports = City;
+module.exports = Category;
