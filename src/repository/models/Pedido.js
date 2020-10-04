@@ -21,7 +21,7 @@ const Order = sequelize.define(
             type: DataTypes.DOUBLE,
         },
     },
-    { freezeTableName: true }
+    { freezeTableName: true, }
 );
 
 module.exports = Order;

@@ -8,10 +8,15 @@ const sequelize = new Sequelize("database_ctiam", "root", "", {
 exports.sequelize = sequelize;
 
 const Address = require("../models/Direccion");
+const Banner = require("../models/Banner");
 const Category = require("../models/Categoria");
 const City = require("../models/Ciudad");
 const LandMark = require("../models/Marca");
 const Order = require("../models/Pedido");
+const Photography = require("../models/Fotografia");
+const Product = require("../models/Producto");
+const Question = require("../models/Pregunta");
+const Sale = require("../models/Venta");
 const Store = require("../models/Tienda");
 const User = require("../models/Usuario");
 
@@ -26,6 +31,10 @@ require("../asociation")({
     City,
     LandMark,
     Order,
+    Photography,
+    Product,
+    Question,
+    Sale,
     Store,
     User,
 });
@@ -36,6 +45,10 @@ exports.models = {
     City,
     LandMark,
     Order,
+    Photography,
+    Product,
+    Question,
+    Sale,
     Store,
     User,
 };
