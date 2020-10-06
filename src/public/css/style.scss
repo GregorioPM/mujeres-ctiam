@@ -11,8 +11,9 @@
 @import "layouts/footer";
 // @import "perfil/lista";
 @import "perfil/form";
-@import "modals/modal";
+// @import "modals/modal";
 @import "modals/modal-account";
+@import "modals/_modal-login";
 @import "modals/modal-category";
 @import "questions/questions";
 @import "modals/modal-perfil";
@@ -40,7 +41,7 @@
 }
 
 body { overflow-x: hidden; }
-
+button {cursor: pointer;}
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
