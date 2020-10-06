@@ -15,23 +15,9 @@
     <title>...</title>
 </head>
 <body>
-    <div class="modal" data-visible={{modal}}>
-        <div class="modal__content">
-            <form action="/login/signin" method="POST">
-                <p>Iniciar sesión</p>
-                <div>
-                    <input type="text" placeholder="Correo electrónico" id="correo" name="email" required>
-                </div>
-                <div>
-                    <input type="password" placeholder="Contraseña" id="password" name="password" required>
-                </div>
-                <button class="btn-modal blue" type="submit">Entrar</button>
-                {{!-- <a href="/login/signin/google">Entra con google</a> --}}
-                <button class="btn-gris" type="reset">Borrar información</button>
-                <i class="fas fa-times-circle cerrar"></i>
-            </form>
-        </div>
-    </div>
+    
+    <div id="c-login"></div>
+    <div id="c-register"></div>
 
     <div class="h-list">
         <div class="h-list__content">
@@ -39,7 +25,6 @@
                 <li class="h-list__li"><a class="h-list__li--a" href="/contact">¿Necesitas ayuda?</a></li>
                 <li class="h-list__li"><a class="h-list__li--a" href="/questions">Preguntas frecuentes</a></li>
                 <li class="h-list__li"><a class="h-list__li--a" href="">Como comprar</a></li>
-                <li class="h-list__li"><a class="h-list__li--a" href="">Blog</a></li>
             </ul>
         </div>
     </div>
@@ -50,7 +35,8 @@
                 <a class="h__menu__a-img" href="/"><img class="h__content--img" src="images/logo.png"></a>
                 <li class="h__menu--li">
                     <button onclick="showCategory()" class="h__menu--a">
-                      Categorias<i class="fas fa-caret-down"></i>
+                      Categorias
+                      <i class="fas fa-caret-down"></i>
                     </button>
                 </li>
                 <li class="h__menu--li"><a class="h__menu--a" href="https://ctiam.dasscol.co/" target="_blank">CTIAM</a></li>
@@ -65,7 +51,8 @@
                   {{#if isAuthenticated}}
                     <a class="h__menu--a" href="/home">Perfil</a>
                     {{else}}
-                    <a class="abrir h__menu--a" href="">Ingresar</a>
+                    <button onclick="loginModal()" class="h__menu--a">Ingresar</button>
+                    {{!-- <a class="abrir h__menu--a" href="">Ingresar</a> --}}
                   {{/if}}
                 </li>
             </ul>
