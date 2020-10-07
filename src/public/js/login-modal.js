@@ -25,7 +25,6 @@ function loginModal() {
                     '<div class="m-login__options">'+
                         '<a class="m-login__options--a" href="">¿Olvidaste tu contraseña?</a>'+
                         '<button onclick="registerModal()" class="m-login__options--a">Crear cuenta</button>'+
-                        // '<a class="m-login__options--a" href="">Crear cuenta</a>'+
                     '</div>'+
                 '</form>'+
             '</div>'+
