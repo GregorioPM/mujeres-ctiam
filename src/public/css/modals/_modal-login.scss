@@ -66,7 +66,7 @@
 .m-login--p
 {
     font-size: 20px;
-    padding: 2rem 0;
+    padding-bottom: 2rem;
 }
 
 .m-login__c-fist
@@ -114,6 +114,30 @@
     width: 95%;
 }
 
+.m__btn-google
+{
+    border-radius: 5px;
+    border: 1px solid #C50084;
+    height: 32px;
+    margin-top: 5px;
+    width: 100%;
+}
+.m__btn-google:hover
+{
+    background-color: #f2f2f2;
+}
+.m__btn-google i { padding-right: 10px; }
+.m__btn-google--a
+{
+    align-items: center;
+    display: flex;
+    color: black;
+    height: 30px;
+    justify-content: center;
+    font-size: 14px;
+    width: 100%;
+}
+
 .m-login__c__content i { padding-right: 10px; }
 
 .m-login__c--input
@@ -137,8 +161,8 @@
 {
     display: flex;
     flex-direction: column;
-    text-align: center;
     padding-top: 20px;
+    text-align: center;
     width: 100%;
 }
 
@@ -150,6 +174,7 @@
 
 .m-login__options--a:nth-child(2)
 {
-    font-size: 14px;
+    background-color: transparent;
     color: #29abe2;
+    font-size: 14px;
 }
