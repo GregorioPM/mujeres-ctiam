@@ -7,7 +7,6 @@ function loginModal() {
             '<button onclick="deletemlogin()" class="m__cerrar"><i class="fas fa-times"></i></button>'+
             '<div class="m-login">'+
                 '<form class="m-login__content">'+
-                    '<img class="m-login--ctiam src="">'+
                     '<p class="m-login--p">Iniciar sesión</p>'+
                     '<div class="m-login__c-fist">'+
                         '<div class="m-login__c__content">'+
@@ -22,7 +21,7 @@ function loginModal() {
                         '</div>'+
                     '</div>'+
                     '<button type="submit" class="m-login--send">Entrar</button>'+
-                    '<a href="/login/signin/google">Entra con google</a>'+
+                    '<div class="m__btn-google"><a class="m__btn-google--a" href="/login/signin/google"><i class="fab fa-google"></i>Entra con google</a></div>'+
                     '<div class="m-login__options">'+
                         '<a class="m-login__options--a" href="">¿Olvidaste tu contraseña?</a>'+
                         '<button onclick="registerModal()" class="m-login__options--a">Crear cuenta</button>'+
@@ -34,6 +33,11 @@ function loginModal() {
     '</div>'
     ;
 
+    var object = {
+        cssbody : document.getElementById("body").style.overflow = "hidden",
+        inyectarhtml : htmlLogin,
+    }
+
     if (varLogin.length === 0) {
         return htmlLogin;
     }
@@ -42,8 +46,13 @@ function loginModal() {
 function deletemlogin(){
     var temporal;
     var varLogin = document.getElementById("c-login").innerHTML;
-    if (varLogin.length > 0) {
-        temporal = document.getElementById("c-login").innerHTML = "";
+
+    var object = {
+        cssbody : document.getElementById("body").style.overflow = "scroll",
+        borrar : document.getElementById("c-login").innerHTML = "",
     }
-    return temporal;
+
+    if (varLogin.length > 0) {
+        return object;
+    }
 }
