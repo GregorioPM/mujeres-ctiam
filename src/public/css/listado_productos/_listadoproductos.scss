@@ -1,0 +1,127 @@
+.c-list-product
+{
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.c-list-products
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    width: 95%;
+}
+
+.c-filter
+{
+    background-color: #ffffff;
+    width: 20%;
+}
+
+.c-filter--h2
+{
+    font-size: 20px;
+    margin: 0 auto;
+    padding-top: 35px;
+    padding-bottom: 15px;
+    width: 75%;
+}
+
+.c-filter__ul
+{
+    border-top: 1px solid gray;
+    padding-top: 2rem;
+    padding-bottom: 15px;
+    margin: 0 auto;
+    width: 75%;
+}
+
+.c-filter__li
+{
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.c-filter__li:last-child { padding-bottom: 0; }
+
+.c-filter__li--input
+{
+    border: 1px solid gray;
+}
+
+.c-filter__li p{
+    padding-left: 15px;
+}
+
+.c-list-products__grid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+    grid-gap: 10px;
+    width: 75%;
+}
+
+.c-list-products--name { color: #000000; }
+
+.c-filter--brand
+{
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.c-list-products__grid-content
+{
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.c-list-products__figure
+{
+    height: 200px;
+    width: 100%;
+}
+
+.c-list-products__figure--img
+{
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+}
+
+.c-list-products__info
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.c-list-products__info-content
+{
+    padding: 1rem 0;
+    width: 90%;
+}
+
+.c-list-products--price
+{
+    color: #C50084;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.c-list-products--brand
+{
+    font-size: 12px;
+    padding-bottom: 5px;
+    color: gray;
+}
+.c-list-products__grid--a { transition: .3s; }
+.c-list-products__grid--a:hover
+{
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.33);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.33);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.33);
+}
