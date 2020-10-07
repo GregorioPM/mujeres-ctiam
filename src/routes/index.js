@@ -40,6 +40,12 @@ router.get("/questions", (req, res) => {
     });
 });
 
+router.get("/list-product", (req, res) => {
+    res.render("list-product", {
+        title: "Lista productos | Mujeres CTIAM",
+    });
+});
+
 router.use("/login", login);
 
 router.use((req, res, next) => {
