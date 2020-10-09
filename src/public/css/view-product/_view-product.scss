@@ -1,0 +1,44 @@
+.c-view-product
+{
+    width: 100%;
+}
+
+.c-view-product__content
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.c-view-product__images
+{
+    display: flex;
+    justify-content: ;
+    width: 55%;
+}
+
+.c-view-product__list-images
+{
+    width: 20%;
+}
+
+.c-view-product__image
+{
+    height: 500px;
+    width: 80%;
+}
+
+.c-view-product__image--img
+{
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.c-view-product__description
+{
+    width: 40%;
+}
