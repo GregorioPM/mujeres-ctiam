@@ -21,8 +21,7 @@ const Store = require("../models/Tienda");
 const User = require("../models/Usuario");
 
 (async () => {
-    sequelize.drop();
-    sequelize.sync({ force: true }).then(() => console.log("tables created"));
+    sequelize.sync().then(() => console.log("tables created"));
 })();
 
 require("../asociation")({
