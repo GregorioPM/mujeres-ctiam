@@ -23,10 +23,10 @@
 
 <body>
 
-    <div id="c-login" style="display: none;">
+    <div id="c-login" style="display: {{showModal modal}};">
         {{> modals/login-modal}}
     </div>
-    <div id="c-register">
+    <div id="c-register" style="display: none;">
         {{> modals/register-modal}}
     </div>
 

@@ -19,6 +19,9 @@ app.engine(
         extname: "hbs",
         defaultLayout: "layout",
         layoutsDir: path.join(__dirname, "/views", "/layouts"),
+        helpers: {
+            showModal: (bool) => (bool ? "block" : "none"),
+        },
     })
 );
 

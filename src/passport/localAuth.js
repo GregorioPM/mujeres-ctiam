@@ -1,7 +1,7 @@
 const LocalStrategy = require("passport-local").Strategy;
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const passport = require("passport");
-const { User } = require("../repository/database");
+const User = require("../repository/models/Usuario");
 
 passport.serializeUser((user, done) => {
     done(null, user.id);
@@ -43,10 +43,16 @@ passport.use(
                     )
                 );
             } else {
+                const {
+                    firstName: nombres,
+                    lastName: apellidos,
+                    cedula: dni,
+                } = req.body;
                 const user = await User.create({
+                    nombres,
+                    apellidos,
+                    dni,
                     email,
-                    firstName: req.body.firstName,
-                    lastName: "Gómez",
                     password: User.encryptPassword(password),
                 });
                 if (user) {
