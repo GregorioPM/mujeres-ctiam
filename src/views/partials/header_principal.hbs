@@ -50,7 +50,8 @@
                         <i class="fas fa-caret-down"></i>
                     </button>
                 </li>
-                <li class="h__menu--li"><a class="h__menu--a" href="https://ctiam.dasscol.co/" target="_blank">CTIAM</a>
+                <li class="h__menu--li">
+                    <a class="h__menu--a" href="/store">Tiendas</a>
                 </li>
                 {{!-- <li class="h__menu--li"><a class="h__menu--a" href="/contact">Contacto</a></li> --}}
                 {{!-- {{#unless isAuthenticated}}
@@ -81,6 +82,15 @@
                     <i class="fas fa-shopping-cart h__ico-show--i"></i>
                 </div>
             </form>
+            {{#if isAuthenticated}}
+            <ul class="h__menu-account">
+                <figure class="h__menu-account__fig">
+                    <img class="h__menu-account__fig--img" src="images/perfil/photo.jpg">
+                </figure>
+                <p class="h__menu-account--name-user">brpenaranda</p>
+                <button onclick="modal_cuenta()" class="h__menu-account--ico"><i class="fas fa-caret-down"></i></button>
+            </ul>
+            {{/if}}
         </nav>
     </header>
 

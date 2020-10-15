@@ -34,6 +34,18 @@ router.get("/list", (req, res) => {
     });
 });
 
+router.get("/profile-store", (req, res) => {
+    res.render("profile-store", {
+        title: "Perfil tienda | Mujeres CTIAM",
+    });
+});
+
+router.get("/store", (req, res) => {
+    res.render("store", {
+        title: "Tiendas | Mujeres CTIAM",
+    });
+});
+
 router.get("/questions", (req, res) => {
     res.render("questions", {
         title: "Preguntas frecuentes | Mujeres CTIAM",

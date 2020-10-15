@@ -711,9 +711,9 @@
 
 .h__menu-account__fig {
   border-radius: 40px;
-  height: 40px;
+  height: 30px;
   overflow: hidden;
-  width: 40px;
+  width: 30px;
 }
 
 .h__menu-account__fig--img {
@@ -883,12 +883,14 @@ footer {
 
 .f-asteroide--p {
   color: #f1f1f1;
+  font-size: 12px;
   opacity: .5;
   padding-right: 10px;
 }
 
 .f-asteroide--a {
   color: #f1f1f1;
+  font-size: 12px;
   opacity: .5;
 }
 
@@ -901,7 +903,6 @@ footer {
 }
 
 .c-profile {
-  border-top: 1px solid #29abe2;
   width: 100%;
 }
 
@@ -1090,7 +1091,7 @@ footer {
   height: 100px;
   justify-content: center;
   position: absolute;
-  top: 70px;
+  top: 90px;
   right: 70px;
   width: 180px;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
@@ -1861,6 +1862,165 @@ footer {
   height: 250px;
 }
 
+.c-stores {
+  width: 100%;
+}
+
+.c-stores__content {
+  margin: 0 auto;
+  padding: 3rem 0;
+  width: 90%;
+}
+
+.c-stores--title {
+  font-size: 24px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.c-stores {
+  display: flex;
+  justify-content: space-between;
+}
+
+.c-stores__store {
+  width: 30%;
+}
+
+.c-profile-store {
+  background-color: #f1f1f1;
+  border-bottom: 2px solid #000000;
+  padding: 4rem 0;
+  width: 100%;
+}
+
+.c-profile-store__content {
+  background-color: #ffffff;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.c-profile-store__photo-banner {
+  position: relative;
+  height: 355px;
+  width: 100%;
+}
+
+.c-profile-store__fig {
+  position: relative;
+  height: 280px;
+  width: 100%;
+  z-index: 1;
+}
+
+.c-profile-store__fig--img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.c-profile-store__photo {
+  position: absolute;
+  bottom: 0;
+  border-radius: 8px;
+  height: 150px;
+  left: 0;
+  margin: auto;
+  overflow: hidden;
+  right: 0;
+  width: 150px;
+  z-index: 2;
+}
+
+.c-profile-store__photo--img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.c-profile-store__info {
+  margin: 0 auto;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.c-profile-store__info--h1 {
+  font-size: 20px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.c-profile-store__info--p {
+  color: #8b8b8b;
+}
+
+.c-profile-store__info--a {
+  color: #29abe2;
+}
+
+.c-profile-store__info--a:hover {
+  text-decoration: underline;
+}
+
+.c-profile-store__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
+  grid-gap: 2vw;
+  padding-bottom: 4rem;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.c-profile-store__product {
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.c-profile-store__product--img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.c-profile-store__info-product {
+  background: rgba(0, 0, 0, 0);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(85%, black), color-stop(100%, black));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 85%, black 100%);
+  bottom: -45px;
+  left: 0;
+  position: absolute;
+  padding: 1rem 0;
+  transition: .5s;
+  width: 100%;
+  z-index: 2;
+}
+
+.c-profile-store__info-product--p {
+  color: #ffffff;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  width: 90%;
+}
+
+.c-profile-store__info-product--price {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.c-profile-store__product:hover .c-profile-store__info-product {
+  bottom: 0px;
+}
+
 * {
   border: 0;
   color: #000000;
@@ -1871,6 +2031,22 @@ footer {
   resize: none;
   padding: 0;
   text-decoration: none;
+}
+
+html::-webkit-scrollbar {
+  width: 20px;
+  height: 20px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #C50084, #e52e71);
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+
+html::-webkit-scrollbar-track {
+  background: #f7d4da;
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
 }
 
 *,
