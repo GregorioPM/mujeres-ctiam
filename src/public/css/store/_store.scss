@@ -1,0 +1,29 @@
+.c-stores
+{
+    width: 100%;
+}
+
+.c-stores__content
+{
+    margin: 0 auto;
+    padding: 3rem 0;
+    width: 90%;
+}
+
+.c-stores--title
+{
+    font-size: 24px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.c-stores
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.c-stores__store
+{
+    width: 30%;
+}

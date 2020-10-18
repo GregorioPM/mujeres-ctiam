@@ -34,6 +34,30 @@ router.get("/list", (req, res) => {
     });
 });
 
+router.get("/perfil_new", (req, res) => {
+    res.render("perfil_new", {
+        title: "Perfil Tienda | Mujeres CTIAM",
+    });
+});
+
+router.get("/profile-store", (req, res) => {
+    res.render("profile-store", {
+        title: "Perfil tienda | Mujeres CTIAM",
+    });
+});
+
+router.get("/view-product", (req, res) => {
+    res.render("view-product", {
+        title: "Vista producto | Mujeres CTIAM",
+    });
+});
+
+router.get("/store", (req, res) => {
+    res.render("store", {
+        title: "Tiendas | Mujeres CTIAM",
+    });
+});
+
 router.get("/questions", (req, res) => {
     res.render("questions", {
         title: "Preguntas frecuentes | Mujeres CTIAM",

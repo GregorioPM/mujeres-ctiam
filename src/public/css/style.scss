@@ -22,10 +22,15 @@
 @import "list/list";
 @import "index/c1-index";
 @import "contact/contact";
+@import "store/store";
+@import "store/perfil";
+@import "perfil/perfil-store";
+@import "view-product/view-product";
 
 *
 {
     border: 0;
+    color: #000000;
     font-family: 'Montserrat', sans-serif;
     list-style: none;
     margin: 0;
@@ -33,6 +38,20 @@
     resize: none;
     padding: 0;
     text-decoration: none;
+}
+
+html::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+}
+html::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg,#C50084,#e52e71);
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
+}
+html::-webkit-scrollbar-track {
+    background: #f7d4da;
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(0,0,0,.25);
 }
 
 *,
