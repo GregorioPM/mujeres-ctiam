@@ -92,7 +92,7 @@
 
 .c-profile-store__product
 {
-    height: 400px;
+    height: 300px;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -147,4 +147,30 @@
 .c-profile-store__product:hover .c-profile-store__info-product
 {
     bottom: 0px;
+}
+
+@media (max-width: 1040px)
+{
+    .c-profile-store__grid
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 765px)
+{
+    .c-profile-store__grid
+    {
+        display: block;
+    }
+
+    .c-profile-store__product
+    {
+        margin-bottom: 30px;
+    }
+
+    .c-profile-store__product:last-child
+    {
+        margin-bottom: 30px;
+    }
 }
