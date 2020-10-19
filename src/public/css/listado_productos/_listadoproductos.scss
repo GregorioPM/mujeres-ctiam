@@ -45,20 +45,13 @@
 }
 
 .c-filter__li:last-child { padding-bottom: 0; }
-
-.c-filter__li--input
-{
-    border: 1px solid gray;
-}
-
-.c-filter__li p{
-    padding-left: 15px;
-}
+.c-filter__li--input { border: 1px solid gray; }
+.c-filter__li p{ padding-left: 15px; }
 
 .c-list-products__grid
 {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(232.25px, 1fr));
     grid-gap: 10px;
     width: 75%;
 }
