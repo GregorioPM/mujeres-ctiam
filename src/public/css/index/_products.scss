@@ -23,7 +23,7 @@
 .c-product-cols
 {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(383.8px, 3fr));
     grid-gap: 30px;
 }
 
@@ -139,7 +139,7 @@
 .c-grid-four
 {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(24%, 1fr));
+    grid-template-columns: repeat(auto-fill,minmax(292.59px, 1fr));
     grid-gap: 1vw;
     width: 100%;    
 }
