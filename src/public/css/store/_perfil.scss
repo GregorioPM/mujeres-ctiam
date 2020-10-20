@@ -80,10 +80,10 @@
 .c-profile-store__info--a { color: #29abe2; }
 .c-profile-store__info--a:hover { text-decoration: underline; }
 
-.c-profile-store__grid
+    .c-profile-store__grid
 {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(31%, 1fr));
+    grid-template-columns: repeat(auto-fill,minmax(345.2px, 1fr));
     grid-gap: 2vw;
     padding-bottom: 4rem;
     margin: 0 auto;

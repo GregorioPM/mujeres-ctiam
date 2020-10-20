@@ -40,6 +40,12 @@ router.get("/perfil_new", (req, res) => {
     });
 });
 
+router.get("/reg_product", (req, res) => {
+    res.render("reg_product", {
+        title: "Registrarproducto | Mujeres CTIAM",
+    });
+});
+
 router.get("/profile-store", (req, res) => {
     res.render("profile-store", {
         title: "Perfil tienda | Mujeres CTIAM",
