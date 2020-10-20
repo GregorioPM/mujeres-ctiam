@@ -1,3 +1,5 @@
+const Item = require("./models/Item");
+
 module.exports = function ({
     Address,
     Category,
@@ -130,5 +132,20 @@ module.exports = function ({
         onDelete: "RESTRICT",
         onUpdate: "CASCADE",
         foreignKey : { name: "id_producto"},
-    })
+    });
+    Order.hasMany(Item,{
+        onDelete: "RESTRICT",
+        onUpdate: "CASCADE",
+        foreignKey : { name: "id_pedido"},
+    });
+    Sale.hasMany(Item,{
+        onDelete: "RESTRICT",
+        onUpdate: "CASCADE",
+        foreignKey : { name: "id_venta"},
+    });
+    Product.hasMany(Item,{
+        onDelete: "RESTRICT",
+        onUpdate: "CASCADE",
+        foreignKey : { name: "id_producto"},
+    });
 };
