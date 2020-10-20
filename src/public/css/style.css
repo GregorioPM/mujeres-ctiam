@@ -1863,6 +1863,111 @@ footer {
   height: 250px;
 }
 
+@media (max-width: 1024px) {
+  .row-70 {
+    width: 85%;
+  }
+  .c-promo-index {
+    flex-direction: column;
+  }
+  .c-promo-index__fig {
+    width: 100%;
+  }
+  .c-promo-index__info {
+    padding: 2rem 0;
+    width: 100%;
+  }
+  .f__content {
+    flex-direction: column;
+  }
+  .f__category-help {
+    padding-bottom: 30px;
+    width: 100%;
+  }
+  .f__subscribe {
+    width: 100%;
+  }
+}
+
+@media (max-width: 960px) {
+  .flex-justify {
+    flex-direction: column;
+  }
+  .flex {
+    width: 100%;
+    flex-direction: column;
+  }
+  .row-50 {
+    width: 100%;
+  }
+  .title-2 {
+    margin-top: 40px;
+    font-size: 40px;
+    line-height: 35px;
+  }
+  .btn-form {
+    margin-bottom: 40px;
+  }
+  .img-section-r {
+    width: 70%;
+  }
+  .service-index {
+    margin-bottom: 50px;
+    width: 80%;
+  }
+  .row-70 {
+    width: 90%;
+  }
+  .art-profile {
+    flex-direction: column;
+  }
+  .cont-form-profile {
+    width: 100%;
+  }
+  .c-list__t-head {
+    display: flex;
+    flex-direction: column;
+  }
+  .c-list__t-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .c-list__column {
+    border-right: 0;
+    border-bottom: 1px solid gray;
+  }
+  .menu {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .menu__li {
+    display: flex;
+    padding-right: 0;
+    width: 100%;
+    transition: .5s;
+  }
+  .menu__li:hover {
+    background-color: #f9f9f9;
+  }
+  .menu__li--a {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .f__category-help {
+    flex-direction: column;
+  }
+  .f__category, .f__help {
+    padding-bottom: 30px;
+    width: 100%;
+  }
+}
+
 .c-stores {
   width: 100%;
 }
@@ -1967,7 +2072,7 @@ footer {
 
 .c-profile-store__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(345.2px, 1fr));
   grid-gap: 2vw;
   padding-bottom: 4rem;
   margin: 0 auto;
@@ -2101,6 +2206,7 @@ footer {
 }
 
 .c-profile-seller__form--content {
+  overflow: hidden;
   width: 55%;
 }
 
@@ -2202,6 +2308,18 @@ footer {
 .c-profile-seller__options--a i {
   font-size: 20px;
   padding-right: 10px;
+}
+
+.c-profile__reg-steps {
+  position: relative;
+  display: flex;
+  transition: .5s;
+  left: 0;
+  width: 300%;
+}
+
+.c-profile__reg-step {
+  width: 100%;
 }
 
 .c-view-product {

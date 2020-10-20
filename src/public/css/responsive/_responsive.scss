@@ -2,6 +2,27 @@
 @media (max-width: 1024px)
 {
     .row-70 { width: 85%; }
+
+    .c-promo-index { flex-direction: column; }
+    .c-promo-index__fig { width: 100%; }
+    .c-promo-index__info
+    {
+        padding: 2rem 0;
+        width: 100%;
+    }
+
+    .f__content { flex-direction: column; }
+
+    .f__category-help
+    {
+        padding-bottom: 30px;
+        width: 100%;
+    }
+
+    .f__subscribe
+    {
+        width: 100%;
+    }
 }
 
 @media (max-width: 960px)
@@ -61,6 +82,16 @@
 @media (max-width: 768px)
 {
     
+}
+
+@media (max-width: 500px)
+{
+    .f__category-help
+    {
+        flex-direction: column;
+    }
+
+    .f__category, .f__help { padding-bottom: 30px; width: 100%; }
 }
 
 @media (max-width: 375px)
