@@ -2313,13 +2313,12 @@ footer {
 .c-profile__reg-steps {
   position: relative;
   display: flex;
-  transition: .5s;
   left: 0;
-  width: 300%;
+  transition: .5s;
 }
 
 .c-profile__reg-step {
-  width: 100%;
+  min-width: 100%;
 }
 
 .c-view-product {
