@@ -2,14 +2,8 @@
 {
     position: relative;
     display: flex;
-    transition: .5s;
-    // height: 100px;
-    // left: -100%;
     left: 0;
-    width: 300%;
+    transition: .5s;
 }
 
-.c-profile__reg-step
-{
-    width: 100%;
-}
+.c-profile__reg-step { min-width: 100%; }
