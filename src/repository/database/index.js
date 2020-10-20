@@ -8,9 +8,11 @@ const sequelize = new Sequelize("database_ctiam", "root", "", {
 exports.sequelize = sequelize;
 
 const Address = require("../models/Direccion");
+const Admin = require("../models/Admin");
 const Banner = require("../models/Banner");
 const Category = require("../models/Categoria");
 const City = require("../models/Ciudad");
+const Item = require("../models/Item");
 const LandMark = require("../models/Marca");
 const Order = require("../models/Pedido");
 const Photography = require("../models/Fotografia");
@@ -20,6 +22,7 @@ const Sale = require("../models/Venta");
 const Store = require("../models/Tienda");
 const User = require("../models/Usuario");
 
+// {alter:true}
 (async () => {
     sequelize.sync().then(() => console.log("tables created"));
 })();
@@ -28,6 +31,7 @@ require("../asociation")({
     Address,
     Category,
     City,
+    Item,
     LandMark,
     Order,
     Photography,
@@ -43,6 +47,7 @@ exports.models = {
     Category,
     City,
     LandMark,
+    Item,
     Order,
     Photography,
     Product,
