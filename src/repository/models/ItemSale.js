@@ -5,7 +5,7 @@ const Pedido= require("./Pedido");
 const Venta = require ("./Venta");
 
 const Item = sequelize.define(
-    "Item",
+    "item_sale",
     {
         id: {
             type : DataTypes.INTEGER,
