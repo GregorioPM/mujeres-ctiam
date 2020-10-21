@@ -11,8 +11,12 @@ const Address = require("../models/Direccion");
 const Admin = require("../models/Admin");
 const Banner = require("../models/Banner");
 const Category = require("../models/Categoria");
+const Cart = require("../models/Carrito");
 const City = require("../models/Ciudad");
-const Item = require("../models/Item");
+const Comentary = require("../models/Comentario");
+const Favorite = require("../models/Favorito");
+const ItemSale = require("../models/ItemSale");
+const ItemCart = require("../models/ItemCart");
 const LandMark = require("../models/Marca");
 const Order = require("../models/Pedido");
 const Photography = require("../models/Fotografia");
@@ -24,14 +28,18 @@ const User = require("../models/Usuario");
 
 // {alter:true}
 (async () => {
-    sequelize.sync().then(() => console.log("tables created"));
+    sequelize.sync({force:true}).then(() => console.log("tables created"));
 })();
 
 require("../asociation")({
     Address,
     Category,
+    Cart,
     City,
-    Item,
+    Comentary,
+    Favorite,
+    ItemCart,
+    ItemSale,
     LandMark,
     Order,
     Photography,
@@ -45,9 +53,13 @@ require("../asociation")({
 exports.models = {
     Address,
     Category,
+    Cart,
     City,
+    Comentary,
+    Favorite,
+    ItemCart,
+    ItemSale,
     LandMark,
-    Item,
     Order,
     Photography,
     Product,
