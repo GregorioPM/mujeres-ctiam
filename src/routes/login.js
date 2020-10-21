@@ -16,7 +16,7 @@ router.get("/signup", (req, res) => {
 router.post(
     "/signup",
     passport.authenticate("local-signup", {
-        successRedirect: "/home",
+        successRedirect: "/user",
         failureRedirect: "/login",
         passReqToCallback: true,
     })
@@ -25,7 +25,7 @@ router.post(
 router.post(
     "/signin",
     passport.authenticate("local-signin", {
-        successRedirect: "/home",
+        successRedirect: "/user",
         failureRedirect: "/login",
         passReqToCallback: true,
     })
@@ -39,7 +39,7 @@ router.get(
 router.get(
     "/google/callback",
     passport.authenticate("google", {
-        successRedirect: "/home",
+        successRedirect: "/user",
         failureRedirect: "/login",
         passReqToCallback: true,
     })

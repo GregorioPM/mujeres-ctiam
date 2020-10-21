@@ -8,6 +8,7 @@ const user = require("./user");
 router.get("/", (req, res) => {
     res.render("index", {
         title: "Tienda CTIAM",
+        user: req.user,
         isAuthenticated: req.user != undefined,
     });
 });
@@ -82,6 +83,6 @@ router.use((req, res, next) => {
     isAuthenticated(req, res, next);
 });
 
-router.use("/home", user);
+router.use("/user", user);
 
 module.exports = router;
