@@ -18,6 +18,10 @@ const User = sequelize.define(
             type: DataTypes.STRING(30),
             allowNull: false,
         },
+        avatar: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
         dni: {
             type: DataTypes.STRING(12),
             allowNull: false,
@@ -27,6 +31,14 @@ const User = sequelize.define(
             type: DataTypes.STRING(60),
             allowNull: false,
             unique: true,
+        },
+        telefono: {
+            type: DataTypes.STRING(10),
+            allowNull: false,
+        },
+        telefono_alternativo: {
+            type: DataTypes.STRING(10),
+            allowNull: true,
         },
         password: {
             type: DataTypes.STRING,
