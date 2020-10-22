@@ -2311,15 +2311,36 @@ footer {
   padding-right: 10px;
 }
 
+.reg-step-1 {
+  opacity: 1;
+  transform: .5s;
+}
+
+.reg-step-2 {
+  opacity: 1;
+  transform: .5s;
+}
+
+.reg-step-3 {
+  opacity: 1;
+  transform: .5s;
+}
+
 .c-profile__reg-steps {
   position: relative;
   display: flex;
   left: 0;
-  transition: .5s;
+  transition: .3s;
 }
 
 .c-profile__reg-step {
   min-width: 100%;
+}
+
+.favoritos-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
 }
 
 .c-view-product {
