@@ -66,6 +66,12 @@ router.get("/reportes", (req, res) => {
     });
 })
 
+router.get("/preguntas-vendedor", (req, res) => {
+    res.render("preguntas-vendedor", {
+        title: "Preguntas vendedor | Mujeres CTIAM",
+    });
+})
+
 router.get("/reg_product", (req, res) => {
     res.render("reg_product", {
         title: "Registrarproducto | Mujeres CTIAM",
