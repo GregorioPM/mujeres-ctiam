@@ -14,7 +14,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>...</title>
 </head>
+
 <body>
+
     <div id="c-login" style="display: {{showModal modal}};">
         {{> modals/login-modal}}
     </div>
@@ -51,6 +53,7 @@
                     <a class="h__menu--a" href="/registrar">Crea tu cuenta</a>
                 </li>--}}
                 {{!-- {{/unless}} --}}
+
                 <li class="h__menu--li-btn">
                     {{#if isAuthenticated}}
                     <a class="h__menu--a" href="/home">Perfil</a>
