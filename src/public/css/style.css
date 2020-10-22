@@ -1890,12 +1890,64 @@ footer {
 
 .c-stores__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(393px, 3fr));
-  grid-gap: 7px;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 3fr));
+  grid-gap: 25px;
 }
 
 .c-stores__store {
   min-width: 100%;
+}
+
+.c-stores__store-info {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  width: 100%;
+}
+
+.c-stores__fig {
+  border-radius: 8px;
+  height: 100px;
+  width: 25%;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.c-stores__fig--img,
+.c-stores__store--img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.c-stores__text--name {
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
+.c-stores__text--description {
+  color: gray;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.c-stores__text {
+  width: 70%;
+}
+
+.c-stores__store-imgs {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.c-stores__store-fig {
+  border-radius: 5px;
+  height: 110px;
+  overflow: hidden;
+  width: 32%;
 }
 
 .c-profile-store {
