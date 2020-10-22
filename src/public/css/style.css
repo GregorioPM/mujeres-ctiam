@@ -1863,10 +1863,6 @@ footer {
   height: 250px;
 }
 
-.c-stores {
-  width: 100%;
-}
-
 .c-stores__content {
   margin: 0 auto;
   padding: 3rem 0;
@@ -1880,11 +1876,15 @@ footer {
 }
 
 .c-stores {
+  background-color: #f1f1f1;
+  border-bottom: 2px solid #000000;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .c-stores__store {
+  background-color: #ffffff;
   width: 30%;
 }
 
@@ -1895,6 +1895,7 @@ footer {
 }
 
 .c-stores__store {
+  border-radius: 8px;
   min-width: 100%;
 }
 
@@ -1902,8 +1903,9 @@ footer {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 25px;
-  width: 100%;
+  margin: 0 auto;
+  padding: 25px 0;
+  width: 90%;
 }
 
 .c-stores__fig {
@@ -1940,7 +1942,9 @@ footer {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 25px;
+  width: 90%;
 }
 
 .c-stores__store-fig {
