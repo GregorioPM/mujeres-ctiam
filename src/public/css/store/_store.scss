@@ -1,7 +1,4 @@
-.c-stores
-{
-    width: 100%;
-}
+.c-stores { width: 100%; }
 
 .c-stores__content
 {
@@ -23,7 +20,16 @@
     justify-content: space-between;
 }
 
+.c-stores__store { width: 30%; }
+
+.c-stores__grid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(393px, 3fr));
+    grid-gap: 7px;
+}
+
 .c-stores__store
 {
-    width: 30%;
+    min-width: 100%;
 }
