@@ -58,6 +58,12 @@ router.get("/carrito", (req, res) => {
     });
 })
 
+router.get("/reportes", (req, res) => {
+    res.render("reportes", {
+        title: "Reportes | Mujeres CTIAM",
+    });
+})
+
 router.get("/reg_product", (req, res) => {
     res.render("reg_product", {
         title: "Registrarproducto | Mujeres CTIAM",
