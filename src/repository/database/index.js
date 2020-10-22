@@ -3,6 +3,7 @@ const { Sequelize } = require("sequelize");
 const sequelize = new Sequelize("database_ctiam", "root", "", {
     host: "localhost",
     dialect: "mysql",
+    logging: false,
 });
 
 exports.sequelize = sequelize;
@@ -52,6 +53,8 @@ require("../asociation")({
 
 exports.models = {
     Address,
+    Admin,
+    Banner,
     Category,
     Cart,
     City,

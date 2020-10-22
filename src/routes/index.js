@@ -4,6 +4,7 @@ const isAuthenticated = require("../middlewares/isAuthenticated");
 const nodeMailer = require("../services/nodemailer");
 const router = Router();
 const user = require("./user");
+const admin = require("./admin");
 
 router.get("/", (req, res) => {
     res.render("index", {
