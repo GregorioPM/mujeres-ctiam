@@ -1,0 +1,53 @@
+<h5>{{status}}</h5>
+
+<form action="/login/admin" method="POST" id="formLogin"
+    style="border: 2px solid #ccc; width : 200px; margin: 100px; padding: 50px; display: block">
+    <div style="margin-bottom: 50px;">
+        <input type="text" name="nombre_usuario" placeholder="usuario">
+    </div>
+    <div style="margin-bottom: 50px;">
+        <input type="text" name="email" placeholder="email">
+    </div>
+    <div style="margin-bottom: 50px;">
+        <input type="password" name="password" placeholder="password">
+    </div>
+    <div style="margin-bottom: 50px;">
+        <button type="submit">Iniciar sesión</button>
+    </div>
+    <div>
+        <a href="#" onclick="showRegister()">registrar administrador</a>
+    </div>
+</form>
+
+<form action="/login/signup-admin" method="POST" id="formRegister"
+    style="border: 2px solid #ccc; width : 200px; margin: 100px; padding: 50px; display: none">
+    <div style="margin-bottom: 50px;">
+        <input type="text" name="nombre_usuario" placeholder="usuario">
+    </div>
+    <div style="margin-bottom: 50px;">
+        <input type="text" name="email" placeholder="email">
+    </div>
+    <div style="margin-bottom: 50px;">
+        <input type="password" name="password" placeholder="password">
+    </div>
+    <div style="margin-bottom: 50px;">
+        <input type="password" name="key" placeholder="palabra clave">
+    </div>
+    <div style="margin-bottom: 50px;">
+        <button type="submit">Registrar</button>
+    </div>
+    <div>
+        <a href="#" onclick="showLogin()">iniciar sesión administrador</a>
+    </div>
+</form>
+
+<script>
+    function showRegister() {
+        document.querySelector("#formLogin").style.display = "none";
+        document.querySelector("#formRegister").style.display = "block";
+    }
+    function showLogin() {
+        document.querySelector("#formLogin").style.display = "block";
+        document.querySelector("#formRegister").style.display = "none";
+    }
+</script>

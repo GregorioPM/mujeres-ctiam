@@ -1,14 +1,16 @@
-const  { DataTypes } = require("sequelize");
-const  { sequelize } = require("../database");
+const bcrypt = require("bcrypt");
+const { DataTypes } = require("sequelize");
+const { sequelize } = require("../database");
 
 const Admin = sequelize.define(
-    "admin",{
+    "admin",
+    {
         id: {
-            type : DataTypes.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        nombre_Usuario:{
+        nombre_usuario: {
             type: DataTypes.STRING(30),
             allowNull: false,
         },
@@ -17,13 +19,13 @@ const Admin = sequelize.define(
             allowNull: false,
             unique: true,
         },
-        password:{
-            type: DataTypes.STRING(20),
+        password: {
+            type: DataTypes.STRING,
             allowNull: false,
-        }
+        },
     },
     { freezeTableName: true }
-)
+);
 
 Admin.encryptPassword = (password) =>
     bcrypt.hashSync(password, bcrypt.genSaltSync(10));
