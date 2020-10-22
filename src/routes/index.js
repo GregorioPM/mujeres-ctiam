@@ -40,6 +40,18 @@ router.get("/perfil_new", (req, res) => {
     });
 });
 
+router.get("/favoritos", (req, res) => {
+    res.render("favoritos", {
+        title: "Favoritos | Mujeres CTIAM",
+    });
+});
+
+router.get("/eliminar-producto", (req, res) => {
+    res.render("eliminar-producto", {
+        title: "Eliminar producto | Mujeres CTIAM",
+    });
+})
+
 router.get("/reg_product", (req, res) => {
     res.render("reg_product", {
         title: "Registrarproducto | Mujeres CTIAM",
