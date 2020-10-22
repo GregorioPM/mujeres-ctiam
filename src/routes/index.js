@@ -54,6 +54,12 @@ router.get("/eliminar-producto", (req, res) => {
     });
 })
 
+router.get("/carrito", (req, res) => {
+    res.render("carrito", {
+        title: "Carrito | Mujeres CTIAM",
+    });
+})
+
 router.get("/reg_product", (req, res) => {
     res.render("reg_product", {
         title: "Registrarproducto | Mujeres CTIAM",
