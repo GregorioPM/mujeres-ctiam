@@ -11,6 +11,7 @@ router.get("/home", (req, res) => {
     res.render("user/perfil", {
         title: "Perfil | Mujeres CTIAM",
         user,
+        isAuthenticated: req.user != undefined
     });
 });
 
