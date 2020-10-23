@@ -107,11 +107,7 @@
     padding: 8px 25px;
 }
 
-.c-profile-seller__actions
-{
-    // width: 30%;
-    width: 300px;
-}
+.c-profile-seller__actions { min-width: 300px; }
 
 .c-profile-seller__buttons
 {
