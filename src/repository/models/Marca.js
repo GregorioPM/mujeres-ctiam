@@ -1,5 +1,6 @@
 const { DataTypes } = require("sequelize");
 const { sequelize } = require("../database");
+const Pedido = require("./Pedido");
 
 const LandMark = sequelize.define(
     "marca",

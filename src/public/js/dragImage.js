@@ -32,6 +32,7 @@ areaFile.addEventListener("drop", async (e) => {
                 img.src = url;
             }
         );
+        document.querySelector("#avatarUser").value = url;
     };
     task.on("state_changed", onProgress, onError, onComplete);
 });

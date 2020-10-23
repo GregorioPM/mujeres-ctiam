@@ -4,10 +4,12 @@ const isAuthenticated = require("../middlewares/isAuthenticated");
 const nodeMailer = require("../services/nodemailer");
 const router = Router();
 const user = require("./user");
+const admin = require("./admin");
 
 router.get("/", (req, res) => {
     res.render("index", {
         title: "Tienda CTIAM",
+        user: req.user,
         isAuthenticated: req.user != undefined,
     });
 });
@@ -126,6 +128,6 @@ router.use((req, res, next) => {
     isAuthenticated(req, res, next);
 });
 
-router.use("/home", user);
+router.use("/user", user);
 
 module.exports = router;

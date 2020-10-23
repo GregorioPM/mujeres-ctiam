@@ -1,7 +1,13 @@
+
 module.exports = function ({
     Address,
     Category,
+    Cart,
     City,
+    Comentary,
+    Favorite,
+    ItemCart,
+    ItemSale,
     LandMark,
     Order,
     Photography,
@@ -130,5 +136,60 @@ module.exports = function ({
         onDelete: "RESTRICT",
         onUpdate: "CASCADE",
         foreignKey : { name: "id_producto"},
-    })
+    });
+    Order.hasMany(ItemSale,{
+        onDelete: "RESTRICT",
+        onUpdate: "CASCADE",
+        foreignKey : { name: "id_pedido"},
+    });
+    Sale.hasMany(ItemSale,{
+        onDelete: "RESTRICT",
+        onUpdate: "CASCADE",
+        foreignKey : { name: "id_venta"},
+    });
+    Product.hasMany(ItemSale,{
+        onDelete: "RESTRICT",
+        onUpdate: "CASCADE",
+        foreignKey : { name: "id_producto"},
+    });
+    User.hasMany(Favorite,{
+        onDelete: "RESTRICT",
+        onUpdate: "CASCADE",
+        foreignKey : { name: "id_usuario"},
+    });
+    Product.hasMany(Favorite,{
+        onDelete: "RESTRICT",
+        onUpdate: "CASCADE",
+        foreignKey : { name: "id_producto"},
+    });
+    User.hasMany(Comentary,{
+        onDelete: "RESTRICT",
+        onUpdate: "CASCADE",
+        foreignKey : { name: "id_usuario"},
+    });
+    ItemSale.hasMany(Comentary,{
+        onDelete: "RESTRICT",
+        onUpdate: "CASCADE",
+        foreignKey : { name: "id_item"},
+    });
+    User.hasOne(Cart, {
+        onDelete: "RESTRICT",
+        onUpdate: "CASCADE",
+        foreignKey: { name: "id" },
+    });
+    Cart.belongsTo(User, {
+        onDelete: "RESTRICT",
+        onUpdate: "RESTRICT",
+        foreignKey: { name: "id" },
+    });
+    Cart.hasMany(ItemCart,{
+        onDelete: "RESTRICT",
+        onUpdate: "CASCADE",
+        foreignKey : { name: "id_carrito"},
+    });
+    Product.hasMany(ItemCart,{
+        onDelete: "RESTRICT",
+        onUpdate: "CASCADE",
+        foreignKey : { name: "id_producto"},
+    });
 };

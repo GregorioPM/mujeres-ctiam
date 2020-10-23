@@ -44,14 +44,16 @@ passport.use(
                 );
             } else {
                 const {
+                    dni,
                     firstName: nombres,
                     lastName: apellidos,
-                    cedula: dni,
+                    numberPhone: telefono,
                 } = req.body;
                 const user = await User.create({
                     nombres,
                     apellidos,
                     dni,
+                    telefono,
                     email,
                     password: User.encryptPassword(password),
                 });

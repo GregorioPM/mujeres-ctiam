@@ -21,6 +21,10 @@ app.engine(
         layoutsDir: path.join(__dirname, "/views", "/layouts"),
         helpers: {
             showModal: (bool) => (bool ? "block" : "none"),
+            avatar: (avatar) => {
+                if (avatar !== "") return avatar;
+                return "../images/perfil/photo.jpg";
+            },
         },
     })
 );
