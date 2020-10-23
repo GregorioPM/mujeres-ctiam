@@ -1,0 +1,139 @@
+.c-user-questions { width: 60%; }
+
+.c-user-questions__content
+{
+    background-color: #ffffff;
+    border-right: 3px solid rgb(199, 199, 199);
+    border-left: 3px solid rgb(199, 199, 199);
+    border-bottom: 3px solid rgb(199, 199, 199);
+    border-radius: 0;
+    width: 100%;
+}
+
+.c-user-questions__content:first-child
+{
+    border-top: 3px solid rgb(199, 199, 199);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.c-user-questions__content:last-child
+{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.c-user-questions__question
+{
+    margin: 0 auto;
+    padding: 2rem 0;
+    width: 90%;
+}
+
+.c-user-questions__title
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+.c-user-questions__title--p { font-size: 20px; font-weight: bold; }
+
+.c-user-questions__title i
+{
+    color: gray;
+    cursor: pointer;
+    font-size: 25px;
+    transition: .3s;
+}
+
+.c-user-questions__title i:hover { color: #424242; }
+.c-user-questions__info
+{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    transition: .3s;
+    width: 100%;
+}
+
+.c-user-questions__info--img
+{
+    display: flex;
+    object-fit: cover;
+    object-position: center;
+    width: 150px;
+}
+
+.c-user-questions__text { padding-left: 20px; }
+.c-user-questions__text--marca { font-size: 12px; }
+.c-user-questions__text--name
+{
+    color: red;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.c-user-questions__text--price
+{
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.c-user-questions__text--description
+{
+    font-size: 14px;
+    text-align: justify;
+}
+
+.c-user-questions__answer
+{
+    background-color: #f1f1f1;
+    border-radius:7px;
+    transition: .3s;
+    width: 100%;
+}
+
+.c-user-questions__answer-content
+{
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.c-user-questions__info-usuario
+{
+    align-items: center;
+    display: flex;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.c-user-questions__info-usuario--imgs
+{
+    border-radius: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    width: 40px;
+}
+
+.c-user-questions__info-usuario--p { padding-left: 15px; }
+.c-user-questions--description { text-align: justify; padding-bottom: 20px; }
+
+.c-user-questions--btn
+{
+    align-items: center;
+    background-color: #29abe2;
+    border-radius: 5px;
+    color: #ffffff;
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    transition: .3s;
+    width: 120px;
+}
+
+.c-user-questions--btn:hover { background-color: #000000; }
