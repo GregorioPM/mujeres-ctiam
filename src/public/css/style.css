@@ -2170,8 +2170,8 @@ footer {
 }
 
 .c-shopping-cart--description {
+  font-size: 25px;
   padding-bottom: 15px;
-  text-align: justify;
 }
 
 .c-shopping-cart--brand {
@@ -2214,6 +2214,40 @@ footer {
 .c-shopping-cart--favourite {
   border-right: 0;
   margin-right: 0;
+}
+
+.c-shopping-count {
+  align-items: center;
+  border: 2px solid #c3c3c3;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+  width: 100px;
+}
+
+.c-shopping-count i {
+  color: #c3c3c3;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.c-shopping-count--p {
+  color: #c3c3c3;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 17px;
+}
+
+.c-shopping-count-text {
+  align-items: center;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.c-shopping-text {
+  color: gray;
+  padding-right: 25px;
 }
 
 .c-profile-seller {
