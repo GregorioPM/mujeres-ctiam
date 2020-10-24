@@ -23,10 +23,24 @@
 
     <div class="h-list">
         <div class="h-list__content">
+            <div class="h-list__logo-search" style="display: flex; align-items: center; ">
+                <a class="h__menu__a-img" href="/"><img class="h__content--img" src="../images/logo.png"></a>
+                <div class="h__search">
+                    <form class="h__search__c">
+                        <input class="h__search--input" type="text" placeholder="Buscar">
+                    </form>
+                    <button type="submit" onclick="" class="h__search--ico">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
             <ul class="h-list__ul">
                 <li class="h-list__li"><a class="h-list__li--a" href="/contact">¿Necesitas ayuda?</a></li>
                 <li class="h-list__li"><a class="h-list__li--a" href="/questions">Preguntas frecuentes</a></li>
                 <li class="h-list__li"><a class="h-list__li--a" href="">Como comprar</a></li>
+                <li class="h__ico-show">
+                    <a href="/carrito"><i class="fas fa-shopping-cart h__ico-show--i"></i></a>
+                </li>
             </ul>
         </div>
     </div>
@@ -34,7 +48,6 @@
     <header class="h">
         <nav class="h__content">
             <ul class="h__menu">
-                <a class="h__menu__a-img" href="/"><img class="h__content--img" src="../images/logo.png"></a>
                 <li class="h__menu--li">
                     <button onclick="showCategory()" class="h__menu--a">
                         Categorias
@@ -51,22 +64,6 @@
                 </li>
                 {{/if}}
             </ul>
-            <form class="h__form" action="">
-                <div class="h__search">
-                    <div class="h__search__c">
-                        <input class="h__search--input" type="text" placeholder="Buscar">
-                    </div>
-                    <button type="submit" onclick="" class="h__search--ico">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-                <div class="h__ico-show">
-                    <i class="fas fa-shopping-cart h__ico-show--i"></i>
-                </div>
-                <div class="h__ico-show">
-                    <i class="fas fa-bell h__ico-show--i"></i>
-                </div>
-            </form>
             {{#if isAuthenticated}}
             <ul class="h__menu-account">
                 <figure class="h__menu-account__fig">
@@ -74,6 +71,9 @@
                 </figure>
                 <p class="h__menu-account--name-user">brpenaranda</p>
                 <button onclick="modal_cuenta()" class="h__menu-account--ico"><i class="fas fa-caret-down"></i></button>
+                <div class="h__ico-show">
+                    <i class="fas fa-bell h__ico-show--i2"></i>
+                </div>
             </ul>
             {{/if}}
         </nav>

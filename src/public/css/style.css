@@ -445,13 +445,10 @@
 }
 
 .h {
-  background-color: #C50084;
   display: flex;
-  /* background-color: var(--purple); */
+  background-color: var(--purple);
   overflow: hidden;
   justify-content: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
   width: 100%;
 }
 
@@ -474,18 +471,20 @@
 .h__search {
   align-items: center;
   background-color: #FFFFFF;
+  border: 1px solid var(--purple);
   border-radius: 5px;
   justify-content: space-around;
   display: flex;
   height: 35px;
-  width: 350px;
+  width: 450px;
 }
 
 .h__search__c {
-  width: 290px;
+  width: 390px;
 }
 
 .h__search--input {
+  color: var(--purple);
   font-size: 14px;
   width: 100%;
 }
@@ -496,8 +495,12 @@
   width: 20px;
 }
 
+.h__search--ico i {
+  color: var(--purple);
+}
+
 .h__menu__a-img {
-  margin-right: 20px;
+  margin-right: 50px;
 }
 
 .h__menu--li {
@@ -505,7 +508,6 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  border-radius: 35px;
   height: 35px;
   padding-left: 15px;
   padding-right: 15px;
@@ -518,7 +520,6 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  border-radius: 35px;
   height: 35px;
   padding-left: 15px;
   padding-right: 15px;
@@ -531,12 +532,15 @@
   display: flex;
   justify-content: center;
   background-color: #920061;
-  border-radius: 35px;
   height: 35px;
   padding-left: 15px;
   padding-right: 15px;
   font-weight: bold;
   transition: .5s;
+}
+
+.h__menu-account--ico i {
+  color: #ffffff;
 }
 
 .h__menu--li-btn:hover {
@@ -561,7 +565,6 @@
 }
 
 .h-list {
-  background-color: #000000;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -569,7 +572,7 @@
 
 .h-list__content {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   width: 90%;
 }
 
@@ -589,8 +592,9 @@
 }
 
 .h-list__li--a {
-  color: #ffffff;
-  font-size: 12px;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
   opacity: .6;
 }
 
@@ -601,17 +605,17 @@
 
 .h__ico-show {
   cursor: pointer;
-  padding-left: 15px;
 }
 
 .h__ico-show--i {
-  color: #ffffff;
+  color: var(--purple);
   font-size: 25px;
 }
 
-.h__form {
-  align-items: center;
-  display: flex;
+.h__ico-show--i2 {
+  color: #ffffff;
+  margin-left: 25px;
+  font-size: 20px;
 }
 
 /************** Slider ******************/
@@ -702,6 +706,12 @@
   left: 0;
   width: 560px;
   z-index: 3000;
+}
+
+.h-list__logo-search {
+  align-items: center;
+  display: flex;
+  padding: 10px 0;
 }
 
 .h__menu-account {
@@ -1093,8 +1103,9 @@ footer {
   justify-content: center;
   position: absolute;
   top: 90px;
-  right: 70px;
+  right: 100px;
   width: 180px;
+  z-index: 10000000;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
@@ -1317,8 +1328,8 @@ footer {
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 95px;
-  left: 210px;
+  top: 90px;
+  left: 48px;
   width: 180px;
   z-index: 1000;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.33);
