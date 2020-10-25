@@ -2,20 +2,45 @@
 
 <section class="container-sliders">
     <div class="container-sliders__lines">
-        <div class="container-sliders--line"></div>
-        <div class="container-sliders--line"></div>
-        <div class="container-sliders--line"></div>
+        <div class="container-sliders--line line-active" onclik="posicionSlide(1)"></div>
+        <div class="container-sliders--line" onclik="posicionSlide(2)"></div>
+        <div class="container-sliders--line" onclik="posicionSlide(3)"></div>
     </div>
     <div class="container-sliders__btns">
-        <div class="container-sliders--btn">
+        <a class="container-sliders--btn" href="" onclik="avanzaSlide(-1)">
             <i class="fas fa-arrow-circle-left"></i>
-        </div>
-        <div class="container-sliders--btn">
+        </a>
+        <a class="container-sliders--btn" href="" onclik="avanzaSlide(1)">
             <i class="fas fa-arrow-circle-right"></i>
-        </div>
+        </a>
     </div>
     <article class="art-sliders">
-        <div class="c-slider">
+        <div class="c-slider fade">
+            <div class="c-slider__txt">
+                <div class="c-slider__txt__content">
+                    <img class="c-slider__logo" src="images/slider/logo.png">
+                    <div class="c-slider__info">
+                        {{!-- Cambiar estos textos --}}
+                        <h1 class="c-slider__info--h1">
+                            Mujeres emprendedoras
+                        </h1>
+                        <p class="c-slider__info--p">
+                            Somos un grupo de mujeres y niñas involucradas con la ciencia, las TIC, la innovación y las matemáticas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="c-slider__c-imgs">
+                <img class="flowers-1" src="images/slider/flowers-1.png">
+                <img class="flowers-2" src="images/slider/flowers-2.png">
+                <div class="c-slider-fondo-rojo"></div>
+                <figure class="c-slider__c-img">
+                    {{!-- Cambiar esta imagen --}}
+                    <img src="images/productos/2.jpg"> 
+                </figure>
+            </div>
+        </div>
+        <div class="c-slider fade">
             <div class="c-slider__txt">
                 <div class="c-slider__txt__content">
                     <img class="c-slider__logo" src="images/slider/logo.png">
@@ -36,7 +61,32 @@
                 <div class="c-slider-fondo-rosa"></div>
                 <figure class="c-slider__c-img">
                     {{!-- Cambiar esta imagen --}}
-                    <img src="images/productos/2.jpg"> 
+                    <img src="images/search/10.jpg"> 
+                </figure>
+            </div>
+        </div>
+        <div class="c-slider fade">
+            <div class="c-slider__txt">
+                <div class="c-slider__txt__content">
+                    <img class="c-slider__logo" src="images/slider/logo.png">
+                    <div class="c-slider__info">
+                        {{!-- Cambiar estos textos --}}
+                        <h1 class="c-slider__info--h1">
+                            Ofertas de <br> la semana
+                        </h1>
+                        <p class="c-slider__info--p">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto porro impedit officia quibusdam libero fugit debitis earum, possimus magnam voluptatibus alias, aliquam laboriosam vero atque quidem aut ex, praesentium fugiat!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="c-slider__c-imgs">
+                <img class="flowers-1" src="images/slider/flowers-1.png">
+                <img class="flowers-2" src="images/slider/flowers-2.png">
+                <div class="c-slider-fondo-negro"></div>
+                <figure class="c-slider__c-img">
+                    {{!-- Cambiar esta imagen --}}
+                    <img src="images/search/3.jpg"> 
                 </figure>
             </div>
         </div>
@@ -186,4 +236,5 @@
 {{!-- <script src="js/main.js"></script> --}}
 {{!-- <script src="js/login-modal.js"></script> --}}
 <script src="js/modal-category.js"></script>
+<script src="js/slider-ctiam.js"></script>
 {{> footer}}
