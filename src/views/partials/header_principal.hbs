@@ -13,7 +13,9 @@
     <title>...</title>
 </head>
 <body>
-    <div id="ventana-cuenta"></div>
+    <div id="ventana-cuenta" style="display: none;">
+        {{> modals/items-perfil}}
+    </div>
     <div id="c-login" style="display: {{showModal modal}};">
         {{> modals/login-modal}}
     </div>
@@ -39,7 +41,7 @@
                 <li class="h-list__li"><a class="h-list__li--a" href="/questions">Preguntas frecuentes</a></li>
                 <li class="h-list__li"><a class="h-list__li--a" href="">Como comprar</a></li>
                 <li class="h__ico-show">
-                    <a href="/carrito"><i class="fas fa-shopping-cart h__ico-show--i"></i></a>
+                    <a href="/user/cart"><i class="fas fa-shopping-cart h__ico-show--i"></i></a>
                 </li>
             </ul>
         </div>
@@ -69,8 +71,8 @@
                 <figure class="h__menu-account__fig">
                     <img class="h__menu-account__fig--img" src="{{avatar user.avatar}}">
                 </figure>
-                <p class="h__menu-account--name-user">brpenaranda</p>
-                <button onclick="modal_cuenta()" class="h__menu-account--ico"><i class="fas fa-caret-down"></i></button>
+                <p class="h__menu-account--name-user">{{user.nombres}}</p>
+                <button onclick="modal_profile()" class="h__menu-account--ico"><i class="fas fa-caret-down"></i></button>
                 <div class="h__ico-show">
                     <i class="fas fa-bell h__ico-show--i2"></i>
                 </div>
@@ -80,3 +82,5 @@
     </header>
 
     <div id="c-category"></div>
+
+    <script src="../js/modal-perfil.js"></script>

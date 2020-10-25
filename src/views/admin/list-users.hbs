@@ -1,0 +1,26 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Cédula</th>
+                <th>Email</th>
+                <th>Fecha de registro</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each users}}
+                <tr>
+                    <td>{{this.nombres}}</td>
+                    <td>{{this.apellidos}}</td>
+                    <td>{{this.dni}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.createdAt}}</td>
+                    <td><a href="/admin/make-seller/{{this.id}}"/>Hacer vendedor</a></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

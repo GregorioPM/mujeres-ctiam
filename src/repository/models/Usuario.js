@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-const { DataTypes } = require("sequelize");
+const { DataTypes, QueryTypes } = require("sequelize");
 const { sequelize } = require("../database");
 
 const User = sequelize.define(
@@ -52,5 +52,10 @@ User.encryptPassword = (password) =>
 User.prototype.comparePassword = function (password) {
     return bcrypt.compareSync(password, this.password);
 };
+User.findNoSellers = async () =>
+    await sequelize.query(
+        `SELECT u.id, u.nombres, u.apellidos, u.dni, u.email, u.createdAt FROM usuario u LEFT JOIN tienda t ON t.id = u.id WHERE t.id IS NULL`,
+        { type: QueryTypes.SELECT }
+    );
 
 module.exports = User;
