@@ -14,7 +14,16 @@ passport.deserializeUser(async (id, done) => {
         },
     });
     if (!user) {
-        return done(null, false);
+        const admin = await Admin.findOne({
+            where: {
+                id,
+            },
+        });
+        if (!admin) {
+            return done(null, false);
+        } else {
+            return done(null, admin.dataValues);
+        }
     }
     return done(null, user.dataValues);
 });
