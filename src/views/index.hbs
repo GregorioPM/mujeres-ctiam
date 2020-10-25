@@ -1,29 +1,46 @@
 {{> header_principal}}
 
-<section class="c-slider">
-    <div class="c-slider__txt">
-        <div class="c-slider__txt__content">
-            <img class="c-slider__logo" src="images/slider/logo.png">
-            <div class="c-slider__info">
-                {{!-- Cambiar este textos --}}
-                <h1 class="c-slider__info--h1">
-                    Producto más <br> vendido del mes.
-                </h1>
-                <p class="c-slider__info--p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto porro impedit officia quibusdam libero fugit debitis earum, possimus magnam voluptatibus alias, aliquam laboriosam vero atque quidem aut ex, praesentium fugiat!
-                </p>
-            </div>
+<section class="container-sliders">
+    <div class="container-sliders__lines">
+        <div class="container-sliders--line"></div>
+        <div class="container-sliders--line"></div>
+        <div class="container-sliders--line"></div>
+    </div>
+    <div class="container-sliders__btns">
+        <div class="container-sliders--btn">
+            <i class="fas fa-arrow-circle-left"></i>
+        </div>
+        <div class="container-sliders--btn">
+            <i class="fas fa-arrow-circle-right"></i>
         </div>
     </div>
-    <div class="c-slider__c-imgs">
-        <img class="flowers-1" src="images/slider/flowers-1.png">
-        <img class="flowers-2" src="images/slider/flowers-2.png">
-        <div class="c-slider-fondo-rosa"></div>
-        <figure class="c-slider__c-img">
-            {{!-- Cambiar esta imagen --}}
-            <img src="images/productos/2.jpg"> 
-        </figure>
-    </div>
+    <article class="art-sliders">
+        <div class="c-slider">
+            <div class="c-slider__txt">
+                <div class="c-slider__txt__content">
+                    <img class="c-slider__logo" src="images/slider/logo.png">
+                    <div class="c-slider__info">
+                        {{!-- Cambiar estos textos --}}
+                        <h1 class="c-slider__info--h1">
+                            Producto más <br> vendido del mes.
+                        </h1>
+                        <p class="c-slider__info--p">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto porro impedit officia quibusdam libero fugit debitis earum, possimus magnam voluptatibus alias, aliquam laboriosam vero atque quidem aut ex, praesentium fugiat!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="c-slider__c-imgs">
+                <img class="flowers-1" src="images/slider/flowers-1.png">
+                <img class="flowers-2" src="images/slider/flowers-2.png">
+                <div class="c-slider-fondo-rosa"></div>
+                <figure class="c-slider__c-img">
+                    {{!-- Cambiar esta imagen --}}
+                    <img src="images/productos/2.jpg"> 
+                </figure>
+            </div>
+        </div>
+    </article>
 </section>
 
 <section class="c-1-index">
