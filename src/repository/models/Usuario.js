@@ -54,7 +54,7 @@ User.prototype.comparePassword = function (password) {
 };
 User.findNoSellers = async () =>
     await sequelize.query(
-        `SELECT u.id, u.nombres, u.apellidos, u.dni, u.email, u.password, u.createdAt, u.updatedAt FROM usuario u RIGHT OUTER JOIN tienda t ON u.id <> t.id`,
+        `SELECT u.id, u.nombres, u.apellidos, u.dni, u.email, u.createdAt FROM usuario u LEFT JOIN tienda t ON t.id = u.id WHERE t.id IS NULL`,
         { type: QueryTypes.SELECT }
     );
 
