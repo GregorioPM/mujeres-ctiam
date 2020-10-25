@@ -111,8 +111,10 @@
 
 .c-profile-seller__buttons
 {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    // margin-bottom: 15px;
     width: 100%;
 }
 
@@ -122,9 +124,10 @@
     background-color: #f1f1f1;
     border-radius: 10px;
     display: flex;
+    overflow: hidden;
     height: 90px;
     justify-content: center;
-    width: 30%;
+    min-width: 100%;
 }
 
 .c-profile-seller__buttons--a
@@ -140,7 +143,7 @@
 
 .c-profile-seller__buttons--a:hover
 {
-    background-color: gray;
+    background-color: #29abe2;
     border-radius: 10px;
 }
 

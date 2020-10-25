@@ -791,7 +791,7 @@
   margin-right: 0;
 }
 
-.fa-arrow-circle-left {
+.fa-chevron-circle-left {
   color: #ffffff;
   cursor: pointer;
   font-size: 35px;
@@ -800,7 +800,7 @@
   transition: .4s;
 }
 
-.fa-arrow-circle-right {
+.fa-chevron-circle-right {
   color: #ffffff;
   cursor: pointer;
   font-size: 35px;
@@ -809,12 +809,12 @@
   transition: .4s;
 }
 
-.fa-arrow-circle-left:hover {
+.fa-chevron-circle-left:hover {
   opacity: 1;
   padding-left: 5px;
 }
 
-.fa-arrow-circle-right:hover {
+.fa-chevron-circle-right:hover {
   opacity: 1;
   padding-right: 5px;
 }
@@ -2499,8 +2499,9 @@ footer {
 }
 
 .c-profile-seller__buttons {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
   width: 100%;
 }
 
@@ -2509,9 +2510,10 @@ footer {
   background-color: #f1f1f1;
   border-radius: 10px;
   display: flex;
+  overflow: hidden;
   height: 90px;
   justify-content: center;
-  width: 30%;
+  min-width: 100%;
 }
 
 .c-profile-seller__buttons--a {
@@ -2525,7 +2527,7 @@ footer {
 }
 
 .c-profile-seller__buttons--a:hover {
-  background-color: gray;
+  background-color: #29abe2;
   border-radius: 10px;
 }
 
@@ -2593,7 +2595,11 @@ footer {
 .favoritos-grid {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.c-favorito__grid {
+  width: 100%;
 }
 
 .c-user-questions {
