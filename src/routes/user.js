@@ -11,7 +11,7 @@ router.get("/home", (req, res) => {
     res.render("user/perfil", {
         title: "Perfil | Mujeres CTIAM",
         user,
-        isAuthenticated: req.user != undefined
+        isAuthenticated: req.user != undefined,
     });
 });
 
@@ -29,4 +29,10 @@ router.post("/update", async (req, res) => {
     res.redirect("/user/home");
 });
 
+router.get("/cart", async (req, res) => {
+    if (req.user) {
+        return res.send("mostrando carrito");
+    }
+    return res.send("Debes estar logeado para acceder a esta ruta");
+});
 module.exports = router;

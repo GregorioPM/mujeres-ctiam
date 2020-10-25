@@ -57,28 +57,28 @@ router.get("/eliminar-producto", (req, res) => {
         title: "Eliminar producto | Mujeres CTIAM",
         isAuthenticated: req.user != undefined,
     });
-})
+});
 
 router.get("/carrito", (req, res) => {
     res.render("carrito", {
         title: "Carrito | Mujeres CTIAM",
         isAuthenticated: req.user != undefined,
     });
-})
+});
 
 router.get("/reportes", (req, res) => {
     res.render("reportes", {
         title: "Reportes | Mujeres CTIAM",
         isAuthenticated: req.user != undefined,
     });
-})
+});
 
 router.get("/preguntas-vendedor", (req, res) => {
     res.render("preguntas-vendedor", {
         title: "Preguntas vendedor | Mujeres CTIAM",
         isAuthenticated: req.user != undefined,
     });
-})
+});
 
 router.get("/reg_product", (req, res) => {
     res.render("reg_product", {
@@ -123,6 +123,8 @@ router.get("/list-product", (req, res) => {
 });
 
 router.use("/login", login);
+
+router.use("/admin", admin);
 
 router.use((req, res, next) => {
     isAuthenticated(req, res, next);

@@ -1,7 +1,7 @@
 const LocalStrategy = require("passport-local").Strategy;
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const passport = require("passport");
-const User = require("../repository/models/Usuario");
+const { Admin, User } = require("../repository/database").models;
 
 passport.serializeUser((user, done) => {
     done(null, user.id);
@@ -145,6 +145,88 @@ passport.use(
                     "No se ha podido acceder a tu correo de Google"
                 )
             );
+        }
+    )
+);
+
+passport.use(
+    "local-signin-admin",
+    new LocalStrategy(
+        {
+            usernameField: "email",
+            passwordField: "password",
+            passReqToCallback: true,
+        },
+        async (req, email, password, done) => {
+            const admin = await Admin.findOne({
+                where: {
+                    email,
+                },
+            });
+            const { nombre_usuario } = req.body;
+            if (!admin) {
+                return done(
+                    null,
+                    false,
+                    req.flash("signingMessage", "Administrador no encontrado")
+                );
+            }
+            if (
+                !admin.comparePassword(password) ||
+                admin.nombre_usuario !== nombre_usuario
+            ) {
+                return done(
+                    null,
+                    false,
+                    req.flash("signingMessage", "Administrador no encontrado")
+                );
+            }
+            done(null, admin.dataValues);
+        }
+    )
+);
+
+passport.use(
+    "local-signup-admin",
+    new LocalStrategy(
+        {
+            usernameField: "email",
+            passwordField: "password",
+            passReqToCallback: true,
+        },
+        async (req, email, password, done) => {
+            const adminDB = await Admin.findOne({
+                where: {
+                    email,
+                },
+            });
+            if (adminDB) {
+                return done(
+                    null,
+                    false,
+                    req.flash(
+                        "signupMessage",
+                        "El email ingresado ya está asociado a una cuenta."
+                    )
+                );
+            } else {
+                const { nombre_usuario, key } = req.body;
+                if (key === process.env.KEY_ADMIN) {
+                    const admin = await Admin.create({
+                        nombre_usuario,
+                        email,
+                        password: Admin.encryptPassword(password),
+                    });
+                    if (admin) {
+                        return done(null, admin.dataValues);
+                    }
+                }
+                return done(
+                    null,
+                    false,
+                    req.flash("signupMessage", "Error al crear el usuario")
+                );
+            }
         }
     )
 );
