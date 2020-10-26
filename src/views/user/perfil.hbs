@@ -42,12 +42,14 @@
                         <p>Carrito</p>
                     </a>
                 </li>
-                <li>
-                    <a class="" href="">
-                        <i class="fas fa-lock"></i>
-                        <p>Crear Tienda</p>
-                    </a>
-                </li>
+                {{#if user.is_seller}}
+                    <li>
+                        <a href="/user/store">
+                            <i class="fas fa-lock"></i>
+                            <p>Mi Tienda</p>
+                        </a>
+                    </li>
+                {{/if}}
             </div>
         </div>
         <div class="c-profile__info">

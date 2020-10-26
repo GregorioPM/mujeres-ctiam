@@ -9,7 +9,8 @@ const userController = (module.exports = {
     },
     makeSeller: async (req, res) => {
         const idUser = req.params.id;
-        const { id, telefono, email } = await User.findByPk(idUser);
+        const userDB = await User.findByPk(idUser);
+        const { id, telefono, email } = userDB;
         const tienda = await Store.create({
             id,
             nombre: "Nombre de la tienda",
@@ -18,6 +19,8 @@ const userController = (module.exports = {
             email,
         });
         if (tienda) {
+            userDB.is_seller = 1;
+            userDB.save();
             return res.redirect("/admin/user-list");
         }
         return res.send("No se ha creado la tienda");
