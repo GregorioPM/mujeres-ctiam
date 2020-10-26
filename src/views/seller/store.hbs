@@ -3,7 +3,7 @@
 <section class="c-profile-seller">
     <article class="c-profile-seller__content">
         <figure class="c-profile-seller__fig">
-            <img class="c-profile-seller__fig--img" src="images/photo-store/1.jpg">
+            <img class="c-profile-seller__fig--img" src="../images/photo-store/1.jpg">
         </figure>
         <div class="c-profile-seller__form-actions">
             <div class="c-profile-seller__form-actions--content">
@@ -12,28 +12,22 @@
                     <form class="c-profile-seller__form--content" action="" method="">
                         <p class="c-profile-seller__form--title">Datos de la cuenta</p>
                         <div class="c-profile-seller__input">
-                            <input placeholder="Usuario:" type="text" required>
+                            <input placeholder="Usuario:" type="text" value="{{user.nombres}}" readonly required>
                         </div>
                         <div class="c-profile-seller__input">
-                            <input placeholder="Correo:" type="text" required>
+                            <input placeholder="Nombre de la tienda:" value="{{store.nombre}}" type="text" required>
                         </div>
                         <div class="c-profile-seller__input">
-                            <input placeholder="Nombre de la tienda:" type="text" required>
+                            <input placeholder="Descripción:" type="text" value="{{store.descripcion}}" required>
                         </div>
                         <div class="c-profile-seller__input">
-                            <input placeholder="Dirección:" type="text" required>
+                            <input placeholder="Teléfono:" type="text" value="{{store.telefono}}" required>
                         </div>
                         <div class="c-profile-seller__input">
-                            <input placeholder="Teléfono:" type="text" required>
+                            <input placeholder="Correo electrónico:" value="{{store.email}}" type="email" required>
                         </div>
                         <div class="c-profile-seller__input">
                             <input placeholder="Sitio web:" type="text" required>
-                        </div>
-                        <div class="c-profile-seller__textarea">
-                            <textarea class="" placeholder="Descripción" cols="30" rows="10"></textarea>
-                        </div>
-                        <div class="c-profile-seller__file">
-                            <input type="file" id="file" name="file" multiple>
                         </div>
                         <div class="c-profile-seller__file">
                             <input type="file" id="file" name="file" multiple>

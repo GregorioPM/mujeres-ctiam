@@ -1,6 +1,8 @@
 const { Router } = require("express");
 const router = Router();
-const { User } = require("../repository/database").models;
+const { userController } = require("../controllers");
+const routerStore = require("./store");
+
 router.get("/", (req, res) => {
     res.redirect("/user/home");
 });
@@ -15,19 +17,7 @@ router.get("/home", (req, res) => {
     });
 });
 
-router.post("/update", async (req, res) => {
-    const user = req.body;
-    let userDB = await User.findOne({
-        where: {
-            id: req.user.id,
-        },
-    });
-    for (field in user) {
-        userDB[field] = user[field];
-    }
-    await userDB.save();
-    res.redirect("/user/home");
-});
+router.post("/update", userController.updateAUser);
 
 router.get("/cart", async (req, res) => {
     if (req.user) {
@@ -35,4 +25,7 @@ router.get("/cart", async (req, res) => {
     }
     return res.send("Debes estar logeado para acceder a esta ruta");
 });
+
+router.use("/store", routerStore);
+
 module.exports = router;

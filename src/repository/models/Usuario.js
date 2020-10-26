@@ -44,6 +44,11 @@ const User = sequelize.define(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        is_seller: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false,
+        },
     },
     { freezeTableName: true }
 );
@@ -54,7 +59,7 @@ User.prototype.comparePassword = function (password) {
 };
 User.findNoSellers = async () =>
     await sequelize.query(
-        `SELECT u.id, u.nombres, u.apellidos, u.dni, u.email, u.createdAt FROM usuario u LEFT JOIN tienda t ON t.id = u.id WHERE t.id IS NULL`,
+        `SELECT u.id, u.nombres, u.apellidos, u.dni, u.email, u.createdAt FROM usuario u where u.is_seller = "0"`,
         { type: QueryTypes.SELECT }
     );
 
