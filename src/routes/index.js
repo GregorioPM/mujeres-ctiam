@@ -101,6 +101,13 @@ router.get("/compras_usuario", (req, res) => {
     });
 });
 
+router.get("/mis-preguntas", (req, res) => {
+    res.render("mis-preguntas", {
+        title: "Mis preguntas | Mujeres CTIAM",
+        isAuthenticated: req.user != undefined,
+    });
+});
+
 router.get("/profile-store", (req, res) => {
     res.render("profile-store", {
         title: "Perfil tienda | Mujeres CTIAM",
