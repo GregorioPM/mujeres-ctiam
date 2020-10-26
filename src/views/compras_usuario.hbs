@@ -1,0 +1,134 @@
+{{> header_principal}}
+
+<div id="modal"></div>
+
+<section class="c-profile">
+    <article class="c-profile__content">
+        <div class="cont-options-profile">
+            <div class="cont-options-profile__content">
+                <li class="li-active">
+                    <a class="a-active" href="/user/home">
+                        <i class="fas fa-edit i-active"></i>
+                        <p>Editar Perfil</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="/password">
+                        <i class="fas fa-lock"></i>
+                        <p>Contraseña</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="/compras_usuario">
+                        <i class="fas fa-shopping-bag"></i>
+                        <p>Compras</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="/favoritos">
+                        <i class="fas fa-star"></i>
+                        <p>Favoritos</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="">
+                        <i class="far fa-question-circle"></i>
+                        <p>Mis preguntas</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="/carrito">
+                        <i class="fas fa-shopping-cart"></i>
+                        <p>Carrito</p>
+                    </a>
+                </li>
+                {{#if user.is_seller}}
+                    <li>
+                        <a href="/user/store">
+                            <i class="fas fa-store"></i>
+                            <p>Mi Tienda</p>
+                        </a>
+                    </li>
+                {{/if}}
+            </div>
+        </div>
+        <div class="c-profile__info">
+            <div class="c-profile__info__content">
+                <form class="c-user-shopping" action="">
+                    <h2>Mis compras</h2>
+                    <div class="c-user-shopping__div">
+                        <div class="c-user-shopping__box">
+                            <div class="c-user-shopping__box-content">
+                                <h3>Fecha de compra: 25 de Septiembre</h3>
+                                <div class="c-user-shopping__info">
+                                    <img class="c-user-shopping__img" src="images/search/16.jpg">
+                                    <div class="c-user-shopping__text">
+                                        <p class="c-user-shopping__text--name">Bolso Mochila Morral Antirobo Con Puerto Usb (Mochila antirrobo inteligente.)</p>
+                                        <p class="c-user-shopping__text--description">Viaja tranquilo en el metro, tren o colectivo.</p>
+                                        <p class="c-user-shopping__text--price">$ 65.000 x 1 unidad</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-user-shopping__div">
+                        <div class="c-user-shopping__box">
+                            <div class="c-user-shopping__box-content">
+                                <h3>Fecha de compra: 25 de Septiembre</h3>
+                                <div class="c-user-shopping__info">
+                                    <img class="c-user-shopping__img" src="images/search/16.jpg">
+                                    <div class="c-user-shopping__text">
+                                        <p class="c-user-shopping__text--name">Bolso Mochila Morral Antirobo Con Puerto Usb (Mochila antirrobo inteligente.)</p>
+                                        <p class="c-user-shopping__text--description">Viaja tranquilo en el metro, tren o colectivo.</p>
+                                        <p class="c-user-shopping__text--price">$ 65.000 x 1 unidad</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-user-shopping__div">
+                        <div class="c-user-shopping__box">
+                            <div class="c-user-shopping__box-content">
+                                <h3>Fecha de compra: 25 de Septiembre</h3>
+                                <div class="c-user-shopping__info">
+                                    <img class="c-user-shopping__img" src="images/search/16.jpg">
+                                    <div class="c-user-shopping__text">
+                                        <p class="c-user-shopping__text--name">Bolso Mochila Morral Antirobo Con Puerto Usb (Mochila antirrobo inteligente.)</p>
+                                        <p class="c-user-shopping__text--description">Viaja tranquilo en el metro, tren o colectivo.</p>
+                                        <p class="c-user-shopping__text--price">$ 65.000 x 1 unidad</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-user-shopping__div">
+                        <div class="c-user-shopping__box">
+                            <div class="c-user-shopping__box-content">
+                                <h3>Fecha de compra: 25 de Septiembre</h3>
+                                <div class="c-user-shopping__info">
+                                    <img class="c-user-shopping__img" src="images/search/16.jpg">
+                                    <div class="c-user-shopping__text">
+                                        <p class="c-user-shopping__text--name">Bolso Mochila Morral Antirobo Con Puerto Usb (Mochila antirrobo inteligente.)</p>
+                                        <p class="c-user-shopping__text--description">Viaja tranquilo en el metro, tren o colectivo.</p>
+                                        <p class="c-user-shopping__text--price">$ 65.000 x 1 unidad</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </article>
+</section>
+
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"></script>
+
+<script src="../js/dragImage.js"></script>
+<script src="../js/uploadImage.js"></script>
+<script src="../perfil_new.hbs"></script>
+<script src="../list-product.hbs"></script>
+<script src="../contact.hbs"></script>
+
+{{> footer }}

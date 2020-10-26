@@ -90,11 +90,20 @@
     .c-profile__info
     {
         padding-top: 0;
+        width: 100%;
+    }
+
+    .c-profile__info__content
+    {
+        margin: 0;
+        width: 100%;
     }
 
     .cont-options-profile__content
     {
         display: flex;
+        justify-content: space-between;
+        width: 100%;
     }
 }
 

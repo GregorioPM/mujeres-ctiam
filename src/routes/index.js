@@ -82,7 +82,21 @@ router.get("/preguntas-vendedor", (req, res) => {
 
 router.get("/reg_product", (req, res) => {
     res.render("reg_product", {
-        title: "Registrarproducto | Mujeres CTIAM",
+        title: "Registrar producto | Mujeres CTIAM",
+        isAuthenticated: req.user != undefined,
+    });
+});
+
+router.get("/password", (req, res) => {
+    res.render("password", {
+        title: "Cambiar contraseña | Mujeres CTIAM",
+        isAuthenticated: req.user != undefined,
+    });
+});
+
+router.get("/compras_usuario", (req, res) => {
+    res.render("compras_usuario", {
+        title: "Mis compras | Mujeres CTIAM",
         isAuthenticated: req.user != undefined,
     });
 });
