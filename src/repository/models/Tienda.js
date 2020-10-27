@@ -31,6 +31,14 @@ const Store = sequelize.define(
             allowNull: false,
             unique: true,
         },
+        pagina_web: {
+            type: DataTypes.STRING(100),
+            allowNull: false,
+        },
+        imagen: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
     },
     { freezeTableName: true }
 );
