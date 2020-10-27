@@ -4,113 +4,19 @@
 </div>
 <div class="c-preguntas-frecuentes">
     <ul class="c-preguntas-frecuentes__ul">
+        {{#each frequentQuestions}}
         <div class="c-preguntas-frecuentes__box">
-            <li class="c-preguntas-frecuentes__li" data-resp_id="resp_1">
-                <span>¿Cómo pagar tu compra?</span>
+            <li class="c-preguntas-frecuentes__li" data-resp_id="resp_{{@index}}">
+                <span>{{this.dataValues.pregunta}}</span>
                 <i class="ico_resp fas fa-angle-down"></i>
             </li>
-            <li class="c-preguntas-frecuentes__respuesta" id="resp_1">
-            <span id="sp_resp_1">
-                El Lorem Ipsum fue concebido como un texto de relleno, formateado de una cierta manera para permitir la presentación de elementos gráficos en documentos, sin necesidad de una copia formal. El uso de Lorem Ipsum permite a los diseñadores reunir los diseños y la forma del contenido antes de que el contenido se haya creado, dando al diseño y al proceso de producción más libertad.
-            </span>
-            </li>
-        </div>
-    
-        <div class="c-preguntas-frecuentes__box">
-            <li class="c-preguntas-frecuentes__li" data-resp_id="resp_2">
-                <span>¿Cómo recibir el producto?</span>
-                <i class="ico_resp fas fa-angle-down"></i>
-            </li>
-            <li class="c-preguntas-frecuentes__respuesta" id="resp_2">
-                <span id="sp_resp_2">
-                    El Lorem Ipsum fue concebido como un texto de relleno, formateado de una cierta manera para permitir la presentación de elementos gráficos en documentos, sin necesidad de una copia formal. El uso de Lorem Ipsum permite a los diseñadores reunir los diseños y la forma del contenido antes de que el contenido se haya creado, dando al diseño y al proceso de producción más libertad.
+            <li class="c-preguntas-frecuentes__respuesta" id="resp_{{@index}}">
+                <span id="sp_resp_{{@index}}">
+                    {{this.dataValues.respuesta}}
                 </span>
             </li>
         </div>
-
-        <div class="c-preguntas-frecuentes__box">
-            <li class="c-preguntas-frecuentes__li" data-resp_id="resp_3">
-                <span>¿Cómo protegemos a los compradores?</span>
-                <i class="ico_resp fas fa-angle-down"></i>
-            </li>
-            <li class="c-preguntas-frecuentes__respuesta" id="resp_3">
-                <span id="sp_resp_3">
-                    El Lorem Ipsum fue concebido como un texto de relleno, formateado de una cierta manera para permitir la presentación de elementos gráficos en documentos, sin necesidad de una copia formal. El uso de Lorem Ipsum permite a los diseñadores reunir los diseños y la forma del contenido antes de que el contenido se haya creado, dando al diseño y al proceso de producción más libertad.
-                </span>
-            </li>
-        </div>
-
-        <div class="c-preguntas-frecuentes__box">
-            <li class="c-preguntas-frecuentes__li" data-resp_id="resp_4">
-                <span>Ventas, Cobros y envíos</span>
-                <i class="ico_resp fas fa-angle-down"></i>
-            </li>
-            <li class="c-preguntas-frecuentes__respuesta" id="resp_4">
-                <span id="sp_resp_4">
-                    El Lorem Ipsum fue concebido como un texto de relleno, formateado de una cierta manera para permitir la presentación de elementos gráficos en documentos, sin necesidad de una copia formal. El uso de Lorem Ipsum permite a los diseñadores reunir los diseños y la forma del contenido antes de que el contenido se haya creado, dando al diseño y al proceso de producción más libertad.
-                </span>
-            </li>
-        </div>
-
-        <div class="c-preguntas-frecuentes__box">
-            <li class="c-preguntas-frecuentes__li" data-resp_id="resp_5">
-                <span>Cargos y facturación de CTIAM</span>
-                <i class="ico_resp fas fa-angle-down"></i>
-            </li>
-            <li class="c-preguntas-frecuentes__respuesta" id="resp_5">
-                <span id="sp_resp_5">
-                    El Lorem Ipsum fue concebido como un texto de relleno, formateado de una cierta manera para permitir la presentación de elementos gráficos en documentos, sin necesidad de una copia formal. El uso de Lorem Ipsum permite a los diseñadores reunir los diseños y la forma del contenido antes de que el contenido se haya creado, dando al diseño y al proceso de producción más libertad.
-                </span>
-            </li>
-        </div>
-
-        <div class="c-preguntas-frecuentes__box">
-            <li class="c-preguntas-frecuentes__li" data-resp_id="resp_6">
-                <span>¿Puedo hacer compras si vivo en el extranjero?</span>
-                <i class="ico_resp fas fa-angle-down"></i>
-            </li>
-            <li class="c-preguntas-frecuentes__respuesta" id="resp_6">
-                <span id="sp_resp_6">
-                    El Lorem Ipsum fue concebido como un texto de relleno, formateado de una cierta manera para permitir la presentación de elementos gráficos en documentos, sin necesidad de una copia formal. El uso de Lorem Ipsum permite a los diseñadores reunir los diseños y la forma del contenido antes de que el contenido se haya creado, dando al diseño y al proceso de producción más libertad.
-                </span>
-            </li>
-        </div>
-
-        <div class="c-preguntas-frecuentes__box">
-            <li class="c-preguntas-frecuentes__li" data-resp_id="resp_7">
-                <span>¿Cómo protegemos a los vendedores?</span>
-                <i class="ico_resp fas fa-angle-down"></i>
-            </li>
-            <li class="c-preguntas-frecuentes__respuesta" id="resp_7">
-                <span id="sp_resp_7">
-                    El Lorem Ipsum fue concebido como un texto de relleno, formateado de una cierta manera para permitir la presentación de elementos gráficos en documentos, sin necesidad de una copia formal. El uso de Lorem Ipsum permite a los diseñadores reunir los diseños y la forma del contenido antes de que el contenido se haya creado, dando al diseño y al proceso de producción más libertad.
-                </span>
-            </li>
-        </div>
-
-        <div class="c-preguntas-frecuentes__box">
-            <li class="c-preguntas-frecuentes__li" data-resp_id="resp_8">
-                <span>Devoluciones y cambios</span>
-                <i class="ico_resp fas fa-angle-down"></i>
-            </li>
-            <li class="c-preguntas-frecuentes__respuesta" id="resp_8">
-                <span id="sp_resp_8">
-                    El Lorem Ipsum fue concebido como un texto de relleno, formateado de una cierta manera para permitir la presentación de elementos gráficos en documentos, sin necesidad de una copia formal. El uso de Lorem Ipsum permite a los diseñadores reunir los diseños y la forma del contenido antes de que el contenido se haya creado, dando al diseño y al proceso de producción más libertad.
-                </span>
-            </li>
-        </div>
-
-        <div class="c-preguntas-frecuentes__box">
-            <li class="c-preguntas-frecuentes__li" data-resp_id="resp_9">
-                <span>¿Qué hago cuando quiero anular una compra?</span>
-                <i class="ico_resp fas fa-angle-down"></i>
-            </li>
-            <li class="c-preguntas-frecuentes__respuesta" id="resp_9">
-                <span id="sp_resp_9">
-                    El Lorem Ipsum fue concebido como un texto de relleno, formateado de una cierta manera para permitir la presentación de elementos gráficos en documentos, sin necesidad de una copia formal. El uso de Lorem Ipsum permite a los diseñadores reunir los diseños y la forma del contenido antes de que el contenido se haya creado, dando al diseño y al proceso de producción más libertad.
-                </span>
-            </li>
-        </div>
+        {{/each}}
     </ul>
 </div>
 

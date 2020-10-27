@@ -5,6 +5,7 @@ const nodeMailer = require("../services/nodemailer");
 const router = Router();
 const user = require("./user");
 const admin = require("./admin");
+const { frequentQuestionController } = require("../controllers");
 
 router.get("/", (req, res) => {
     res.render("index", {
@@ -34,20 +35,6 @@ router.post("/contact", (req, res) => {
 router.get("/list", (req, res) => {
     res.render("list", {
         title: "Lista | Mujeres CTIAM",
-        isAuthenticated: req.user != undefined,
-    });
-});
-
-router.get("/perfil_new", (req, res) => {
-    res.render("perfil_new", {
-        title: "Perfil Tienda | Mujeres CTIAM",
-        isAuthenticated: req.user != undefined,
-    });
-});
-
-router.get("/favoritos", (req, res) => {
-    res.render("user/favourite", {
-        title: "Favoritos | Mujeres CTIAM",
         isAuthenticated: req.user != undefined,
     });
 });
@@ -129,10 +116,13 @@ router.get("/store", (req, res) => {
     });
 });
 
-router.get("/questions", (req, res) => {
+router.get("/questions", async (req, res) => {
+    const frequentQuestions = await frequentQuestionController.getFrequentQuestions();
+    console.log(frequentQuestions);
     res.render("questions", {
         title: "Preguntas frecuentes | Mujeres CTIAM",
-        isAuthenticated: req.user != undefined,
+        isAuthenticated: true,
+        frequentQuestions,
     });
 });
 

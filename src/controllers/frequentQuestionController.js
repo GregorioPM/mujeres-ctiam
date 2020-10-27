@@ -1,6 +1,9 @@
 const { FrequentQuestions } = require("../repository/database").models;
 
 module.exports = {
+    getFrequentQuestions: async () => {
+        return await FrequentQuestions.findAll();
+    },
     createAQuestion: async (req, res) => {
         const { pregunta, respuesta } = req.body;
         const frequentQuestions = await FrequentQuestions.create({
