@@ -1,0 +1,86 @@
+{{> header_principal}}
+<div id="modal"></div>
+
+<section class="c-profile">
+    <article class="c-profile__content">
+        <div class="cont-options-profile">
+            <div class="cont-options-profile__content">
+                <li class="li-active">
+                    <a class="a-active" href="/user/home">
+                        <i class="fas fa-edit i-active"></i>
+                        <p>Editar Perfil</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="/password">
+                        <i class="fas fa-lock"></i>
+                        <p>Contraseña</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="/compras_usuario">
+                        <i class="fas fa-shopping-bag"></i>
+                        <p>Compras</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="/user/favorites">
+                        <i class="fas fa-star"></i>
+                        <p>Favoritos</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="/mis-preguntas">
+                        <i class="far fa-question-circle"></i>
+                        <p>Mis preguntas</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="/carrito">
+                        <i class="fas fa-shopping-cart"></i>
+                        <p>Carrito</p>
+                    </a>
+                </li>
+                {{#if user.is_seller}}
+                <li>
+                    <a href="/user/store">
+                        <i class="fas fa-store"></i>
+                        <p>Mi Tienda</p>
+                    </a>
+                </li>
+                {{/if}}
+            </div>
+        </div>
+        <div class="c-profile__info">
+
+            <form class="c-favorito__grid" action="" method="">
+                <p class="c-profile-seller__form--title">Favoritos</p>
+                <div class="favoritos-grid">
+                    {{#each favourites}}
+                    <a href="/product/{{this.id}}">
+                        <div class="c-profile-store__product">
+                            <img class="c-profile-store__product--img" src="{{this.imagen}}">
+                            <div class="c-profile-store__info-product">
+                                <p class="c-profile-store__info-product--p">{{this.titulo}}</p>
+                                <p class="c-profile-store__info-product--price">$ {{this.precio}}</p>
+                            </div>
+                        </div>
+                    </a>
+                    {{/each}}
+                </div>
+            </form>
+        </div>
+        </div>
+    </article>
+</section>
+
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"></script>
+
+<script src="../js/dragImage.js"></script>
+<script src="../js/uploadImage.js"></script>
+<script src="../perfil_new.hbs"></script>
+<script src="../list-product.hbs"></script>
+<script src="../contact.hbs"></script>
+
+{{> footer }}

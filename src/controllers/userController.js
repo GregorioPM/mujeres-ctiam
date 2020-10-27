@@ -14,9 +14,13 @@ const userController = (module.exports = {
         await userDB.save();
         res.redirect("/user/home");
     },
-    getFavorites: async(req, res) => {
-        const favorites = await User.findFavorites(req.user.id)
-        // res.render('user/favoritos',favorites);
-        res.send(favorites);
-    }
+    getFavorites: async (req, res) => {
+        const favourites = await User.findFavorites(req.user.id);
+        res.render("user/favourite", {
+            title: "Favoritos | Mujeres CTIAM",
+            user: req.user,
+            isAuthenticated: true,
+            favourites,
+        });
+    },
 });

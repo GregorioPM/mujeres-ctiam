@@ -46,7 +46,7 @@ router.get("/perfil_new", (req, res) => {
 });
 
 router.get("/favoritos", (req, res) => {
-    res.render("favoritos", {
+    res.render("user/favourite", {
         title: "Favoritos | Mujeres CTIAM",
         isAuthenticated: req.user != undefined,
     });
