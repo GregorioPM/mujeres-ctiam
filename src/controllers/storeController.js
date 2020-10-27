@@ -1,5 +1,6 @@
 const { Store } = require("../repository/database").models;
-const userController = (module.exports = {
+
+module.exports = {
     updateAStore: async (req, res) => {
         const store = req.body;
         let storeDB = await Store.findByPk(req.user.id);
@@ -12,4 +13,4 @@ const userController = (module.exports = {
         }
         return res.redirect("/user/store");
     },
-});
+};

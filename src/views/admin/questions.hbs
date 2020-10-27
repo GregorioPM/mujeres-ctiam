@@ -1,0 +1,88 @@
+<div style="margin-top: 50px;">
+    <div>
+        <button onclick="modalAdd(this)">Agregar Pregunta</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Pregunta</th>
+                <th>Respuesta</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each frequentQuestions}}
+                <tr>
+                    <td>{{this.dataValues.pregunta}}</td>
+                    <td>{{this.dataValues.respuesta}}</td>
+                    <td><a href="#" data-id-question="{{this.dataValues.id}}" onclick="modalEdit(this)">Editar</a><a href="#" data-id-question="{{this.dataValues.id}}" onclick="modalDelete(this)">Eliminar</a></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <div id="modalAdd" style="display: none; border: 2px dashed #2bf;">
+        <form action="/admin/frecuent-questions" method="POST">
+            <div>
+                <textarea name="pregunta" id="question" cols="50" rows="20"></textarea>
+            </div>
+            <div>
+                <textarea name="respuesta" id="answer" cols="50" rows="20"></textarea>
+            </div>
+            <div>
+                <button>Guardar</button>
+            </div>
+        </form>
+    </div>
+    <div id="modalEdit" style="display: none; border: 2px dashed #2bf;">
+        <form action="" name="edit" method="POST">
+            <div>
+                <textarea name="pregunta" id="question" cols="50" rows="20"></textarea>
+            </div>
+            <div>
+                <textarea name="respuesta" id="answer" cols="50" rows="20"></textarea>
+            </div>
+            <div>
+                <button>Editar</button>
+            </div>
+        </form>
+    </div>
+    <div id="modalDelete" style="display: none; border: 2px dashed #2bf;">
+        <form action="" name="delete" method="POST">
+            <h3>¿Estás seguro que deseas eliminar esta pregunta?</h3>
+            <div>
+                <textarea name="pregunta" id="question" cols="50" rows="20"></textarea>
+            </div>
+            <div>
+                <button type="submit">Eliminar</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    async function modalEdit(e) {
+        const idQuestion = e.dataset.idQuestion;
+        const question = await getQuestion(idQuestion);
+        console.log(question)
+        showModal("modalEdit");
+        document.querySelector("#modalEdit form").action = `/admin/frecuent-questions/${idQuestion}`
+        document.forms["edit"]["pregunta"].value = question.frequentQuestion.pregunta;
+        document.forms["edit"]["respuesta"].value = question.frequentQuestion.respuesta;
+    }
+    async function modalDelete(e) {
+        const idQuestion = e.dataset.idQuestion;
+        const question = await getQuestion(idQuestion);
+        showModal("modalDelete");
+        document.querySelector("#modalDelete form").action = `/admin/delete-frecuent-questions/${idQuestion}`
+        document.forms["delete"]["pregunta"].value = question.frequentQuestion.pregunta;
+    }
+    function showModal(modalName) {
+        document.getElementById(modalName).style.display = "block";
+    }
+    async function getQuestion(idQuestion) {
+        const data = await fetch(`http://localhost:4000/admin/frecuent-questions/${idQuestion}`);
+        return await data.json();
+    }
+    function modalAdd() {
+        showModal("modalAdd")
+    }
+</script>

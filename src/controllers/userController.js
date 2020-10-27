@@ -1,13 +1,9 @@
 const { User } = require("../repository/database").models;
 
-const userController = (module.exports = {
+module.exports = {
     updateAUser: async (req, res) => {
         const user = req.body;
-        let userDB = await User.findOne({
-            where: {
-                id: req.user.id,
-            },
-        });
+        let userDB = await User.findByPk(req.user.id);
         for (field in user) {
             userDB[field] = user[field];
         }
@@ -23,4 +19,4 @@ const userController = (module.exports = {
             favourites,
         });
     },
-});
+};
