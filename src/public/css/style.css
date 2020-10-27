@@ -1059,7 +1059,7 @@ footer {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 1212px;
 }
 
 .c-profile__info {
@@ -1504,7 +1504,7 @@ footer {
 
 .c-title-questions h1 {
   padding-top: 3rem;
-  width: 75%;
+  width: 1212px;
 }
 
 .c-preguntas-frecuentes {
@@ -1521,7 +1521,7 @@ footer {
   list-style: none;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  width: 75%;
+  width: 1212px;
 }
 
 .c-preguntas-frecuentes__li {
@@ -1581,7 +1581,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 2rem 0;
-  width: 95%;
+  width: 1212px;
 }
 
 .c-filter {
@@ -2020,7 +2020,7 @@ footer {
 .c-stores__content {
   margin: 0 auto;
   padding: 3rem 0;
-  width: 90%;
+  width: 1212px;
 }
 
 .c-stores--title {
@@ -2268,7 +2268,7 @@ footer {
 .c-shopping-cart__content {
   margin: 0 auto;
   padding: 4rem 0;
-  width: 90%;
+  width: 1212px;
 }
 
 .c-shopping-cart__title {
@@ -2806,19 +2806,13 @@ footer {
   justify-content: space-between;
   padding: 3rem 0;
   margin: 0 auto;
-  width: 100%;
+  width: 1212px;
 }
 
 .c-view-product__images {
   display: flex;
-  justify-content: flex-end;
-  width: 55%;
-}
-
-.c-view-product__images__content {
-  display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: 55%;
 }
 
 .c-view-product__list-images {
@@ -2909,7 +2903,7 @@ footer {
 .c-details-product__content {
   margin: 0 auto;
   padding: 4rem 0;
-  width: 90%;
+  width: 1212px;
 }
 
 .c-details-product__info, .c-details-product__comments {
@@ -2982,7 +2976,7 @@ footer {
 .c-products-recommended__content {
   margin: 0 auto;
   padding: 4rem 0;
-  width: 90%;
+  width: 1212px;
 }
 
 .c-products-recommended--p {
