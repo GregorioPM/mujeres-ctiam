@@ -1,6 +1,6 @@
 const { User, Store } = require("../repository/database").models;
 
-const userController = (module.exports = {
+module.exports = {
     findNoSellers: async (req, res) => {
         const users = await User.findNoSellers();
         res.render("admin/list-users", {
@@ -25,4 +25,4 @@ const userController = (module.exports = {
         }
         return res.send("No se ha creado la tienda");
     },
-});
+};

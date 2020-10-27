@@ -16,6 +16,7 @@ const Cart = require("../models/Carrito");
 const City = require("../models/Ciudad");
 const Comentary = require("../models/Comentario");
 const Favorite = require("../models/Favorito");
+const FrequentQuestions = require("../models/PreguntasFrecuentes");
 const ItemSale = require("../models/ItemSale");
 const ItemCart = require("../models/ItemCart");
 const LandMark = require("../models/Marca");
@@ -60,6 +61,7 @@ exports.models = {
     City,
     Comentary,
     Favorite,
+    FrequentQuestions,
     ItemCart,
     ItemSale,
     LandMark,

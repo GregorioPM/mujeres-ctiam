@@ -9,7 +9,6 @@ router.get("/", (req, res) => {
 
 router.get("/home", (req, res) => {
     const user = req.user;
-    console.log(user);
     res.render("user/perfil", {
         title: "Perfil | Mujeres CTIAM",
         user,
