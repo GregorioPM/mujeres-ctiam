@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const { Store } = require("../repository/database").models;
 const isSeller = require("../middlewares/isSeller");
+const { storeController } = require("../controllers");
 const router = Router();
 
 router.use(isSeller);
@@ -14,11 +15,13 @@ router.get("/", async (req, res) => {
                 title: "Store | Mujeres CTIAM",
                 user,
                 store: store.dataValues,
-                isAuthenticated: req.user != undefined,
+                isAuthenticated: true,
             });
         }
     }
     return res.redirect("/");
 });
+
+router.post("/update", storeController.updateAStore);
 
 module.exports = router;
