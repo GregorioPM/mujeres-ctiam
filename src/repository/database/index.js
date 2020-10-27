@@ -29,7 +29,7 @@ const User = require("../models/Usuario");
 
 // {alter:true}
 (async () => {
-    sequelize.sync().then(() => console.log("tables created"));
+    sequelize.sync({alter:true}).then(() => console.log("tables created"));
 })();
 
 require("../asociation")({

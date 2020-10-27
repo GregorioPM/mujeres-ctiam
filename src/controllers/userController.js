@@ -14,4 +14,9 @@ const userController = (module.exports = {
         await userDB.save();
         res.redirect("/user/home");
     },
+    getFavorites: async(req, res) => {
+        const favorites = await User.findFavorites(req.user.id)
+        // res.render('user/favoritos',favorites);
+        res.send(favorites);
+    }
 });
