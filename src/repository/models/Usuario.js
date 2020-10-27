@@ -62,5 +62,11 @@ User.findNoSellers = async () =>
         `SELECT u.id, u.nombres, u.apellidos, u.dni, u.email, u.createdAt FROM usuario u where u.is_seller = "0"`,
         { type: QueryTypes.SELECT }
     );
+User.findFavorites = async (userID) =>
+    await sequelize.query(
+        `SELECT p.id,p.id_tienda,p.id_categoria,p.id_marca,p.titulo,p.descripcion,p.detalle,p.precio,p.fecha,p.stock 
+        FROM producto p JOIN favorito f ON p.id = f.id_producto JOIN usuario u ON u.id = f.id_usuario WHERE f.id_usuario = ${userID}`,
+        { type: QueryTypes.SELECT }
+    );
 
 module.exports = User;

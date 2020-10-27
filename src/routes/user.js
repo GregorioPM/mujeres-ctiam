@@ -19,12 +19,7 @@ router.get("/home", (req, res) => {
 
 router.post("/update", userController.updateAUser);
 
-router.get("/cart", async (req, res) => {
-    if (req.user) {
-        return res.send("mostrando carrito");
-    }
-    return res.send("Debes estar logeado para acceder a esta ruta");
-});
+router.get("/favorites", userController.getFavorites);
 
 router.use("/store", routerStore);
 
