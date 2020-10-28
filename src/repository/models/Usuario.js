@@ -68,8 +68,19 @@ User.findFavorites = async (userID) =>
         FROM producto p 
             JOIN favorito f ON p.id = f.id_producto 
             JOIN usuario u ON u.id = f.id_usuario 
-        WHERE f.id_usuario = ${userID}`,
+        WHERE f.id_usuario = ${userID}
+        ORDER BY f.id  DESC`,
         { type: QueryTypes.SELECT }
     );
-
+User.findCart = async(userID) => 
+        await sequelize.query(
+            `SELECT p.id as id_producto, p.imagen, p.titulo, m.nombre as marca, p.precio, i.cantidad, i.id as id_item
+            FROM producto p 
+                JOIN item_cart i ON p.id = i.id_producto
+                JOIN carrito c ON c.id = i.id_carrito
+                JOIN marca m ON m.id = p.id_marca
+            WHERE c.id = ${userID}  
+            ORDER BY i.id  DESC`,
+            { type: QueryTypes.SELECT }
+        );
 module.exports = User;

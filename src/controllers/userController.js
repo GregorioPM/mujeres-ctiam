@@ -19,4 +19,13 @@ module.exports = {
             favourites,
         });
     },
+    getCart: async (req, res)=>{
+        const cart = await User.findCart(req.user.id);
+        res.render("user/cart",{
+            title: "Carrito | Mujeres CTIAM",
+            user: req.user,
+            isAuthenticated: true,
+            cart,
+        })
+    }
 };
