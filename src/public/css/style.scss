@@ -46,7 +46,6 @@
     padding: 0;
     text-decoration: none;
 }
-
 html::-webkit-scrollbar {
     width: 20px;
     height: 20px;
@@ -66,8 +65,14 @@ html::-webkit-scrollbar-track {
 *::after {
   box-sizing: border-box;
 }
-
-body { overflow-x: hidden; }
+html { overflow-x: hidden; }
+body
+{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; 
+}
 button {cursor: pointer;}
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
