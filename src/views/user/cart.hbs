@@ -1,0 +1,41 @@
+{{> header_principal}}
+
+<section class="c-shopping-cart">
+    <article class="c-shopping-cart__content">
+        <div class="c-shopping-cart__title">
+            <p class="c-shopping-cart__title--p">Carrito</p>
+            <button class="c-shopping-cart__title--button" type="submit">Comprar todo</button>
+        </div>
+        {{#each cart}}
+        <div class="c-shopping-cart__product">
+            <figure class="c-shopping-cart__fig">
+                <img class="c-shopping-cart__fig--img" src="{{this.imagen}}">
+            </figure>
+            <div class="c-shopping-cart__p-info">
+                <div class="c-shopping-cart__p-info--content">
+                    <p class="c-shopping-cart--description">
+                        {{this.titulo}}
+                    </p>
+                    <div class="c-shopping-count-text">
+                        <p class="c-shopping-text">Cantidad:</p>
+                        <div class="c-shopping-count">
+                            <i class="fas fa-minus"></i>
+                            <p class="c-shopping-count--p">{{this.cantidad}}</p>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <p class="c-shopping-cart--brand">{{this.marca}}</p>
+                    <p class="c-shopping-cart--price">Precio: ${{this.precio}}</p>
+                    <div class="c-shopping-cart__options">
+                        <button class="c-shopping-cart--buy" type="submit">Comprar</button>
+                        <a class="c-shopping-cart--delete" href="/user/cart/delete/{{this.id_item}}">Eliminar</a>
+                        <a class="c-shopping-cart--favourite" href="">Guardar en favoritos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </article>
+</section>
+
+{{> footer}}

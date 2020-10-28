@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const router = Router();
-const { userController } = require("../controllers");
+const { cartController, userController } = require("../controllers");
 const routerStore = require("./store");
 
 router.get("/", (req, res) => {
@@ -19,6 +19,10 @@ router.get("/home", (req, res) => {
 router.post("/update", userController.updateAUser);
 
 router.get("/favorites", userController.getFavorites);
+
+router.get("/cart", userController.getCart);
+
+router.get("/cart/delete/:id", cartController.deleteAItem);
 
 router.use("/store", routerStore);
 
