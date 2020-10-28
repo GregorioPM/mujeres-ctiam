@@ -205,8 +205,8 @@
 .c-slider__info--h1
 {
     color: #ffffff;
-    font-size: 4vw;
-    line-height: 50px;
+    font-size: 4.5rem;
+    line-height: 60px;
     padding: 30px 0 15px 0;
 }
 
@@ -348,6 +348,7 @@ background: linear-gradient(to right, rgba(219,54,164,1) 0%, rgba(183,16,133,1) 
     overflow: hidden;
     position: relative;
     height: 500px;
+    width: 1440px;
 }
 
 .container-sliders__btns
@@ -357,9 +358,11 @@ background: linear-gradient(to right, rgba(219,54,164,1) 0%, rgba(183,16,133,1) 
     height: inherit;
     justify-content: space-between;
     left: 0;
+    margin: auto;
     position: relative;
+    right: 0;
     top: 0;
-    width: 100%;
+    width: 1340px;
     z-index: 2;
 }
 .container-sliders__lines
