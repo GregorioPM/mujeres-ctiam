@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {{!-- Google font --}}
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="../css/style.css">
     {{!-- Responsive --}}
-    <link href="../css/responsive1024.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
     {{!-- <link href="../css/tablet.css" rel="stylesheet" media="screen and (min-width: 768px)">
-    <link href="../css/phone.css" rel="stylesheet" media="screen and (min-width: 425px)">
-    <link href="../css/phone2.css" rel="stylesheet" media="screen and (min-width: 375px)">
-    <link href="../css/phone3.css" rel="stylesheet" media="screen and (min-width: 320px)"> --}}
-
+    <link href="../css/phone.css" rel="stylesheet" media="screen and (min-width: 425px)"> --}}
     <meta charset="UTF-8">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    {{!-- Iconos --}}
     <script src="https://kit.fontawesome.com/0dc3b1d201.js" crossorigin="anonymous"></script>
+    {{!-- Google Fonts - Tipografía --}}
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>...</title>
@@ -30,9 +26,9 @@
         {{> modals/register-modal}}
     </div>
 
-    <div class="h-list">
-        <div class="h-list__content">
-            <div class="h-list__logo-search" style="display: flex; align-items: center; ">
+    <div class="container">
+        <div class="h-list__content container__content">
+            <div class="h-list__logo-search">
                 <a class="h__menu__a-img" href="/"><img class="h__content--img" src="../images/logo.png"></a>
                 <div class="h__search">
                     <form class="h__search__c">
@@ -57,8 +53,8 @@
         </div>
     </div>
 
-    <header class="h">
-        <nav class="h__content">
+    <header class="h container">
+        <nav class="h__content container__content">
             <ul class="h__menu">
                 <li class="h__menu--li">
                     <button onclick="showCategory()" class="h__menu--a">
