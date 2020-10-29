@@ -100,7 +100,7 @@
 
 .c-product-cols {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(388.66667px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
 }
 
@@ -473,14 +473,15 @@
   background-color: #FFFFFF;
   border: 1px solid var(--purple);
   border-radius: 5px;
-  justify-content: space-around;
+  justify-content: center;
   display: flex;
   height: 35px;
-  width: 450px;
+  width: 80%;
+  min-width: 170px;
 }
 
 .h__search__c {
-  width: 390px;
+  width: 85%;
 }
 
 .h__search--input {
@@ -500,7 +501,7 @@
 }
 
 .h__menu__a-img {
-  margin-right: 50px;
+  margin-right: 3vw;
 }
 
 .h__menu--li {
@@ -579,12 +580,14 @@
 .h-list__ul {
   align-items: center;
   display: flex;
+  justify-content: space-between;
+  width: 40%;
 }
 
 .h-list__li {
-  padding-right: 20px;
   padding-bottom: 7px;
   padding-top: 7px;
+  text-align: center;
 }
 
 .h-list__li:last-child {
@@ -625,6 +628,7 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  max-width: 1440px;
 }
 
 .c-slider__txt {
@@ -634,7 +638,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  margin: auto;
+  width: 90%;
+  max-width: 1340px;
   z-index: 100;
 }
 
@@ -747,13 +754,16 @@
   align-items: center;
   display: flex;
   padding: 10px 0;
+  width: 50%;
 }
 
 .container-sliders {
+  display: flex;
+  flex-wrap: wrap;
   overflow: hidden;
   position: relative;
   height: 500px;
-  width: 1440px;
+  width: 100%;
 }
 
 .container-sliders__btns {
@@ -766,7 +776,8 @@
   position: relative;
   right: 0;
   top: 0;
-  width: 1340px;
+  width: 100%;
+  max-width: 1440px;
   z-index: 2;
 }
 
@@ -778,8 +789,11 @@
   padding-bottom: 10px;
   left: 0;
   position: absolute;
+  right: 0;
   top: 0;
-  width: 100%;
+  margin: auto;
+  width: 90%;
+  max-width: 1440px;
   z-index: 1;
 }
 
@@ -831,9 +845,10 @@
   overflow: hidden;
   right: 0;
   margin: auto;
+  max-width: 1440px;
   position: absolute;
   top: 0;
-  width: 1440px;
+  width: 100%;
   z-index: 0;
 }
 
@@ -912,6 +927,7 @@ footer {
   display: flex;
   justify-content: space-between;
   width: 50%;
+  min-width: 428px;
 }
 
 .f__category {
@@ -1912,7 +1928,7 @@ footer {
 
 .c-1-index__cols {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
   padding-top: 40px;
 }
