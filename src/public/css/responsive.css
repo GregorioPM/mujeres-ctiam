@@ -76,10 +76,11 @@
     .f__content { flex-direction: column; }
     .f__category-help, .f__category, .f__help, .f__subscribe { width: 100%; }
     .f__subscribe__content { padding-top: 30px; }
-    .h-list__logo-search { width: 100%; }
+    .h-list__logo-search { justify-content: space-between; width: 100%; }
     .h__search { width: 170px; }
     .h-list__ul
     {
+        display: none;
         flex-direction: column;
         width: 100%;
     }
@@ -90,9 +91,16 @@
         padding: 10px 0;
         width: 100%;
     }
-
     .h__ico-show { border: 0; }
-    
+    .fa-bars
+    {
+        position: relative;
+        color: var(--purple);
+        cursor: pointer;
+        display: block;
+        font-size: 24px;
+    }
+    .h__search { display: none; }
 }
 
 @media (max-width: 425px)
