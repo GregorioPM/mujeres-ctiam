@@ -1,0 +1,26 @@
+{{> header_principal}}
+<div class="c-title-questions">
+    <h1>Categorias CTIAM</h1>
+</div>
+<div class="c-categorias">
+    <ul class="c-categorias__ul">
+        {{#each categorys}}
+        <div class="c-categorias__box">
+            <li class="c-categorias__li" data-resp_id="resp_{{@index}}">
+                <span>{{this.dataValues.nombre}}</span>
+                <i class="ico_resp fas fa-angle-down"></i>
+            </li>
+            <li class="c-categorias_descripcion" id="resp_{{@index}}">
+                <span id="sp_resp_{{@index}}">
+                    {{this.dataValues.descripcion}}
+                </span>
+            </li>
+        </div>
+        {{/each}}
+    </ul>
+</div>
+
+<!-- Script para controlar la lista de preguntas -->
+<script src="js/categorys.js"></script>
+
+{{> footer}}
