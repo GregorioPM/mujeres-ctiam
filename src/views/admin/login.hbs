@@ -1,23 +1,26 @@
 {{> header_principal}}
 
-<form action="/login/signin-admin" method="POST" id="formLogin"
-    style="border: 2px solid #ccc; width : 200px; margin: 100px; padding: 50px; display: block">
-    <div style="margin-bottom: 50px;">
-        <input type="text" name="nombre_usuario" placeholder="usuario">
-    </div>
-    <div style="margin-bottom: 50px;">
-        <input type="text" name="email" placeholder="email">
-    </div>
-    <div style="margin-bottom: 50px;">
-        <input type="password" name="password" placeholder="password">
-    </div>
-    <div style="margin-bottom: 50px;">
-        <button type="submit">Iniciar sesión</button>
-    </div>
-    <div>
-        <a href="#" onclick="showRegister()">registrar administrador</a>
-    </div>
-</form>
+<div class="c-login-admin container">
+    <form class="form-login-admin" action="/login/signin-admin" method="POST" id="formLogin">
+        <h4>Iniciar sesión | Administrador</h4>
+        <label for="nombre_usuario">
+            <span>Usuario</span>
+            <input type="text" id="nombre_usuario" name="nombre_usuario" required autocomplete="name">
+        </label>
+        <label for="email">
+            <span>Correo</span>
+            <input type="text" id="email" name="email" required autocomplete="email">
+        </label>
+        <label for="password">
+            <span>Contraseña</span>
+            <input type="password" id="password" name="password" required>
+        </label>
+        <label>
+            <input type="submit" value="Iniciar sesión">
+        </label>
+        <a href="#" onclick="showRegister()">Registrar administrador</a>
+    </form>
+</div>
 
 <form action="/login/signup-admin" method="POST" id="formRegister"
     style="border: 2px solid #ccc; width : 200px; margin: 100px; padding: 50px; display: none">

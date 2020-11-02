@@ -30,6 +30,7 @@
 @import "favorito/favorito";
 @import "reportes/reportes";
 @import "password/password";
+@import "admin/login";
 @import "view-product/view-product";
 @import "compras_usuario/compras-usuario";
 
@@ -46,8 +47,7 @@
     text-decoration: none;
 }
 html::-webkit-scrollbar {
-    width: 20px;
-    height: 20px;
+    width: 0.7rem;
 }
 html::-webkit-scrollbar-thumb {
     background: linear-gradient(180deg,#C50084,#e52e71);

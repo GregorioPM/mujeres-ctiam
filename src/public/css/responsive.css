@@ -141,6 +141,7 @@
         padding-left: calc(375px * (1 / 24));
         padding-right: calc(375px * (1 / 24));
     }
+    .form-login-admin { width: 95%; }
 }
 
 @media (max-width: 320px)
