@@ -1,8 +1,7 @@
-<div style="margin-top: 50px;">
-    <div>
-        <button onclick="modalAdd(this)">Agregar Pregunta</button>
-    </div>
-    <table>
+{{> header_principal}}
+<div class="c-list-admin container">
+    <button class="btn-option-admin" onclick="modalAdd(this)">Agregar Pregunta</button>
+    <table class="c-list-admin__table container__content">
         <thead>
             <tr>
                 <th>Pregunta</th>
@@ -58,31 +57,6 @@
         </form>
     </div>
 </div>
-<script>
-    async function modalEdit(e) {
-        const idQuestion = e.dataset.idQuestion;
-        const question = await getQuestion(idQuestion);
-        console.log(question)
-        showModal("modalEdit");
-        document.querySelector("#modalEdit form").action = `/admin/frecuent-questions/${idQuestion}`
-        document.forms["edit"]["pregunta"].value = question.frequentQuestion.pregunta;
-        document.forms["edit"]["respuesta"].value = question.frequentQuestion.respuesta;
-    }
-    async function modalDelete(e) {
-        const idQuestion = e.dataset.idQuestion;
-        const question = await getQuestion(idQuestion);
-        showModal("modalDelete");
-        document.querySelector("#modalDelete form").action = `/admin/delete-frecuent-questions/${idQuestion}`
-        document.forms["delete"]["pregunta"].value = question.frequentQuestion.pregunta;
-    }
-    function showModal(modalName) {
-        document.getElementById(modalName).style.display = "block";
-    }
-    async function getQuestion(idQuestion) {
-        const data = await fetch(`http://localhost:4000/admin/frecuent-questions/${idQuestion}`);
-        return await data.json();
-    }
-    function modalAdd() {
-        showModal("modalAdd")
-    }
-</script>
+<script src="../js/questions-admin.js"></script>
+
+{{> footer}}

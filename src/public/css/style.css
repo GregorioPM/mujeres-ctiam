@@ -2964,6 +2964,67 @@ footer {
   color: #ffffff;
 }
 
+.c-list-admin {
+  padding: calc(1440px * (1 / 24));
+  width: 100%;
+}
+
+.c-list-admin__table {
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-collapse: collapse;
+  display: table;
+}
+
+.c-list-admin thead {
+  width: 100%;
+}
+
+.c-list-admin tr {
+  width: 100%;
+}
+
+.c-list-admin th {
+  border: 1px solid #dee2e6;
+  box-sizing: border-box;
+  vertical-align: inherit;
+  display: table-cell;
+  padding: .75rem;
+}
+
+.c-list-admin th:first-child {
+  border-top-left-radius: 5px;
+}
+
+.c-list-admin th:last-child {
+  border-top-right-radius: 5px;
+}
+
+.c-list-admin td {
+  border: 1px solid #dee2e6;
+  box-sizing: border-box;
+  vertical-align: inherit;
+  display: table-cell;
+  padding: .75rem;
+}
+
+.c-list-admin tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.btn-option-admin {
+  background-color: var(--purple);
+  color: #ffffff;
+  height: 40px;
+  margin-bottom: 40px;
+  transition: .3s;
+  width: 200px;
+}
+
+.btn-option-admin:hover {
+  background-color: #000000;
+}
+
 .c-view-product {
   width: 100%;
 }
