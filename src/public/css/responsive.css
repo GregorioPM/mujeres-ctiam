@@ -45,6 +45,7 @@
 
     .c-profile-admin { flex-direction: column; }
     .c-profile-admin__options { padding-top: 4em; width: 100%; }
+    .c-list-admin { padding: calc(1024px * (1 / 24)); }
 }
 
 @media (max-width: 768px)
