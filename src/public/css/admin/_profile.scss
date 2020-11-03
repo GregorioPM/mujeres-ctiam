@@ -1,0 +1,79 @@
+.c-profile-admin{
+    display: flex;
+    padding-bottom: calc(1440px * (1 / 24));
+    padding-top: calc(1440px * (1 / 24));
+}
+.c-profile-admin__imgs,
+.c-profile-admin__options {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+.c-profile-admin__figure {
+    height: 200px;
+    position: relative;
+    width: 475px;
+}
+.c-profile-admin__figure--ctiam {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    margin:  auto;
+    width: 250px;
+}
+.c-profile-admin__figure--cupcake {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90px;
+}
+.c-profile-admin__figure--dress {
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    width: 90px;
+}
+.c-profile-admin__figure--hat {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90px;
+}
+.c-profile-admin__figure--purse {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 90px;
+}
+.c-profile-admin__figure--sneakers {
+    position: absolute;
+    bottom: 0;
+    right: 40px;
+    width: 90px;
+}
+.c-profile-admin__options {
+    flex-direction: column;
+}
+.c-profile-admin__options h2 {
+    padding-bottom: 25px;
+}
+.c-profile-admin__options a {
+    align-items: center;
+    background-color: #ffb9c6;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    margin-bottom: 20px;
+    transition: .3s;
+    width: 300px;
+}
+.c-profile-admin__options a:hover
+{
+    background-color: var(--purple);
+    color: #ffffff;
+}
