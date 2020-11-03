@@ -1,20 +1,26 @@
 {{> header_principal}}
-<div style="background-color: #2a8;">
-    <div>
-        <a href="/admin/user-list">Agregar Vendedor</a>
-    </div>
-    <div>
-        <a href="/admin">Agregar administrador</a>
-    </div>
-    <div>
-        <a href="/admin/categorys">Agregar Categorias</a>
-    </div>
-    <div>
-        <a href="/admin/frecuent-questions">Preguntas Frecuentes</a>
-    </div>
-    <div>
-        <a href="/banner">Editar banner</a>
-    </div>
-</div>
+
+<section class="container">
+    <article class="c-profile-admin container__content">
+        <div class="c-profile-admin__imgs">
+            <figure class="c-profile-admin__figure">
+                <img class="c-profile-admin__figure--ctiam" src="../images/admin/icos/ctiam.png" alt="imgctiam">
+                <img class="c-profile-admin__figure--cupcake" src="../images/admin/icos/cupcake.png" alt="imgcupcake">
+                <img class="c-profile-admin__figure--dress" src="../images/admin/icos/dress.png" alt="imgdress">
+                <img class="c-profile-admin__figure--hat" src="../images/admin/icos/hat.png" alt="imghat">
+                <img class="c-profile-admin__figure--purse" src="../images/admin/icos/purse.png" alt="imgpurse">
+                <img class="c-profile-admin__figure--sneakers" src="../images/admin/icos/sneakers.png" alt="imgsneakers">
+            </figure>
+        </div>
+        <div class="c-profile-admin__options">
+            <h2>Panel de control</h2>
+            <a href="/admin/user-list">Vendedor</a>
+            <a href="/admin/categorys">Categorias</a>
+            <a href="/admin/frecuent-questions">Preguntas Frecuentes</a>
+            <a href="/banner">Banner</a>
+            <a href="/admin/categorys">Estadisticas</a>
+        </div>
+    </article>
+</section>
 
 {{> footer}}

@@ -23,7 +23,7 @@
     .fa-chevron-circle-left, .fa-chevron-circle-right { font-size: 20px; }
     .flowers-1 { width: 200px; }
     .flowers-2 { width: 100px; }
-    .c-slider__info { width: 100%; }
+    .c-slider__info, .c-profile-admin__imgs { width: 100%; }
     .c-slider__logo { width: 250px; }
     .c-slider__info--h1
     {
@@ -31,7 +31,6 @@
         line-height: 45px;
         padding: 15px 0 7px 0;
     }
-    /* .c-slider__info--p { font-size: 14px; } */
 
     .container__content
     {
@@ -43,6 +42,9 @@
     .h-list__ul { width: 45%; }
     .h-list__li { line-height: 12px; }
     .h-list__li--a { font-weight: normal; }
+
+    .c-profile-admin { flex-direction: column; }
+    .c-profile-admin__options { padding-top: 4em; width: 100%; }
 }
 
 @media (max-width: 768px)
