@@ -244,12 +244,12 @@
   align-items: center;
   display: flex;
   background-color: #f1f1f1;
-  width: 596px;
+  width: 49%;
 }
 
 .c-promo-index__fig {
   height: 300px;
-  width: 596px;
+  width: 49%;
 }
 
 .c-promo-index__fig--img {
@@ -3004,6 +3004,7 @@ footer {
   border: 1px solid #dee2e6;
   box-sizing: border-box;
   vertical-align: inherit;
+  text-align: center;
   display: table-cell;
   padding: .75rem;
 }
@@ -3023,6 +3024,24 @@ footer {
 
 .btn-option-admin:hover {
   background-color: #000000;
+}
+
+.c-list-admin__table i {
+  color: #424242;
+  font-size: 20px;
+  padding: 0.5em;
+}
+
+.c-list-admin__table i.fa-trash-alt {
+  color: #f00;
+}
+
+.c-list-admin__table i:hover {
+  background-color: #f1f1f1;
+}
+
+.c-list-admin__table i.fa-store {
+  color: var(--purple);
 }
 
 .c-view-product {
