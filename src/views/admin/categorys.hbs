@@ -15,49 +15,33 @@
                 <tr>
                     <td>{{this.dataValues.nombre}}</td>
                     <td>{{this.dataValues.descripcion}}</td>
-                    <td><a href="#" data-id-category="{{this.dataValues.id}}" onclick="modalEdit(this)">Editar</a><a href="#" data-id-category="{{this.dataValues.id}}" onclick="modalDelete(this)">Eliminar</a></td>
+                    <td>
+                        <a href="#" data-id-category="{{this.dataValues.id}}" onclick="modalEdit(this)">
+                            <i class="far fa-edit"></i>
+                        </a>
+                        <a href="#" data-id-category="{{this.dataValues.id}}" onclick="modalDelete(this)">
+                            <i class="far fa-trash-alt"></i>
+                        </a>
+                    </td>
                 </tr>
             {{/each}}
         </tbody>
     </table>
-    <div id="modalAdd" style="display: none; border: 2px dashed #2bf;">
-        <form action="/admin/categorys" method="POST">
-            <div>
-                <textarea name="nombre" id="name" cols="50" rows="20"></textarea>
-            </div>
-            <div>
-                <textarea name="descripcion" id="description" cols="50" rows="20"></textarea>
-            </div>
-            <div>
-                <button>Guardar</button>
-            </div>
-        </form>
+
+    <div id="modalAdd" style="display: {{showModal modal}};">
+        {{> modals/add-category-modal}}
     </div>
-    <div id="modalEdit" style="display: none; border: 2px dashed #2bf;">
-        <form action="" name="edit" method="POST">
-            <div>
-                <textarea name="nombre" id="name" cols="50" rows="20"></textarea>
-            </div>
-            <div>
-                <textarea name="descripcion" id="description" cols="50" rows="20"></textarea>
-            </div>
-            <div>
-                <button>Editar</button>
-            </div>
-        </form>
+
+    <div id="modalEdit" style="display: {{showModal modal}};">
+        {{> modals/edit-category-modal}}
     </div>
-    <div id="modalDelete" style="display: none; border: 2px dashed #2bf;">
-        <form action="" name="delete" method="POST">
-            <h3>¿Estás seguro que deseas eliminar esta categoria?</h3>
-            <div>
-                <textarea name="nombre" id="name" cols="50" rows="20"></textarea>
-            </div>
-            <div>
-                <button type="submit">Eliminar</button>
-            </div>
-        </form>
+
+    <div id="modalDelete" style="display: {{showModal modal}};">
+        {{> modals/delete-category-modal}}
     </div>
 </div>
+<script src="../js/login-modal.js"></script>
+
 <script>
     async function modalEdit(e) {
         const idCategory = e.dataset.idCategory;
