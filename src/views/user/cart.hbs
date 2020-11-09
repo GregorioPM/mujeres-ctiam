@@ -18,10 +18,10 @@
                     </p>
                     <div class="c-shopping-count-text">
                         <p class="c-shopping-text">Cantidad:</p>
-                        <div class="c-shopping-count">
-                            <i class="fas fa-minus"></i>
-                            <p class="c-shopping-count--p">{{this.cantidad}}</p>
-                            <i class="fas fa-plus"></i>
+                        <div class="c-shopping-count" data-id-product="{{this.id_producto}}">
+                            <i class="fas fa-minus" id="minus"></i>
+                            <p class="c-shopping-count--p" id="countProduct">{{this.cantidad}}</p>
+                            <i class="fas fa-plus" id="plus"></i>
                         </div>
                     </div>
                     <p class="c-shopping-cart--brand">{{this.marca}}</p>
@@ -37,5 +37,5 @@
         {{/each}}
     </article>
 </section>
-
+<script src="../js/cart.js"></script>
 {{> footer}}
