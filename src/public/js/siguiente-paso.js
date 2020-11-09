@@ -12,49 +12,48 @@ let validar2 = document.querySelectorAll("#reg-step-2 input, textarea");
 let atras1 = document.querySelectorAll("#atras1")[0];
 let atras2 = document.querySelectorAll("#atras2")[0];
 
-siguiente1.addEventListener('click', function (e) {
+siguiente1.addEventListener("click", function (e) {
     e.preventDefault();
     if (validar1[0].value == "" && validar1[1].value == "") {
-        console.log("Vacio");
-        alert("toto");
-    } else {  
-        setTimeout(function(){
-              cProfileRegSteps.style.left = "-100%";
-              registro1.style.opacity = "0";
-              registro2.style.opacity = "1";
-  	    },0)
+    } else {
+        setTimeout(function () {
+            cProfileRegSteps.style.left = "-100%";
+            registro1.style.opacity = "0";
+            registro2.style.opacity = "1";
+        }, 0);
     }
 });
 
-siguiente2.addEventListener('click', function (e) {
+siguiente2.addEventListener("click", function (e) {
     e.preventDefault();
-
-    if (validar2[0].value == "" && validar2[1].value == "" && validar2[2].value == "") {
-        console.log("Vacio");
-        alert("toto2");
-    } else {  
-       setTimeout(function(){
+    if (
+        validar2[0].value == "" &&
+        validar2[1].value == "" &&
+        validar2[2].value == ""
+    ) {
+    } else {
+        setTimeout(function () {
             cProfileRegSteps.style.left = "-200%";
             registro2.style.opacity = "0";
             registro3.style.opacity = "1";
-        },0)
+        }, 0);
     }
 });
 
-atras1.addEventListener('click', function (e) {
+atras1.addEventListener("click", function (e) {
     e.preventDefault();
-    setTimeout(function(){
+    setTimeout(function () {
         cProfileRegSteps.style.left = "0";
         registro1.style.opacity = "1";
         registro2.style.opacity = "0";
-	},0)
+    }, 0);
 });
 
-atras2.addEventListener('click', function (e) {
+atras2.addEventListener("click", function (e) {
     e.preventDefault();
-    setTimeout(function(){
+    setTimeout(function () {
         cProfileRegSteps.style.left = "-100%";
         registro2.style.opacity = "1";
         registro3.style.opacity = "0";
-	},0)
+    }, 0);
 });

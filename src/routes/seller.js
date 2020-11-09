@@ -9,7 +9,6 @@ router.use(isSeller);
 router.get("/", (req, res) => res.redirect("/seller/store"));
 
 router.get("/products", async (req, res) => {
-    console.log("someone", req.params.action);
     const user = req.user;
     const store = await Store.findByPk(user.id);
     const products = await Product.findAll({
@@ -17,7 +16,7 @@ router.get("/products", async (req, res) => {
             id_tienda: store.id,
         },
     });
-    return res.render("seller/index", {
+    return res.render("seller/register-pruduct", {
         title: "Mis publicaciones | Mujeres CTIAM",
         user,
         store: store.dataValues,

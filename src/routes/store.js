@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
     const user = req.user;
     const store = await Store.findByPk(user.id);
     if (store) {
-        return res.render("seller/store", {
+        return res.render("seller/index", {
             title: "Store | Mujeres CTIAM",
             user,
             store: store.dataValues,

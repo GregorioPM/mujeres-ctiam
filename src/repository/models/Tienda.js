@@ -24,7 +24,6 @@ const Store = sequelize.define(
         telefono: {
             type: DataTypes.STRING(12),
             allowNull: false,
-            unique: true,
         },
         email: {
             type: DataTypes.STRING(60),
@@ -33,7 +32,7 @@ const Store = sequelize.define(
         },
         pagina_web: {
             type: DataTypes.STRING(100),
-            allowNull: false,
+            allowNull: true,
         },
         imagen: {
             type: DataTypes.STRING,
