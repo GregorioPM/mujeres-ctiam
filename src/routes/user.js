@@ -1,7 +1,6 @@
 const { Router } = require("express");
 const router = Router();
 const { cartController, userController } = require("../controllers");
-const routerStore = require("./store");
 
 router.get("/", (req, res) => {
     res.redirect("/user/home");
@@ -22,8 +21,11 @@ router.get("/favorites", userController.getFavorites);
 
 router.get("/cart", userController.getCart);
 
-router.get("/cart/delete/:id", cartController.deleteAItem);
+router.post("/cart/setAmount", (req, res) => {
+    const { amount, idProduct } = req.body;
+    res.json(req.body);
+});
 
-router.use("/store", routerStore);
+router.get("/cart/delete/:id", cartController.deleteAItem);
 
 module.exports = router;

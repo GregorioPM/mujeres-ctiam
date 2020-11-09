@@ -9,10 +9,6 @@ router.get("/", (req, res) => {
     });
 });
 
-router.get("/signup", (req, res) => {
-    res.render("user/register");
-});
-
 router.post(
     "/signup",
     passport.authenticate("local-signup", {

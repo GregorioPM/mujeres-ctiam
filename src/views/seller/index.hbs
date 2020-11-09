@@ -1,79 +1,99 @@
 {{> header_principal}}
 
-<section class="c-profile-store">
-    <article class="c-profile-store__content">
-        <div class="c-profile-store__photo-banner">
-            <figure class="c-profile-store__fig">
-                <img class="c-profile-store__fig--img" src="../images/banner-store/2.jpg">
-            </figure>
-            <div class="c-profile-store__photo">
-                <img class="c-profile-store__photo--img" src="../images/photo-store/1.jpg">
+<section class="c-profile-seller">
+    <article class="c-profile-seller__content">
+        <figure class="c-profile-seller__fig">
+            <img class="c-profile-seller__fig--img" src="{{store.imagen}}">
+        </figure>
+        <div class="c-profile-seller__form-actions">
+            <div class="c-profile-seller__form-actions--content">
+                <p class="c-profile-seller__form-actions--title">{{store.nombre}}</p>
+                <div class="c-profile-seller__form">
+                    <form class="c-profile-seller__form--content" action="/seller/store/update" method="POST">
+                        <p class="c-profile-seller__form--title">Datos de la cuenta</p>
+                        <div class="c-profile-seller__input">
+                            <input placeholder="Usuario:" type="text" value="{{user.nombres}}" readonly required>
+                        </div>
+                        <div class="c-profile-seller__input">
+                            <input placeholder="Nombre de la tienda:" value="{{store.nombre}}" name="nombre" type="text" required>
+                        </div>
+                        <div class="c-profile-seller__input">
+                            <input placeholder="Descripción:" type="text" value="{{store.descripcion}}" name="descripcion" required>
+                        </div>
+                        <div class="c-profile-seller__input">
+                            <input placeholder="Teléfono:" type="text" value="{{store.telefono}}" name="telefono" required>
+                        </div>
+                        <div class="c-profile-seller__input">
+                            <input placeholder="Correo electrónico:" value="{{store.email}}" name="email" type="email" required>
+                        </div>
+                        <div class="c-profile-seller__input">
+                            <input placeholder="Sitio web:" type="text" name="pagina_web" value="{{store.pagina_web}}">
+                        </div>
+                        <div class="c-profile-seller__file">
+                            <input type="file" id="file">
+                            <input type="text" name="imagen">
+                        </div>
+                        <button class="c-profile-seller--button" type="submit">Guardar</button>
+                    </form>
+                    <div class="c-profile-seller__actions">
+                        <div class="c-profile-seller__buttons">
+                            <div class="c-profile-seller__buttons--btn">
+                                <a class="c-profile-seller__buttons--a" href="/seller/products">
+                                    <i class="fas fa-box"></i>
+                                </a>
+                            </div>
+                            <div class="c-profile-seller__buttons--btn">
+                                <a class="c-profile-seller__buttons--a" href="">
+                                    <i class="fas fa-chart-line"></i>
+                                </a>
+                            </div>
+                            <div class="c-profile-seller__buttons--btn">
+                                <a class="c-profile-seller__buttons--a" href="">
+                                    <i class="fas fa-question-circle"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <ul class="c-profile-seller__options">
+                            <li class="c-profile-seller__options--li">
+                                <a class="c-profile-seller__options--a" href="">
+                                    <i class="far fa-edit"></i>
+                                    Editar perfil
+                                </a>
+                            </li>
+                            <li class="c-profile-seller__options--li">
+                                <a class="c-profile-seller__options--a" href="">
+                                    <i class="fas fa-store"></i>
+                                    Compras
+                                </a>
+                            </li>
+                            <li class="c-profile-seller__options--li">
+                                <a class="c-profile-seller__options--a" href="">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    Devoluciones
+                                </a>
+                            </li>
+                            <li class="c-profile-seller__options--li">
+                                <a class="c-profile-seller__options--a" href="">
+                                    <i class="fas fa-box-open"></i>
+                                    Cambios
+                                </a>
+                            </li>
+                            <li class="c-profile-seller__options--li">
+                                <a class="c-profile-seller__options--a" href="">
+                                    <i class="fas fa-star"></i>
+                                    Favoritos
+                                </a>
+                            </li>
+                            <li class="c-profile-seller__options--li">
+                                <a class="c-profile-seller__options--a" href="">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Carrito
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="c-profile-store__info">
-            <h1 class="c-profile-store__info--h1">
-                POSTRES Y PONQUES DON JACOBO
-            </h1>
-            <p class="c-profile-store__info--p">
-                Más de 29 años endulzando a nuestros clientes en Colombia
-            </p>
-            <a class="c-profile-store__info--a" href="http://donjacobopasteleria.com/">http://donjacobopasteleria.com/</a>
-        </div>
-        <div class="c-profile-store__grid">
-            <a href="">
-                <div class="c-profile-store__product">
-                    <img class="c-profile-store__product--img" src="../images/categorias/postres2.jpg">
-                    <div class="c-profile-store__info-product">
-                        <p class="c-profile-store__info-product--p">Postre de fresas con chocolate con frambuesas</p>
-                        <p class="c-profile-store__info-product--price">$ 50.000</p>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="c-profile-store__product">
-                    <img class="c-profile-store__product--img" src="../images/categorias/pastel2.jpg">
-                    <div class="c-profile-store__info-product">
-                        <p class="c-profile-store__info-product--p">Postre de fresas con chocolate con frambuesas</p>
-                        <p class="c-profile-store__info-product--price">$ 50.000</p>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="c-profile-store__product">
-                    <img class="c-profile-store__product--img" src="../images/categorias/pastel3.jpg">
-                    <div class="c-profile-store__info-product">
-                        <p class="c-profile-store__info-product--p">Postre de fresas con chocolate con frambuesas</p>
-                        <p class="c-profile-store__info-product--price">$ 50.000</p>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="c-profile-store__product">
-                    <img class="c-profile-store__product--img" src="../images/categorias/pastel2.jpg">
-                    <div class="c-profile-store__info-product">
-                        <p class="c-profile-store__info-product--p">Postre de fresas con chocolate con frambuesas</p>
-                        <p class="c-profile-store__info-product--price">$ 50.000</p>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="c-profile-store__product">
-                    <img class="c-profile-store__product--img" src="../images/categorias/pastel3.jpg">
-                    <div class="c-profile-store__info-product">
-                        <p class="c-profile-store__info-product--p">Postre de fresas con chocolate con frambuesas</p>
-                        <p class="c-profile-store__info-product--price">$ 50.000</p>
-                    </div>
-                </div>
-            </a>
-            <a href="">
-                <div class="c-profile-store__product">
-                    <img class="c-profile-store__product--img" src="../images/categorias/postres2.jpg">
-                    <div class="c-profile-store__info-product">
-                        <p class="c-profile-store__info-product--p">Postre de fresas con chocolate con frambuesas</p>
-                        <p class="c-profile-store__info-product--price">$ 50.000</p>
-                    </div>
-                </div>
-            </a>
         </div>
     </article>
 </section>
