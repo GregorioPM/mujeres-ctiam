@@ -28,6 +28,7 @@ const Sale = require("../models/Venta");
 const Store = require("../models/Tienda");
 const User = require("../models/Usuario");
 
+// {force:true}
 // {alter:true}
 (async () => {
     sequelize.sync().then(() => console.log("tables created"));

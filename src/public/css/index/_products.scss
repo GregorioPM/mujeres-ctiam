@@ -23,7 +23,7 @@
 .c-product-cols
 {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(388.666666667px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px;
 }
 
@@ -176,13 +176,15 @@
     align-items: center;
     display: flex;
     background-color: #f1f1f1;
-    width: 596px;
+    // width: 596px;
+    width: 49%;
 }
 
 .c-promo-index__fig
 {
     height: 300px;
-    width: 596px;    
+    // width: 596px;
+    width: 49%;
 }
 
 .c-promo-index__fig--img

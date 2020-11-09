@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {{!-- Google font --}}
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="../css/style.css">
     {{!-- Responsive --}}
-    <link href="../css/responsive1024.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
     {{!-- <link href="../css/tablet.css" rel="stylesheet" media="screen and (min-width: 768px)">
-    <link href="../css/phone.css" rel="stylesheet" media="screen and (min-width: 425px)">
-    <link href="../css/phone2.css" rel="stylesheet" media="screen and (min-width: 375px)">
-    <link href="../css/phone3.css" rel="stylesheet" media="screen and (min-width: 320px)"> --}}
-
+    <link href="../css/phone.css" rel="stylesheet" media="screen and (min-width: 425px)"> --}}
     <meta charset="UTF-8">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    {{!-- Iconos --}}
     <script src="https://kit.fontawesome.com/0dc3b1d201.js" crossorigin="anonymous"></script>
+    {{!-- Google Fonts - Tipografía --}}
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>...</title>
+    {{!-- Bootstrap --}}
+    {{!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> --}}
 </head>
 <body>
     <div id="ventana-cuenta" style="display: none;">
@@ -30,20 +28,23 @@
         {{> modals/register-modal}}
     </div>
 
-    <div class="h-list">
-        <div class="h-list__content">
-            <div class="h-list__logo-search" style="display: flex; align-items: center; ">
-                <a class="h__menu__a-img" href="/"><img class="h__content--img" src="../images/logo.png"></a>
-                <div class="h__search">
-                    <form class="h__search__c">
-                        <input class="h__search--input" type="text" placeholder="Buscar">
-                    </form>
-                    <a href="/list-product">
-                    <button type="submit" onclick="" class="h__search--ico">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    </a>
+    <div class="container">
+        <div class="h-list__content container__content">
+            <div class="h-list__logo-search">
+                <div class="flex">
+                    <a class="h__menu__a-img" href="/"><img class="h__content--img" src="../images/logo.png"></a>
+                    <div class="h__search">
+                        <form class="h__search__c">
+                            <input class="h__search--input" type="text" placeholder="Buscar">
+                        </form>
+                        <a href="/list-product">
+                        <button type="submit" onclick="" class="h__search--ico">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        </a>
+                    </div>
                 </div>
+                <i class="fas fa-bars"></i>
             </div>
             <ul class="h-list__ul">
                 <li class="h-list__li"><a class="h-list__li--a" href="/contact">¿Necesitas ayuda?</a></li>
@@ -57,8 +58,8 @@
         </div>
     </div>
 
-    <header class="h">
-        <nav class="h__content">
+    <header class="h container">
+        <nav class="h__content container__content">
             <ul class="h__menu">
                 <li class="h__menu--li">
                     <button onclick="showCategory()" class="h__menu--a">

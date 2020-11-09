@@ -7,6 +7,7 @@ const admin = require("./admin");
 const user = require("./user");
 const seller = require("./seller");
 const { frequentQuestionController } = require("../controllers");
+const { categoryController } = require("../controllers");
 
 router.get("/", (req, res) => {
     res.render("index", {
@@ -117,6 +118,16 @@ router.get("/questions", async (req, res) => {
         title: "Preguntas frecuentes | Mujeres CTIAM",
         isAuthenticated: true,
         frequentQuestions,
+    });
+});
+
+router.get("/categorys", async (req, res) => {
+    const categorys = await categoryController.getCategorys();
+    console.log(categorys);
+    res.render("categorys", {
+        title: "Categorias | Mujeres CTIAM",
+        isAuthenticated: true,
+        categorys,
     });
 });
 
