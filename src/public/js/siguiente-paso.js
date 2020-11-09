@@ -16,7 +16,7 @@ siguiente1.addEventListener('click', function (e) {
     e.preventDefault();
     if (validar1[0].value == "" && validar1[1].value == "") {
         console.log("Vacio");
-        alert("toto");
+        alert("Campos sin completar");
     } else {  
         setTimeout(function(){
               cProfileRegSteps.style.left = "-100%";
@@ -31,7 +31,7 @@ siguiente2.addEventListener('click', function (e) {
 
     if (validar2[0].value == "" && validar2[1].value == "" && validar2[2].value == "") {
         console.log("Vacio");
-        alert("toto2");
+        alert("Campos sin completar 2");
     } else {  
        setTimeout(function(){
             cProfileRegSteps.style.left = "-200%";
