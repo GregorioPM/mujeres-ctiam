@@ -15,17 +15,20 @@ let atras2 = document.querySelectorAll("#atras2")[0];
 siguiente1.addEventListener("click", function (e) {
     e.preventDefault();
     if (validar1[0].value == "" && validar1[1].value == "") {
+        
     } else {
         setTimeout(function () {
             cProfileRegSteps.style.left = "-100%";
             registro1.style.opacity = "0";
             registro2.style.opacity = "1";
         }, 0);
+
     }
 });
 
 siguiente2.addEventListener("click", function (e) {
     e.preventDefault();
+
     if (
         validar2[0].value == "" &&
         validar2[1].value == "" &&

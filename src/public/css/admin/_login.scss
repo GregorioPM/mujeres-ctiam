@@ -4,6 +4,7 @@
     padding-top: calc(1440px * (1 / 24));
 }
 .form-login-admin {
+    border-radius: 8px;
     background-color: #ffffff;
     margin: 0 auto;
     padding: calc(1440px * (1 / 48));
@@ -28,7 +29,8 @@
     padding-bottom: 5px;
 }
 .form-login-admin input[type="submit"] {
-    background-color: #29abe2;
+    background-color: var(--purple);
+    border: 0;
     color: #ffffff;
     cursor: pointer;
     height: 35px;
