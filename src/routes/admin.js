@@ -18,7 +18,7 @@ router.get("/user-list", adminController.findNoSellers);
 router.get("/make-seller/:id", adminController.makeSeller);
 
 router.get("/frecuent-questions", async (req, res) => {
-    const frequentQuestions = frequentQuestionController.getFrequentQuestions();
+    const frequentQuestions = await frequentQuestionController.getFrequentQuestions();
     res.render("admin/questions", {
         frequentQuestions,
     });

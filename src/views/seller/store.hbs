@@ -3,13 +3,13 @@
 <section class="c-profile-seller">
     <article class="c-profile-seller__content">
         <figure class="c-profile-seller__fig">
-            <img class="c-profile-seller__fig--img" src="../images/photo-store/1.jpg">
+            <img class="c-profile-seller__fig--img" src="{{store.imagen}}">
         </figure>
         <div class="c-profile-seller__form-actions">
             <div class="c-profile-seller__form-actions--content">
                 <p class="c-profile-seller__form-actions--title">{{store.nombre}}</p>
                 <div class="c-profile-seller__form">
-                    <form class="c-profile-seller__form--content" action="/user/store/update" method="POST">
+                    <form class="c-profile-seller__form--content" action="/seller/store/update" method="POST">
                         <p class="c-profile-seller__form--title">Datos de la cuenta</p>
                         <div class="c-profile-seller__input">
                             <input placeholder="Usuario:" type="text" value="{{user.nombres}}" readonly required>
@@ -38,7 +38,7 @@
                     <div class="c-profile-seller__actions">
                         <div class="c-profile-seller__buttons">
                             <div class="c-profile-seller__buttons--btn">
-                                <a class="c-profile-seller__buttons--a" href="">
+                                <a class="c-profile-seller__buttons--a" href="/seller/products">
                                     <i class="fas fa-box"></i>
                                 </a>
                             </div>

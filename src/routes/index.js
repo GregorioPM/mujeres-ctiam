@@ -3,8 +3,9 @@ const login = require("./login");
 const isAuthenticated = require("../middlewares/isAuthenticated");
 const nodeMailer = require("../services/nodemailer");
 const router = Router();
-const user = require("./user");
 const admin = require("./admin");
+const user = require("./user");
+const seller = require("./seller");
 const { frequentQuestionController } = require("../controllers");
 
 router.get("/", (req, res) => {
@@ -63,13 +64,6 @@ router.get("/reportes", (req, res) => {
 router.get("/preguntas-vendedor", (req, res) => {
     res.render("preguntas-vendedor", {
         title: "Preguntas vendedor | Mujeres CTIAM",
-        isAuthenticated: req.user != undefined,
-    });
-});
-
-router.get("/reg_product", (req, res) => {
-    res.render("reg_product", {
-        title: "Registrar producto | Mujeres CTIAM",
         isAuthenticated: req.user != undefined,
     });
 });
@@ -142,5 +136,7 @@ router.use((req, res, next) => {
 });
 
 router.use("/user", user);
+
+router.use("/seller", seller);
 
 module.exports = router;

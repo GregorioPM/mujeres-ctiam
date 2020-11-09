@@ -62,7 +62,6 @@
     async function modalEdit(e) {
         const idQuestion = e.dataset.idQuestion;
         const question = await getQuestion(idQuestion);
-        console.log(question)
         showModal("modalEdit");
         document.querySelector("#modalEdit form").action = `/admin/frecuent-questions/${idQuestion}`
         document.forms["edit"]["pregunta"].value = question.frequentQuestion.pregunta;

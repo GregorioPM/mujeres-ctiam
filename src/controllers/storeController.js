@@ -9,8 +9,8 @@ module.exports = {
                 storeDB[field] = store[field];
             }
             await storeDB.save();
-            return res.redirect("/user/store");
+            return res.redirect("/seller/store");
         }
-        return res.redirect("/user/store");
+        return res.redirect("/seller/store");
     },
 };
