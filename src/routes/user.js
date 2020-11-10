@@ -21,10 +21,7 @@ router.get("/favorites", userController.getFavorites);
 
 router.get("/cart", userController.getCart);
 
-router.post("/cart/setAmount", (req, res) => {
-    const { amount, idProduct } = req.body;
-    res.json(req.body);
-});
+router.post("/cart/setAmount", cartController.changeAmountProduct);
 
 router.get("/cart/delete/:id", cartController.deleteAItem);
 
