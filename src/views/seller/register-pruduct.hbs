@@ -14,7 +14,14 @@
                             <div id="reg-step-1" class="c-profile__reg-step">
                                 <p class="c-profile-seller__form--title">Registrar producto - Paso 1</p>
                                 <div class="c-profile-seller__input">
-                                    <input placeholder="Categoria:" id="categoria_producto" type="text" required>
+                                    <input list="categroai" id="categoria_producto" placeholder="cursos">
+                                    <datalist id="categroai">
+                                        <option value="jampi"></option>
+                                        <option value="higuera"></option>
+                                        <option value="liendra"></option>
+                                        <option value="toto"></option>
+                                        <option value="yilberto"></option>
+                                    </datalist>
                                 </div>
                                 <div class="c-profile-seller__input">
                                     <input placeholder="Titulo:" id="titulo_producto" type="text" required>
@@ -30,7 +37,7 @@
                                     <input placeholder="Precio unidad:" id="precio_producto" type="text" required>
                                 </div>
                                 <div class="c-profile-seller__input">
-                                    <textarea name="" id="descripcion_producto" cols="30" rows="10"></textarea>
+                                    <textarea placeholder="Descripción" name="" id="descripcion_producto" cols="30" rows="5"></textarea>
                                 </div>
                                 <a id="atras1" class="c-profile-seller--button">Atras</a>
                                 <a id="siguiente2" class="c-profile-seller--button">Sigueinte paso</a>
